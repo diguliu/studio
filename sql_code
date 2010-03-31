@@ -1,0 +1,657 @@
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746345','Joao Silva','Street Joao - Silva','joao@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746346','Joao Oliveira','Street Joao - Oliveira','joao@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746347','Joao Alcantra','Street Joao - Alcantra','joao@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746348','Joao Souto','Street Joao - Souto','joao@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746349','Joao Jackson','Street Joao - Jackson','joao@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746350','Joao Norris','Street Joao - Norris','joao@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746351','Joao Santos','Street Joao - Santos','joao@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746352','Joao Neto','Street Joao - Neto','joao@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746353','Joao Braga','Street Joao - Braga','joao@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746354','Joao Correa','Street Joao - Correa','joao@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746355','Joao Depp','Street Joao - Depp','joao@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746356','Joao Jordan','Street Joao - Jordan','joao@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746357','Maria Silva','Street Maria - Silva','maria@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746358','Maria Oliveira','Street Maria - Oliveira','maria@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746359','Maria Alcantra','Street Maria - Alcantra','maria@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746360','Maria Souto','Street Maria - Souto','maria@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746361','Maria Jackson','Street Maria - Jackson','maria@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746362','Maria Norris','Street Maria - Norris','maria@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746363','Maria Santos','Street Maria - Santos','maria@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746364','Maria Neto','Street Maria - Neto','maria@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746365','Maria Braga','Street Maria - Braga','maria@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746366','Maria Correa','Street Maria - Correa','maria@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746367','Maria Depp','Street Maria - Depp','maria@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746368','Maria Jordan','Street Maria - Jordan','maria@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746369','Dedeu Silva','Street Dedeu - Silva','dedeu@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746370','Dedeu Oliveira','Street Dedeu - Oliveira','dedeu@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746371','Dedeu Alcantra','Street Dedeu - Alcantra','dedeu@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746372','Dedeu Souto','Street Dedeu - Souto','dedeu@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746373','Dedeu Jackson','Street Dedeu - Jackson','dedeu@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746374','Dedeu Norris','Street Dedeu - Norris','dedeu@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746375','Dedeu Santos','Street Dedeu - Santos','dedeu@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746376','Dedeu Neto','Street Dedeu - Neto','dedeu@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746377','Dedeu Braga','Street Dedeu - Braga','dedeu@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746378','Dedeu Correa','Street Dedeu - Correa','dedeu@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746379','Dedeu Depp','Street Dedeu - Depp','dedeu@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746380','Dedeu Jordan','Street Dedeu - Jordan','dedeu@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746381','Diguliu Silva','Street Diguliu - Silva','diguliu@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746382','Diguliu Oliveira','Street Diguliu - Oliveira','diguliu@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746383','Diguliu Alcantra','Street Diguliu - Alcantra','diguliu@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746384','Diguliu Souto','Street Diguliu - Souto','diguliu@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746385','Diguliu Jackson','Street Diguliu - Jackson','diguliu@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746386','Diguliu Norris','Street Diguliu - Norris','diguliu@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746387','Diguliu Santos','Street Diguliu - Santos','diguliu@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746388','Diguliu Neto','Street Diguliu - Neto','diguliu@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746389','Diguliu Braga','Street Diguliu - Braga','diguliu@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746390','Diguliu Correa','Street Diguliu - Correa','diguliu@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746391','Diguliu Depp','Street Diguliu - Depp','diguliu@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746392','Diguliu Jordan','Street Diguliu - Jordan','diguliu@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746393','Michael Silva','Street Michael - Silva','michael@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746394','Michael Oliveira','Street Michael - Oliveira','michael@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746395','Michael Alcantra','Street Michael - Alcantra','michael@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746396','Michael Souto','Street Michael - Souto','michael@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746397','Michael Jackson','Street Michael - Jackson','michael@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746398','Michael Norris','Street Michael - Norris','michael@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746399','Michael Santos','Street Michael - Santos','michael@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746400','Michael Neto','Street Michael - Neto','michael@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746401','Michael Braga','Street Michael - Braga','michael@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746402','Michael Correa','Street Michael - Correa','michael@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746403','Michael Depp','Street Michael - Depp','michael@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746404','Michael Jordan','Street Michael - Jordan','michael@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746405','Daniela Silva','Street Daniela - Silva','daniela@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746406','Daniela Oliveira','Street Daniela - Oliveira','daniela@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746407','Daniela Alcantra','Street Daniela - Alcantra','daniela@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746408','Daniela Souto','Street Daniela - Souto','daniela@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746409','Daniela Jackson','Street Daniela - Jackson','daniela@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746410','Daniela Norris','Street Daniela - Norris','daniela@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746411','Daniela Santos','Street Daniela - Santos','daniela@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746412','Daniela Neto','Street Daniela - Neto','daniela@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746413','Daniela Braga','Street Daniela - Braga','daniela@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746414','Daniela Correa','Street Daniela - Correa','daniela@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746415','Daniela Depp','Street Daniela - Depp','daniela@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746416','Daniela Jordan','Street Daniela - Jordan','daniela@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746417','Kratus Silva','Street Kratus - Silva','kratus@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746418','Kratus Oliveira','Street Kratus - Oliveira','kratus@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746419','Kratus Alcantra','Street Kratus - Alcantra','kratus@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746420','Kratus Souto','Street Kratus - Souto','kratus@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746421','Kratus Jackson','Street Kratus - Jackson','kratus@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746422','Kratus Norris','Street Kratus - Norris','kratus@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746423','Kratus Santos','Street Kratus - Santos','kratus@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746424','Kratus Neto','Street Kratus - Neto','kratus@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746425','Kratus Braga','Street Kratus - Braga','kratus@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746426','Kratus Correa','Street Kratus - Correa','kratus@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746427','Kratus Depp','Street Kratus - Depp','kratus@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746428','Kratus Jordan','Street Kratus - Jordan','kratus@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746429','Chuck Silva','Street Chuck - Silva','chuck@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746430','Chuck Oliveira','Street Chuck - Oliveira','chuck@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746431','Chuck Alcantra','Street Chuck - Alcantra','chuck@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746432','Chuck Souto','Street Chuck - Souto','chuck@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746433','Chuck Jackson','Street Chuck - Jackson','chuck@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746434','Chuck Norris','Street Chuck - Norris','chuck@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746435','Chuck Santos','Street Chuck - Santos','chuck@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746436','Chuck Neto','Street Chuck - Neto','chuck@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746437','Chuck Braga','Street Chuck - Braga','chuck@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746438','Chuck Correa','Street Chuck - Correa','chuck@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746439','Chuck Depp','Street Chuck - Depp','chuck@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746440','Chuck Jordan','Street Chuck - Jordan','chuck@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746441','Johnny Silva','Street Johnny - Silva','johnny@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746442','Johnny Oliveira','Street Johnny - Oliveira','johnny@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746443','Johnny Alcantra','Street Johnny - Alcantra','johnny@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746444','Johnny Souto','Street Johnny - Souto','johnny@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746445','Johnny Jackson','Street Johnny - Jackson','johnny@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746446','Johnny Norris','Street Johnny - Norris','johnny@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746447','Johnny Santos','Street Johnny - Santos','johnny@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746448','Johnny Neto','Street Johnny - Neto','johnny@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746449','Johnny Braga','Street Johnny - Braga','johnny@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746450','Johnny Correa','Street Johnny - Correa','johnny@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746451','Johnny Depp','Street Johnny - Depp','johnny@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746452','Johnny Jordan','Street Johnny - Jordan','johnny@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746453','Ze Silva','Street Ze - Silva','ze@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746454','Ze Oliveira','Street Ze - Oliveira','ze@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746455','Ze Alcantra','Street Ze - Alcantra','ze@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746456','Ze Souto','Street Ze - Souto','ze@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746457','Ze Jackson','Street Ze - Jackson','ze@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746458','Ze Norris','Street Ze - Norris','ze@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746459','Ze Santos','Street Ze - Santos','ze@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746460','Ze Neto','Street Ze - Neto','ze@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746461','Ze Braga','Street Ze - Braga','ze@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746462','Ze Correa','Street Ze - Correa','ze@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746463','Ze Depp','Street Ze - Depp','ze@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746464','Ze Jordan','Street Ze - Jordan','ze@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746465','Conf Silva','Street Conf - Silva','conf@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746466','Conf Oliveira','Street Conf - Oliveira','conf@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746467','Conf Alcantra','Street Conf - Alcantra','conf@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746468','Conf Souto','Street Conf - Souto','conf@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746469','Conf Jackson','Street Conf - Jackson','conf@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746470','Conf Norris','Street Conf - Norris','conf@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746471','Conf Santos','Street Conf - Santos','conf@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746472','Conf Neto','Street Conf - Neto','conf@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746473','Conf Braga','Street Conf - Braga','conf@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746474','Conf Correa','Street Conf - Correa','conf@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746475','Conf Depp','Street Conf - Depp','conf@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746476','Conf Jordan','Street Conf - Jordan','conf@jordan.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746477','Joca Silva','Street Joca - Silva','joca@silva.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746478','Joca Oliveira','Street Joca - Oliveira','joca@oliveira.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746479','Joca Alcantra','Street Joca - Alcantra','joca@alcantra.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746480','Joca Souto','Street Joca - Souto','joca@souto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746481','Joca Jackson','Street Joca - Jackson','joca@jackson.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746482','Joca Norris','Street Joca - Norris','joca@norris.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746483','Joca Santos','Street Joca - Santos','joca@santos.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746484','Joca Neto','Street Joca - Neto','joca@neto.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746485','Joca Braga','Street Joca - Braga','joca@braga.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746486','Joca Correa','Street Joca - Correa','joca@correa.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746487','Joca Depp','Street Joca - Depp','joca@depp.com');
+
+INSERT INTO Person (Cpf,Name,Address,Email)
+VALUES ('345746488','Joca Jordan','Street Joca - Jordan','joca@jordan.com');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('the_zeppelin','The Zeppelin','Hard Metal','www.all-bands.com','1');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('the_monkeys','The Monkeys','Hard Core','www.all-bands.com','2');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('the_sevenfold','The Sevenfold','Hard Punk','www.all-bands.com','3');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('the_jam','The Jam','Hard Grunge','www.all-bands.com','4');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('the_beatles','The Beatles','Hard Rock','www.all-bands.com','5');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('arctic_zeppelin','Arctic Zeppelin','Black Metal','www.all-bands.com','6');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('arctic_monkeys','Arctic Monkeys','Black Core','www.all-bands.com','7');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('arctic_sevenfold','Arctic Sevenfold','Black Punk','www.all-bands.com','8');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('arctic_jam','Arctic Jam','Black Grunge','www.all-bands.com','9');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('arctic_beatles','Arctic Beatles','Black Rock','www.all-bands.com','10');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('pearl_zeppelin','Pearl Zeppelin','Emo Metal','www.all-bands.com','11');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('pearl_monkeys','Pearl Monkeys','Emo Core','www.all-bands.com','12');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('pearl_sevenfold','Pearl Sevenfold','Emo Punk','www.all-bands.com','13');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('pearl_jam','Pearl Jam','Emo Grunge','www.all-bands.com','14');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('pearl_beatles','Pearl Beatles','Emo Rock','www.all-bands.com','15');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('led_zeppelin','Led Zeppelin','Heavy Metal','www.all-bands.com','16');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('led_monkeys','Led Monkeys','Heavy Core','www.all-bands.com','17');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('led_sevenfold','Led Sevenfold','Heavy Punk','www.all-bands.com','18');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('led_jam','Led Jam','Heavy Grunge','www.all-bands.com','19');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('led_beatles','Led Beatles','Heavy Rock','www.all-bands.com','20');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('avenged_zeppelin','Avenged Zeppelin','Folk Metal','www.all-bands.com','21');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('avenged_monkeys','Avenged Monkeys','Folk Core','www.all-bands.com','22');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('avenged_sevenfold','Avenged Sevenfold','Folk Punk','www.all-bands.com','23');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('avenged_jam','Avenged Jam','Folk Grunge','www.all-bands.com','24');
+
+INSERT INTO Band (Login,Name,Style,HomePage,Pass)
+VALUES ('avenged_beatles','Avenged Beatles','Folk Rock','www.all-bands.com','25');
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (1,'Model','Guitar Les Paul',20.0,50.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (2,'Model','Guitar Stratocaster',21.0,51.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (3,'Model','Guitar Flying V',22.0,52.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (4,'Model','Guitar SG',23.0,53.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (5,'Model','Guitar Telecaster',24.0,54.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (6,'Model','Bass Les Paul',25.0,55.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (7,'Model','Bass Stratocaster',26.0,56.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (8,'Model','Bass Flying V',27.0,57.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (9,'Model','Bass SG',28.0,58.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (10,'Model','Bass Telecaster',29.0,59.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (11,'Model','Drums Les Paul',30.0,60.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (12,'Model','Drums Stratocaster',31.0,61.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (13,'Model','Drums Flying V',32.0,62.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (14,'Model','Drums SG',33.0,63.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (15,'Model','Drums Telecaster',34.0,64.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (16,'Model','Microphone Les Paul',35.0,65.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (17,'Model','Microphone Stratocaster',36.0,66.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (18,'Model','Microphone Flying V',37.0,67.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (19,'Model','Microphone SG',38.0,68.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (20,'Model','Microphone Telecaster',39.0,69.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (21,'Model','Amplificator Les Paul',40.0,70.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (22,'Model','Amplificator Stratocaster',41.0,71.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (23,'Model','Amplificator Flying V',42.0,72.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (24,'Model','Amplificator SG',43.0,73.0);
+
+INSERT INTO Equipment (Equipment_ID,Model,Equipment_Type,InternalPrice,ExternalPrice)
+VALUES (25,'Model','Amplificator Telecaster',44.0,74.0);
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (1,'Record Albuns',30.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (2,'Record Instruments',31.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (3,'Record Equipments',32.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (4,'Record Rooms',33.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (5,'Record Dvds',34.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (6,'Sell Albuns',35.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (7,'Sell Instruments',36.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (8,'Sell Equipments',37.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (9,'Sell Rooms',38.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (10,'Sell Dvds',39.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (11,'Rent Albuns',40.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (12,'Rent Instruments',41.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (13,'Rent Equipments',42.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (14,'Rent Rooms',43.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (15,'Rent Dvds',44.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (16,'Practice Albuns',45.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (17,'Practice Instruments',46.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (18,'Practice Equipments',47.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (19,'Practice Rooms',48.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (20,'Practice Dvds',49.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (21,'Make Albuns',50.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (22,'Make Instruments',51.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (23,'Make Equipments',52.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (24,'Make Rooms',53.0,'Description');
+
+INSERT INTO Service (Service_ID,Name,Price,Description)
+VALUES (25,'Make Dvds',54.0,'Description');
+
