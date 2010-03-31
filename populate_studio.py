@@ -94,10 +94,10 @@ person_attributes = ["Cpf", "Name", "Address", "Email"]
 band_attributes = ["Login", "Name", "Style", "HomePage", "Pass"]
 equipment_attributes = ["Equipment_ID", "Model", "Equipment_Type", "InternalPrice", "ExternalPrice"]
 service_attributes = ["Service_ID", "Name", "Price", "Description"]
-sql_code = generate_insert_sql(person_attributes, generate_people(), "Person")
-sql_code += generate_insert_sql(band_attributes, generate_bands(), "Band")
-sql_code += generate_insert_sql(equipment_attributes, generate_equipments(), "Equipment")
-sql_code += generate_insert_sql(service_attributes, generate_services(), "Service")
-file = open("sql_code","w")
-file.write(sql_code)
+sql_insert_code = generate_insert_sql(person_attributes, generate_people(), "Person")
+sql_insert_code += generate_insert_sql(band_attributes, generate_bands(), "Band")
+sql_insert_code += generate_insert_sql(equipment_attributes, generate_equipments(), "Equipment")
+sql_insert_code += generate_insert_sql(service_attributes, generate_services(), "Service")
+file = open("sql_insert_code.sql","w")
+file.write(sql_insert_code)
 file.close()
