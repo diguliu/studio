@@ -2,7 +2,8 @@ from random import randint
 from itertools import product
 
 def combinator(first_names, last_names, separator = " ", prefix="", sufix=""):
-    return map("".join,product([prefix], first_names, [separator], last_names, [sufix]))
+    return  map("".join,product([prefix], first_names, [separator], last_names, [sufix]))+\
+            map("".join,product([prefix], last_names, [separator], first_names, [sufix]))
 
 def generate_numbers(number, start=1, type="int"):
     numbers = []
@@ -29,13 +30,21 @@ def generate_people():
     people_cpfs = generate_numbers(len(people_names),345746345)
     people_cpfs = map(str, people_cpfs)
 
-    return [people_cpfs, people_names, people_addresses, people_emails]
+    return zip(*[people_cpfs, people_names, people_addresses, people_emails])
+
+def generate_clients(people, percent):
+    clients = []
+    for i in range(int(len(people)*percent)):
+        login = people[i][1].lower().replace(' ','_')
+        clients.append([login, people[i][0], "dfasdj"])
+    return clients
+
 
 def generate_bands():
     first_names = ["The", "Arctic", "Pearl", "Led", "Avenged"]
     last_names = ["Zeppelin", "Monkeys", "Sevenfold", "Jam", "Beatles"]
-    band_names = combinator(first_names, last_names)
 
+    band_names = combinator(first_names, last_names)
     logins = combinator(map(str.lower,first_names), map(str.lower,last_names),"_")
     passwords = generate_numbers(len(logins))
     passwords = map(str, passwords)
@@ -44,7 +53,7 @@ def generate_bands():
     last_style_names = ["Metal", "Core", "Punk", "Grunge", "Rock"]
     style_names = combinator(first_style_names, last_style_names)
 
-    return [logins, band_names, style_names, ["www.all-bands.com"]*len(logins), passwords]
+    return zip(*[logins, band_names, style_names, ["www.all-bands.com"]*len(logins), passwords])
 
 def generate_equipments():
     description = ["Semi-Acoustic", "Eletric", "Acoustic", "Tuned", "Golden"]
@@ -56,7 +65,7 @@ def generate_equipments():
     internal_prices = generate_numbers(len(equipment_types),20,"float")
     external_prices = generate_numbers(len(equipment_types),50,"float")
 
-    return [equipment_ids, ["Model"]*len(equipment_types), equipment_types, internal_prices, external_prices]
+    return zip(*[equipment_ids, ["Model"]*len(equipment_types), equipment_types, internal_prices, external_prices])
 
 def generate_services():
     first_names = ["Record", "Sell", "Rent", "Practice", "Make"]
@@ -66,16 +75,16 @@ def generate_services():
     service_ids = generate_numbers(len(service_names))
     prices = generate_numbers(len(service_names),30,"float")
 
-    return [service_ids, service_names, prices, ["Description"]*len(service_names)]
+    return zip(*[service_ids, service_names, prices, ["Description"]*len(service_names)])
 
-def generate_insert_sql(attributes, data, table_name):
+
+def generate_insert_sql(attributes, entities, table_name):
     colums = ""
     sql_code = ""
-    data = zip(*data)
     for attribute in attributes:
         colums += ',' + attribute
     colums = colums[1:]
-    for entity in data:
+    for entity in entities:
         values = ""
         for att in entity:
             if type(att).__name__ != "int" and type(att).__name__ != "float":
@@ -91,13 +100,27 @@ def generate_insert_sql(attributes, data, table_name):
 
 
 person_attributes = ["Cpf", "Name", "Address", "Email"]
+client_attributes = ["Login", "Person_Cpf", "Pass"]
 band_attributes = ["Login", "Name", "Style", "HomePage", "Pass"]
 equipment_attributes = ["Equipment_ID", "Model", "Equipment_Type", "InternalPrice", "ExternalPrice"]
 service_attributes = ["Service_ID", "Name", "Price", "Description"]
-sql_insert_code = generate_insert_sql(person_attributes, generate_people(), "Person")
-sql_insert_code += generate_insert_sql(band_attributes, generate_bands(), "Band")
-sql_insert_code += generate_insert_sql(equipment_attributes, generate_equipments(), "Equipment")
-sql_insert_code += generate_insert_sql(service_attributes, generate_services(), "Service")
-file = open("sql_insert_code.sql","w")
+
+people = generate_people()
+print len(people)
+clients = generate_clients(people,0.5)
+print len(clients)
+bands = generate_bands()
+print len(bands)
+equipments = generate_equipments()
+print len(equipments)
+services = generate_services()
+print len(services)
+
+sql_insert_code = generate_insert_sql(person_attributes, people, "Person")
+sql_insert_code += generate_insert_sql(band_attributes, bands, "Band")
+sql_insert_code += generate_insert_sql(equipment_attributes, equipments, "Equipment")
+sql_insert_code += generate_insert_sql(service_attributes, services, "Service")
+sql_insert_code += generate_insert_sql(client_attributes, clients, "Client")
+file = open("testing_sql_insert_code.sql","w")
 file.write(sql_insert_code)
 file.close()
