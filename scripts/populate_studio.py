@@ -100,7 +100,7 @@ def generate_services():
 
 def generate_agendas(services, bands, n):
     agendas = []
-    year = 2010
+    year = 1900
     for i in range(n):
         agendas.append([i+1,random.choice(services)[0], random.choice(bands)[0], 
                         str(year) + "-" + str(random.randint(1,12)) + "-" + str(random.randint(1,28)),\
