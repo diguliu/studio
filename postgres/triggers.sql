@@ -4,8 +4,8 @@
 /*-- Service Total Price Equipment Update --*/
 /*------------------------------------------*/
 
-create or replace function update_agenda() 
-returns trigger as $update_agenda$ 
+create or replace function update_agenda()
+returns trigger as $update_agenda$
 declare
 d integer;
 begin
@@ -31,8 +31,8 @@ for each row execute procedure update_agenda();
 /*-- Service Total Price --*/
 /*-------------------------*/
 
-create or replace function service_price() 
-returns trigger as $service_price$ 
+create or replace function service_price()
+returns trigger as $service_price$
 declare
 	service_price float;
 	equipments_price float;
@@ -62,8 +62,8 @@ for each row execute procedure service_price();
 /*-- Rent Total Price --*/
 /*----------------------*/
 
-create or replace function rent_price() 
-returns trigger as $rent_price$ 
+create or replace function rent_price()
+returns trigger as $rent_price$
 declare
 	equipments_price float;
 begin
@@ -85,3 +85,4 @@ language plpgsql;
 drop trigger if exists calculate_rent_price on client_rents_equipment;
 create trigger calculate_rent_price before update or insert on client_rents_equipment
 for each row execute procedure rent_price();
+

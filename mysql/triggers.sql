@@ -1,14 +1,5 @@
 /* Mysql */
 
-/*---------*/
-/*-- Age --*/
-/*---------*/
-
-CREATE TRIGGER Age_Calc BEFORE INSERT ON Person
-FOR EACH ROW
-SET NEW.Age =  FLOOR((DATEDIFF(CURDATE(), NEW.Birth_Date))/365);
-
-
 /*-------------------------*/
 /*-- Service Total Price --*/
 /*-------------------------*/
@@ -17,7 +8,7 @@ DELIMITER $
 CREATE TRIGGER total_service_price BEFORE UPDATE ON Agenda
      FOR EACH ROW
      BEGIN
-        
+
     SET @service_price = 0;
     SET @equipments_price = 0;
 
@@ -37,7 +28,7 @@ CREATE TRIGGER total_service_price BEFORE UPDATE ON Agenda
 	END IF;
 
     SET NEW.Total_Price = @service_price + @equipments_price;
-   
+
      END;$
 DELIMITER ;
 
@@ -45,7 +36,7 @@ DELIMITER $
 CREATE TRIGGER total_service_price BEFORE INSERT ON Agenda
      FOR EACH ROW
      BEGIN
-        
+
     SET @service_price = 0;
     SET @equipments_price = 0;
 
@@ -65,7 +56,7 @@ CREATE TRIGGER total_service_price BEFORE INSERT ON Agenda
 	END IF;
 
     SET NEW.Total_Price = @service_price + @equipments_price;
-   
+
      END;$
 DELIMITER ;
 
@@ -77,7 +68,7 @@ DELIMITER $
 CREATE TRIGGER total_rent_price BEFORE UPDATE ON Client_rents_Equipment
      FOR EACH ROW
      BEGIN
-        
+
     SET @equipments_price = 0;
 
     INSERT INTO @equipments_price
@@ -90,7 +81,7 @@ CREATE TRIGGER total_rent_price BEFORE UPDATE ON Client_rents_Equipment
 	END IF;
 
     SET NEW.Total_Price = @equipments_price;
-   
+
      END;$
 DELIMITER ;
 
@@ -98,7 +89,7 @@ DELIMITER $
 CREATE TRIGGER total_rent_price BEFORE INSERT ON Client_rents_Equipment
      FOR EACH ROW
      BEGIN
-        
+
     SET @equipments_price = 0;
 
     INSERT INTO @equipments_price
@@ -111,6 +102,6 @@ CREATE TRIGGER total_rent_price BEFORE INSERT ON Client_rents_Equipment
 	END IF;
 
     SET NEW.Total_Price = @equipments_price;
-   
+
      END;$
 DELIMITER ;

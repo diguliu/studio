@@ -1,11 +1,11 @@
 /* Postgres / Mysql */
 
-/*-------------------------------*/
-/*-- Informações sobre a banda --*/
-/*-------------------------------*/
+/*----------------------*/
+/*-- Band Information --*/
+/*----------------------*/
 
 CREATE OR REPLACE VIEW Band_Information AS
-SELECT Band.Name, Band.Style, Band.HomePage, Person.Name as Member_Name, Person.Phone1, Person.Email FROM Band
+SELECT Band.Name, Band.Login, Band.Style, Band.HomePage, Person.Name as Member_Name, Person.Phone1, Person.Email FROM Band
 INNER JOIN Band_Has_Member
 ON Band_Has_Member.Band_Login = Band.Login
 INNER JOIN Member
@@ -14,12 +14,12 @@ INNER JOIN Person
 ON Person.Cpf = Member.Person_Cpf
 Order by Band.Name asc;
 
-/*------------*/
-/*-- Agenda --*/
-/*------------*/
+/*------------------------*/
+/*-- Agenda Information --*/
+/*------------------------*/
 
-CREATE OR REPLACE VIEW Show_Agenda AS
-SELECT b.Name, a.Date, a.Time, a.Duration, a.Room, a.Status 
+CREATE OR REPLACE VIEW Agenda_Information AS
+SELECT b.Name, b.Login, a.Date, a.Time, a.Duration, a.Room, a.Status
 FROM Band b
 INNER JOIN Agenda a
 ON a.Band_Login = b.Login
