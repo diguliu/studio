@@ -1,0 +1,6 @@
+- Criar stored procedures para view.
+- Criar trigger no relacionamento de equipamento para atualizar alugueis.
+- Tratar exclusão nas triggers
+- Remover trigger de idade.
+- Criar trigger para criação de agenda setar o status.
+
