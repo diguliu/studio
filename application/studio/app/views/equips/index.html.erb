@@ -1,0 +1,18 @@
+<h1>Listing equips</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for equip in @equips %>
+  <tr>
+    <td><%= link_to 'Show', equip %></td>
+    <td><%= link_to 'Edit', edit_equip_path(equip) %></td>
+    <td><%= link_to 'Destroy', equip, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New equip', new_equip_path %>

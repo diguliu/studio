@@ -1,0 +1,17 @@
+p = Person.new(:name => "Rodrigo", :cpf => "03076884530", :gender => "male")
+p.save
+c = Client.new(:person_id => p.id, :login => "diguliu", :password => "1234")
+c.save
+b = Band.new(:name => "Pearl Jam", :login => "pearl_jam", :password => "1234")
+b.save
+s = Service.new(:name => "Ensaio", :price => 30)
+s.save
+e1 = Equip.new(:internal_price => 3, :external_price => 30)
+e1.save
+e2 = Equip.new(:internal_price => 2, :external_price => 20)
+e2.save
+a = Agenda.new(:start => Time.now, :duration => 3, :room => 1, :status => "reserved", :band => Band.first, :service => Service.first)
+a.save
+c.external_rents << ExternalRent.new(:start => Time.now, :duration => 3, :status => "reserved", :price => e1.external_price*3, :client => c, :equip => e1)
+a.internal_rents << InternalRent.new(:start => Time.now, :duration => 3, :agenda => a, :equip => e2)
+

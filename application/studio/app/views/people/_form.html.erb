@@ -1,0 +1,82 @@
+<% form_for(@person) do |f| %>
+
+  <table width="400">
+    <tr>
+      <td>
+        <%= f.error_messages %>
+        <font color="red">*</font>
+        <%= f.label :cpf, "Cpf: " %>  
+      </td>
+      <td>
+        <%= f.text_field :cpf %>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <font color="red">*</font>
+        <%= f.label :name, "Name: " %>  
+      </td>
+      <td>
+        <%= f.text_field :name %>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <%= f.label :address, "Address: " %> 
+      </td>
+      <td>
+        <%= f.text_area :address, :cols => 34, :rows => 3 %>  
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <%= f.label :email, "Email: " %>  
+      </td>
+      <td>
+        <%= f.text_field :email %>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        Gender: 
+      </td>
+      <td>
+        <%= f.label :gender_male, 'Male: ' %>
+        <%= f.radio_button :gender, 'male', :checked => true  %>  
+        <%= f.label :gender_female, 'Female: ' %>
+        <%= f.radio_button :gender, 'female' %>  
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :phone1, "Phone 1: " %>  
+      </td>
+      <td>
+        <%= f.text_field :phone1 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :phone2, "Phone 2: " %>  
+      </td>
+      <td>
+        <%= f.text_field :phone2 %>
+      </td>
+    </tr>
+  </table>
+
+  <p><font color="red">* Required Fields</font></p>
+
+  <%= f.submit @submit_message %>
+
+<% end %>

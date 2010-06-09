@@ -1,8 +1,8 @@
 class CreateMembers < ActiveRecord::Migration
   def self.up
     create_table :members do |t|
-      t.string  :person_cpf, :null => false 
       t.timestamps
+      t.references :person
     end
   end
 

@@ -1,6 +1,7 @@
 class CreateBands < ActiveRecord::Migration
   def self.up
-    create_table :bands, :primary_key => :login do |t|
+    create_table :bands do |t|
+      t.string :login, :null => false
       t.string :name, :null => false
       t.string :style
       t.string :homepage

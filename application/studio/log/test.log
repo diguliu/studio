@@ -1,0 +1,166 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "agendas" [0m
+
+
+Processing AgendasController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"agenda"=>{}}
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://test.host/agendas?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "agendas" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "agendas" [0m
+
+
+Processing AgendasController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;35;1mAgenda Load (0.2ms)[0m   [0mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/agendas]
+
+
+Processing AgendasController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/agendas/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "bands" [0m
+
+
+Processing BandsController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"band"=>{}}
+  [4;35;1mBand Exists (0.1ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" IS NULL) LIMIT 1[0m
+Rendering template within layouts/bands
+Rendering bands/new
+Completed in 63ms (View: 4, DB: 0) | 200 OK [http://test.host/bands?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "bands" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "bands" [0m
+
+
+Processing BandsController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/bands]
+
+
+Processing BandsController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/bands/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+
+
+Processing ClientsController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"client"=>{}}
+  [4;36;1mClient Exists (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" IS NULL) LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://test.host/clients?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+
+
+Processing ClientsController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/clients]
+
+
+Processing ClientsController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/clients/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "equips" [0m
+
+
+Processing EquipsController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"equip"=>{}}
+Rendering template within layouts/equips
+Rendering equips/new
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://test.host/equips?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "equips" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "equips" [0m
+
+
+Processing EquipsController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;35;1mEquip Load (0.2ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/equips]
+
+
+Processing EquipsController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/equips/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "members" [0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"member"=>{}}
+Rendering template within layouts/members
+Rendering members/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://test.host/members?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "members" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "members" [0m
+
+
+Processing MembersController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT * FROM "members" [0m
+Rendering template within layouts/members
+Rendering members/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/members]
+
+
+Processing MembersController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/members
+Rendering members/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/members/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "people" [0m
+
+
+Processing PeopleController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"person"=>{}}
+  [4;35;1mPerson Exists (0.1ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" IS NULL) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (6.5ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://test.host/people?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "people" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "people" [0m
+
+
+Processing PeopleController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;36;1mPerson Load (0.2ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/people]
+
+
+Processing PeopleController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (5.0ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/people/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "services" [0m
+
+
+Processing ServicesController#create (for 0.0.0.0 at 2010-06-09 16:47:23) [POST]
+  Parameters: {"service"=>{}}
+Rendering template within layouts/services
+Rendering services/new
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://test.host/services?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "services" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "services" [0m
+
+
+Processing ServicesController#index (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+  [4;36;1mService Load (0.2ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/services]
+
+
+Processing ServicesController#new (for 0.0.0.0 at 2010-06-09 16:47:23) [GET]
+Rendering template within layouts/services
+Rendering services/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/services/new]

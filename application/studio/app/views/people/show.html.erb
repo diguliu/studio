@@ -1,0 +1,26 @@
+<h1><%= @person.name %></h1>
+
+<b>Cpf: </b> <%= @person.cpf %><br />
+
+<% if !@person.address.blank? %>
+  <b>Address: </b> <%= @person.address %><br />
+<% end %>
+
+<% if !@person.email.blank? %>
+  <b>Email: </b> <%= @person.email %><br />
+<% end %>
+
+<% if !@person.gender.blank? %>
+  <b>Gender: </b> <%= @person.gender %><br />
+<% end %>
+
+<% if !@person.phone1.blank? %>
+  <b>Phone 1: </b> <%= @person.phone1 %><br />
+<% end %>
+
+<% if !@person.phone2.blank? %>
+  <b>Phone 2: </b> <%= @person.phone2 %><br />
+<% end %>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

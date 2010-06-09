@@ -1,0 +1,26 @@
+<h1>Listing people</h1>
+<%= link_to 'Home', root_path %>
+
+<% if @people.blank? %>
+	<p>There is nobody registered.</p>
+
+<% else %>
+	<p>These are the current registered people:</p>
+<table>
+  <tr>
+  </tr>
+
+<% for person in @people %>
+  <tr>
+    <td> <%= person.name %> </td>
+    <td><%= link_to 'Show', person %></td>
+    <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+
+<br />
+
+<%= link_to 'New person', new_person_path %>

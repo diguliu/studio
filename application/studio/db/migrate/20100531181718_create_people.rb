@@ -1,6 +1,7 @@
 class CreatePeople < ActiveRecord::Migration
   def self.up
-    create_table :people, :primary_key => :cpf do |t|
+    create_table :people do |t|
+      t.string  :cpf, :null => false
       t.string  :name, :null => false
       t.text    :address
       t.string  :email

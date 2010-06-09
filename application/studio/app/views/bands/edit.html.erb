@@ -1,0 +1,12 @@
+<h1>Editing band</h1>
+
+<% form_for(@band) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @band %> |
+<%= link_to 'Back', bands_path %>
