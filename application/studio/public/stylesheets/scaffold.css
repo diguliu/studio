@@ -51,10 +51,26 @@ pre {
   font-size: 11px;
 }
 
-.fieldWithErrors {
-  padding: 2px;
+.fields {
+  clear: both;
+}
+
+.required {
+  margin-right: -2px;
+}
+
+.required .field_label {
+  margin-right: -7px;
+}
+
+.field_label {
+  height: 100%;
+  width: 200px;
+  float: left;
+}
+
+.fieldWithErrors .field_label {
   background-color: red;
-  display: table;
 }
 
 #errorExplanation {
