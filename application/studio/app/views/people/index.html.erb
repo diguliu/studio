@@ -1,5 +1,4 @@
 <h1>Listing people</h1>
-<%= link_to 'Home', root_path %>
 
 <% if @people.blank? %>
 	<p>There is nobody registered.</p>
@@ -24,3 +23,4 @@
 <br />
 
 <%= link_to 'New person', new_person_path %>
+<%= link_to 'Home', root_path %>

@@ -1,3 +1,45 @@
+<h1><%= @band.name %></h1>
+
+<b>Login: </b> <%= @band.login %><br />
+
+<% if !@band.style.blank? %>
+  <b>Style: </b> <%= @band.style %><br />
+<% end %>
+
+<% if !@band.homepage.blank? %>
+  <b>Homepage: </b> <%= @band.homepage %><br />
+<% end %>
+
+<% @aux = @people %>
+
+<% if @band.people.length > 0 %>
+  <b>Members:</b>
+  <% @band.people.each do |person| %><br />
+    <li><%= link_to(person.name, person) %></li>
+    <% @aux.delete(person) %>
+  <% end %>
+<% end %>
+
+<div class=cool_box>
+  <b>Add member: </b>
+  <% form_tag :action => "add" do %>
+    <%= hidden_field "band", "id", :id => @band.id %>
+    <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
+    <br /><br />
+    <%= submit_tag "Add" %>
+  <% end %>
+</div>
+<br /><br />
+<div class=cool_box>
+  <b> Remove member: </b>
+  <% form_tag :action => "remove" do %>
+    <%= hidden_field "band", "id", :id => @band.id %>
+    <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
+    <br /><br />
+    <%= submit_tag "Remove" %>
+  <% end %>
+</div>
+
 
 <%= link_to 'Edit', edit_band_path(@band) %> |
 <%= link_to 'Back', bands_path %>

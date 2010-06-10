@@ -14,6 +14,7 @@ class BandsController < ApplicationController
   # GET /bands/1.xml
   def show
     @band = Band.find(params[:id])
+    @people = Person.find(:all)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -82,4 +83,39 @@ class BandsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def add
+    @member = Person.find(params[:person][:id])
+    @band = Band.find(params[:band][:id])
+
+    respond_to do |format|
+      if @band.people << @member
+        flash[:notice] = "Member added to the band."
+        format.html {redirect_to(@band)}
+        format.xml {head :ok}
+      else
+        flash[:notice] = "Failed to add member to the band."
+        format.html {redirect_to(@band)}
+        format.xml  { render :xml => @band.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def remove
+    @person = Person.find(params[:person][:id])
+    @band = Band.find(params[:band][:id])
+
+    respond_to do |format|
+      if @band.people.delete(@member)
+        flash[:notice] = "Member removed from the band."
+        format.html {redirect_to(@band)}
+        format.xml {head :ok}
+      else
+        flash[:notice] = "Failed to remove member from the band."
+        format.html {redirect_to(@band)}
+        format.xml  { render :xml => @band.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
 end

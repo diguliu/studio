@@ -7,8 +7,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :bands
 
-  map.resources :members
-
   map.resources :clients
 
   map.resources :people

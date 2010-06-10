@@ -1,18 +1,25 @@
 <h1>Listing bands</h1>
 
-<table>
-  <tr>
-  </tr>
+<% if @bands.blank? %>
+  <p>There is no band registered.</p>
 
-<% for band in @bands %>
-  <tr>
-    <td><%= link_to 'Show', band %></td>
-    <td><%= link_to 'Edit', edit_band_path(band) %></td>
-    <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% else %>
+  <table>
+    <tr>
+    </tr>
+
+    <% for band in @bands %>
+      <tr>
+        <td><%= band.name %></td>
+        <td><%= link_to 'Show', band %></td>
+        <td><%= link_to 'Edit', edit_band_path(band) %></td>
+        <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
 <% end %>
-</table>
 
 <br />
 
 <%= link_to 'New band', new_band_path %>
+<%= link_to 'Home', root_path %>

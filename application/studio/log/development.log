@@ -6058,3 +6058,2989 @@ Processing PeopleController#show (for 127.0.0.1 at 2010-06-09 20:11:22) [GET]
 Rendering template within layouts/people
 Rendering people/show
 Completed in 18ms (View: 6, DB: 0) | 200 OK [http://localhost/people/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-09 23:25:26) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 34ms (View: 29, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-09 23:25:33) [GET]
+  [4;36;1mBand Load (1.0ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 91ms (View: 80, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:25:36) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+
+
+ActionView::TemplateError (undefined method `address' for #<Band:0xb659f7d4>) on line #54 of app/views/bands/_form.html.erb:
+51:         <%= f.label :address, "Address: " %> 
+52:       </td>
+53:       <td>
+54:         <%= f.text_area :address, :cols => 34, :rows => 3 %>  
+55:       </td>
+56:     </tr>
+57: 
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:653:in `send'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:653:in `value_before_type_cast'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:641:in `value_before_type_cast'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:593:in `to_text_area_tag'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:441:in `text_area'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:745:in `send'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:745:in `text_area'
+    app/views/bands/_form.html.erb:54
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/bands/_form.html.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/bands/new.html.erb:4
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (36.6ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:26:01) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.9ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-09 23:26:09) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-09 23:26:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.6ms)
+Completed in 24ms (View: 13, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-09 23:26:17) [GET]
+  [4;35;1mBand Load (0.8ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:26:18) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.2ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:26:40) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.8ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:27:03) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.8ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:27:28) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (7.0ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:29:03) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.4ms)
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-06-09 23:29:41) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"123", "homepage"=>"", "password"=>"1234", "login"=>"pearl_jam", "style"=>""}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;36;1mBand Exists (0.4ms)[0m   [0;1mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam') LIMIT 1[0m
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (9.4ms)
+Completed in 101ms (View: 19, DB: 0) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-09 23:30:49) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-09 23:30:53) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-09 23:30:58) [GET]
+  [4;36;1mPerson Load (1.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 51ms (View: 20, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:31:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.9ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.5ms)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:31:07) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.4ms)
+Completed in 31ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:31:46) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.4ms)
+Completed in 33ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:31:58) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (13.4ms)
+Completed in 38ms (View: 20, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:32:07) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.1ms)
+Completed in 32ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:32:40) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (1.0ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.0ms)
+Completed in 103ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:33:30) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.9ms)
+Completed in 37ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:33:46) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.6ms)
+Completed in 32ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:33:55) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.3ms)
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:35:58) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (77.3ms)
+Completed in 101ms (View: 84, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-09 23:36:08) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-09 23:36:10) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-09 23:36:13) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-09 23:36:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.0ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-09 23:36:18) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.7ms)
+Completed in 83ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-06-09 23:36:21) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"", "password_confirmation"=>"", "homepage"=>"", "password"=>"", "login"=>"", "style"=>""}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mBand Exists (0.2ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = '') LIMIT 1[0m
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (7.6ms)
+Completed in 33ms (View: 13, DB: 0) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-06-09 23:37:24) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"", "password_confirmation"=>"", "homepage"=>"", "password"=>"", "login"=>"", "style"=>""}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;36;1mBand Exists (0.2ms)[0m   [0;1mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = '') LIMIT 1[0m
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (7.7ms)
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://localhost/bands]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-09 23:40:55) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-09 23:40:57) [GET]
+  [4;35;1mPerson Load (0.8ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-06-09 23:40:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:41:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.3ms)
+Completed in 25ms (View: 14, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-09 23:48:32) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:48:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.1ms)
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:49:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (2.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.9ms)
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:49:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.5ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:51:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.6ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:51:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.7ms)
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:54:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.6ms)
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:55:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (10.2ms)
+Completed in 29ms (View: 16, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:55:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.0ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:55:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.9ms)
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:55:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.8ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:55:48) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.4ms)
+Completed in 92ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:56:27) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (13.1ms)
+Completed in 40ms (View: 19, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:56:55) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.4ms)
+Completed in 34ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:57:06) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.3ms)
+Completed in 32ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:57:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.5ms)
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-09 23:58:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.2ms)
+Completed in 26ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:58:09) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.3ms)
+Completed in 33ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-09 23:58:25) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.3ms)
+Completed in 33ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:00:16) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (1.6ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.1ms)
+Completed in 33ms (View: 14, DB: 2) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:03:43) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.4ms)
+Completed in 34ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:05:50) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.3ms)
+Completed in 33ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:05:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.8ms)
+Completed in 27ms (View: 18, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:06:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.6ms)
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 00:06:45) [GET]
+  [4;35;1mPerson Load (0.8ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/people/]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:06:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.4ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:11:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.7ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:11:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.9ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:11:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (10.2ms)
+Completed in 87ms (View: 77, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:12:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.7ms)
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:16:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.1ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:17:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+ERROR: compiling _run_erb_app47views47people47_form46html46erb_locals_form_object RAISED compile error
+/home/rodrigo/projetos/studio/application/studio/app/views/people/_form.html.erb:27: syntax error, unexpected ')'
+...abel :gender_male, 'Male: ', ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47people47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];form = local_assigns[:form];;@output_buffer = '';  __in_erb_template=true ;  form_for(@person) do |f| ; @output_buffer.concat "\n\n  "
+
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <div class=\"field required\"> \n    "
+
+
+; @output_buffer.concat(( f.label :cpf, "Cpf: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.text_field :cpf ).to_s); @output_buffer.concat "\n  </div>\n\n  <div class=\"field required\"> \n    "
+
+
+
+; @output_buffer.concat(( f.label :name, "Name: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.text_field :name ).to_s); @output_buffer.concat "\n  </div>\n\n  <div class=\"field\"> \n    "
+
+
+
+; @output_buffer.concat(( f.label :address, "Address: ", :class => "field_label" ).to_s); @output_buffer.concat " \n    "
+; @output_buffer.concat(( f.text_area :address, :cols => 34, :rows => 3 ).to_s); @output_buffer.concat "  \n  </div>\n\n  <div class=\"field\"> \n    "
+
+
+
+; @output_buffer.concat(( f.label :email, "Email: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n  </div>\n\n  <div class=\"field\"> \n    <span class=\"field_label\">Gender: </div>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :gender_male, 'Male: ', ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.radio_button :gender, 'male', :checked => true  ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.label :gender_female, 'Female: ' ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.radio_button :gender, 'female' ).to_s); @output_buffer.concat "  \n  </div>\n\n  <div class=\"field\"> \n    "
+
+
+
+; @output_buffer.concat(( f.label :phone1, "Phone 1: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.text_field :phone1 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div class=\"field\"> \n    "
+
+
+
+; @output_buffer.concat(( f.label :phone2, "Phone 2: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.text_field :phone2 ).to_s); @output_buffer.concat "\n  </div>\n\n  <p><font color=\"red\">* Required Fields</font></p>\n\n  "
+
+
+
+
+; @output_buffer.concat(( f.submit @submit_message ).to_s); @output_buffer.concat "\n\n"
+
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rodrigo/projetos/studio/application/studio/app/views/people/_form.html.erb:51:in `compile!'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/home/rodrigo/projetos/studio/application/studio/app/views/people/edit.html.erb:4:in `_run_erb_app47views47people47edit46html46erb'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+/usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:282
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rodrigo/projetos/studio/application/studio/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/rodrigo/projetos/studio/application/studio/app/views/people/_form.html.erb:27: syntax error, unexpected ')'
+...abel :gender_male, 'Male: ', ).to_s); @output_buffer.concat ...
+                              ^) on line #27 of app/views/people/_form.html.erb:
+24: 
+25:   <div class="field"> 
+26:     <span class="field_label">Gender: </div>
+27:     <%= f.label :gender_male, 'Male: ', %>
+28:     <%= f.radio_button :gender, 'male', :checked => true  %>  
+29:     <%= f.label :gender_female, 'Female: ' %>
+30:     <%= f.radio_button :gender, 'female' %>  
+
+    app/views/people/_form.html.erb:51:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/people/edit.html.erb:4
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (99.2ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:17:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.8ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:18:23) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.9ms)
+Completed in 30ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:18:36) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.1ms)
+Completed in 30ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:18:52) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (78.2ms)
+Completed in 102ms (View: 85, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:20:37) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.4ms)
+Completed in 33ms (View: 15, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:21:47) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.3ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.7ms)
+Completed in 34ms (View: 16, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:22:02) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (12.8ms)
+Completed in 35ms (View: 18, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:23:01) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (7.8ms)
+Completed in 30ms (View: 14, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:24:59) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (10.9ms)
+Completed in 39ms (View: 17, DB: 1) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-06-10 00:25:08) [PUT]
+  Parameters: {"person"=>{"address"=>"", "name"=>"", "cpf"=>"03076884530", "phone1"=>"", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mPerson Load (3.1ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Exists (0.4ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530' AND "people".id <> 1) LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.0ms)
+Completed in 37ms (View: 16, DB: 3) | 200 OK [http://localhost/people/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 00:25:18) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 00:25:19) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-06-10 00:25:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:25:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.2ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:26:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.9ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:27:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.8ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:27:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (71.5ms)
+Completed in 88ms (View: 78, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:28:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.1ms)
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:30:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.8ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:30:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.9ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:30:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.2ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:30:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.2ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:30:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.0ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 00:30:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (9.1ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 00:33:41) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:33:44) [GET]
+  [4;35;1mBand Load (1.0ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 80ms (View: 10, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-10 00:33:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.6ms)
+Completed in 25ms (View: 14, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-10 00:34:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.7ms)
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-10 00:35:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (8.4ms)
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-10 00:35:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.4ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#update (for 127.0.0.1 at 2010-06-10 00:35:33) [PUT]
+  Parameters: {"commit"=>"Update", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"", "homepage"=>"", "password"=>"1234", "login"=>"pearl_jam", "style"=>""}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mBand Exists (0.2ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam' AND "bands".id <> 1) LIMIT 1[0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.6ms)
+Completed in 32ms (View: 13, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#update (for 127.0.0.1 at 2010-06-10 00:38:37) [PUT]
+  Parameters: {"commit"=>"Update", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"12345", "homepage"=>"", "password"=>"12345", "login"=>"pearl_jam", "style"=>""}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mBand Exists (0.2ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam' AND "bands".id <> 1) LIMIT 1[0m
+  [4;36;1mBand Update (0.3ms)[0m   [0;1mUPDATE "bands" SET "updated_at" = '2010-06-10 03:38:37', "homepage" = '', "password" = '12345', "style" = '' WHERE "id" = 1[0m
+Redirected to #<Band:0xb657036c>
+Completed in 84ms (DB: 1) | 302 Found [http://localhost/bands/1]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:38:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-06-10 00:38:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+Rendered bands/_form (7.3ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#update (for 127.0.0.1 at 2010-06-10 00:38:56) [PUT]
+  Parameters: {"commit"=>"Update", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"12345", "homepage"=>"www.pearljam.com", "password"=>"12345", "login"=>"pearl_jam", "style"=>"Rock"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mBand Exists (0.2ms)[0m   [0;1mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam' AND "bands".id <> 1) LIMIT 1[0m
+  [4;35;1mBand Update (0.3ms)[0m   [0mUPDATE "bands" SET "updated_at" = '2010-06-10 03:38:56', "homepage" = 'www.pearljam.com', "style" = 'Rock' WHERE "id" = 1[0m
+Redirected to #<Band:0xb673a288>
+Completed in 65ms (DB: 1) | 302 Found [http://localhost/bands/1]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:38:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:39:02) [GET]
+  [4;35;1mBand Load (0.8ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:43:57) [GET]
+  [4;36;1mBand Load (0.7ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:44:34) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:44:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM "members" INNER JOIN "bands_members" ON "members".id = "bands_members".member_id WHERE ("bands_members".band_id = 1 ) [0m
+Completed in 35ms (View: 23, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:45:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT * FROM "members" INNER JOIN "bands_members" ON "members".id = "bands_members".member_id WHERE ("bands_members".band_id = 1 ) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/bands/1]
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM "members" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" LIMIT 1[0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" LIMIT 1[0m
+  [4;36;1mMember Create (0.7ms)[0m   [0;1mINSERT INTO "members" ("created_at", "updated_at", "person_id") VALUES('2010-06-10 03:46:17', '2010-06-10 03:46:17', 1)[0m
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" LIMIT 1[0m
+  [4;36;1mBand Load (0.6ms)[0m   [0;1mSELECT * FROM "bands" LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "bands_members" ("member_id", "band_id") VALUES (1, 1)[0m
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM "members" INNER JOIN "bands_members" ON "members".id = "bands_members".member_id WHERE ("bands_members".band_id = 1 ) [0m
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:46:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM "members" INNER JOIN "bands_members" ON "members".id = "bands_members".member_id WHERE ("bands_members".band_id = 1 ) [0m
+
+
+ActionView::TemplateError (undefined method `name' for #<Member:0xb645c584>) on line #16 of app/views/bands/show.html.erb:
+13: <% if @band.members.length > 0 %>
+14:   <p><b>Members:</b></p>
+15:   <% @band.members.each do |member| %><br />
+16:     <li><%= link_to(member.name, member) %></li>
+17:   <% end %>
+18: <% end %>
+19: 
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/bands/show.html.erb:16
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `each'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `send'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    app/views/bands/show.html.erb:15
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:18:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (95.8ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:47:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM "members" INNER JOIN "bands_members" ON "members".id = "bands_members".member_id WHERE ("bands_members".band_id = 1 ) [0m
+
+
+ActionView::TemplateError (undefined method `person' for #<Member:0xb6632520>) on line #16 of app/views/bands/show.html.erb:
+13: <% if @band.members.length > 0 %>
+14:   <p><b>Members:</b></p>
+15:   <% @band.members.each do |member| %><br />
+16:     <li><%= link_to(member.person.name, member.person) %></li>
+17:   <% end %>
+18: <% end %>
+19: 
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/bands/show.html.erb:16
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `each'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `send'
+    vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    app/views/bands/show.html.erb:15
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:18:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (31.0ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (109.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (89.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100531181718)
+  [4;36;1mSQL (91.5ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "address" text, "email" varchar(255), "gender" varchar(255), "phone1" varchar(255), "phone2" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (46.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531181718')[0m
+Migrating to CreateBands (20100531184337)
+  [4;36;1mSQL (105.2ms)[0m   [0;1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "style" varchar(255), "homepage" varchar(255), "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (45.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531184337')[0m
+Migrating to CreateServices (20100531185228)
+  [4;36;1mSQL (116.7ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "price" float NOT NULL, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (67.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531185228')[0m
+Migrating to CreateClients (20100531190606)
+  [4;36;1mSQL (94.3ms)[0m   [0;1mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "person_id" integer) [0m
+  [4;35;1mSQL (56.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531190606')[0m
+Migrating to CreateAgendas (20100531191234)
+  [4;36;1mSQL (93.6ms)[0m   [0;1mCREATE TABLE "agendas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime NOT NULL, "duration" integer NOT NULL, "room" integer NOT NULL, "status" varchar(255) NOT NULL, "total_price" float, "created_at" datetime, "updated_at" datetime, "band_id" integer, "service_id" integer) [0m
+  [4;35;1mSQL (89.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531191234')[0m
+Migrating to CreateEquips (20100609191940)
+  [4;36;1mSQL (105.9ms)[0m   [0;1mCREATE TABLE "equips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar(255), "description" varchar(255), "type" varchar(255), "external_price" float NOT NULL, "internal_price" float NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (55.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609191940')[0m
+Migrating to CreateInternalRents (20100609202534)
+  [4;36;1mSQL (105.1ms)[0m   [0;1mCREATE TABLE "internal_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "agenda_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (56.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202534')[0m
+Migrating to CreateExternalRents (20100609202554)
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE "external_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "status" varchar(255), "price" float, "client_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (56.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202554')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("agendas")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("equips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("external_rents")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("internal_rents")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("services")[0m
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:52:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=1):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1528:in `find_one'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1511:in `find_from_ids'
+    /vendor/rails/activerecord/lib/active_record/base.rb:590:in `find'
+    /app/controllers/bands_controller.rb:16:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (25.2ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:52:43) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-10 00:52:43) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 00:52:50) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-10 00:52:50) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 00:53:13) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:53:15) [GET]
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-10 00:53:17) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (6.8ms)
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-10 00:53:53) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (7.0ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-06-10 00:55:05) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"12345", "homepage"=>"www.pearljam.com", "password"=>"12345", "login"=>"pearl_jam", "style"=>"Rock"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mBand Exists (0.1ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam') LIMIT 1[0m
+  [4;36;1mBand Create (0.3ms)[0m   [0;1mINSERT INTO "bands" ("name", "created_at", "updated_at", "homepage", "login", "password", "style") VALUES('Pearl Jam', '2010-06-10 03:55:05', '2010-06-10 03:55:05', 'www.pearljam.com', 'pearl_jam', '12345', 'Rock')[0m
+Redirected to #<Band:0xb66e6db8>
+Completed in 76ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:55:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+
+
+ActionView::TemplateError (undefined method `people' for #<Band:0xb660ccbc>) on line #13 of app/views/bands/show.html.erb:
+10:   <b>Homepage: </b> <%= @band.homepage %><br />
+11: <% end %>
+12: 
+13: <% if @band.people.length > 0 %>
+14:   <p><b>Members:</b></p>
+15:   <% @band.people.each do |person| %><br />
+16:     <li><%= link_to(person.name, person) %></li>
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/bands/show.html.erb:13
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:18:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (28.6ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:56:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+
+
+ActionView::TemplateError (Could not find table 'bands_people') on line #13 of app/views/bands/show.html.erb:
+10:   <b>Homepage: </b> <%= @band.homepage %><br />
+11: <% end %>
+12: 
+13: <% if @band.people.length > 0 %>
+14:   <p><b>Members:</b></p>
+15:   <% @band.people.each do |person| %><br />
+16:     <li><%= link_to(person.name, person) %></li>
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    vendor/rails/activesupport/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    vendor/rails/activerecord/lib/active_record/reflection.rb:202:in `columns'
+    vendor/rails/activerecord/lib/active_record/associations/has_and_belongs_to_many_association.rb:13:in `columns'
+    vendor/rails/activerecord/lib/active_record/associations/has_and_belongs_to_many_association.rb:112:in `finding_with_ambiguous_select?'
+    vendor/rails/activerecord/lib/active_record/associations/has_and_belongs_to_many_association.rb:23:in `construct_find_options!'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:54:in `find'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:390:in `find_target'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:344:in `load_target'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:278:in `length'
+    app/views/bands/show.html.erb:13
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:18:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (35.7ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (141.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (89.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100531181718)
+  [4;36;1mSQL (113.8ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "address" text, "email" varchar(255), "gender" varchar(255), "phone1" varchar(255), "phone2" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (78.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531181718')[0m
+Migrating to CreateBands (20100531184337)
+  [4;36;1mSQL (116.7ms)[0m   [0;1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "style" varchar(255), "homepage" varchar(255), "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (79.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531184337')[0m
+Migrating to CreateServices (20100531185228)
+  [4;36;1mSQL (127.8ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "price" float NOT NULL, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (78.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531185228')[0m
+Migrating to CreateClients (20100531190606)
+  [4;36;1mSQL (150.3ms)[0m   [0;1mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "person_id" integer) [0m
+  [4;35;1mSQL (89.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531190606')[0m
+Migrating to CreateAgendas (20100531191234)
+  [4;36;1mSQL (127.1ms)[0m   [0;1mCREATE TABLE "agendas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime NOT NULL, "duration" integer NOT NULL, "room" integer NOT NULL, "status" varchar(255) NOT NULL, "total_price" float, "created_at" datetime, "updated_at" datetime, "band_id" integer, "service_id" integer) [0m
+  [4;35;1mSQL (78.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531191234')[0m
+Migrating to CreateEquips (20100609191940)
+  [4;36;1mSQL (141.7ms)[0m   [0;1mCREATE TABLE "equips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar(255), "description" varchar(255), "type" varchar(255), "external_price" float NOT NULL, "internal_price" float NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (78.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609191940')[0m
+Migrating to CreateInternalRents (20100609202534)
+  [4;36;1mSQL (138.7ms)[0m   [0;1mCREATE TABLE "internal_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "agenda_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (78.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202534')[0m
+Migrating to CreateExternalRents (20100609202554)
+  [4;36;1mSQL (127.6ms)[0m   [0;1mCREATE TABLE "external_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "status" varchar(255), "price" float, "client_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (89.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202554')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("agendas")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("equips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("external_rents")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("internal_rents")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("services")[0m
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:57:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=1):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1528:in `find_one'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1511:in `find_from_ids'
+    /vendor/rails/activerecord/lib/active_record/base.rb:590:in `find'
+    /app/controllers/bands_controller.rb:16:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (22.7ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 00:57:44) [GET]
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/bands/]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-10 00:57:47) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (7.1ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-06-10 00:57:58) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"teste", "homepage"=>"www.pearljam.com", "password"=>"teste", "login"=>"pearl_jam", "style"=>"Rock"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mBand Exists (0.1ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam') LIMIT 1[0m
+  [4;36;1mBand Create (0.2ms)[0m   [0;1mINSERT INTO "bands" ("name", "created_at", "updated_at", "homepage", "login", "password", "style") VALUES('Pearl Jam', '2010-06-10 03:57:58', '2010-06-10 03:57:58', 'www.pearljam.com', 'pearl_jam', 'teste', 'Rock')[0m
+Redirected to #<Band:0xb65f77f4>
+Completed in 72ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 00:57:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+
+
+ActionView::TemplateError (Could not find table 'bands_people') on line #13 of app/views/bands/show.html.erb:
+10:   <b>Homepage: </b> <%= @band.homepage %><br />
+11: <% end %>
+12: 
+13: <% if @band.people.length > 0 %>
+14:   <p><b>Members:</b></p>
+15:   <% @band.people.each do |person| %><br />
+16:     <li><%= link_to(person.name, person) %></li>
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    vendor/rails/activesupport/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    vendor/rails/activerecord/lib/active_record/reflection.rb:202:in `columns'
+    vendor/rails/activerecord/lib/active_record/associations/has_and_belongs_to_many_association.rb:13:in `columns'
+    vendor/rails/activerecord/lib/active_record/associations/has_and_belongs_to_many_association.rb:112:in `finding_with_ambiguous_select?'
+    vendor/rails/activerecord/lib/active_record/associations/has_and_belongs_to_many_association.rb:23:in `construct_find_options!'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:54:in `find'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:390:in `find_target'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:344:in `load_target'
+    vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:278:in `length'
+    app/views/bands/show.html.erb:13
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:18:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (32.5ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mBand Load (0.8ms)[0m   [0;1mSELECT * FROM "bands" LIMIT 1[0m
+  [4;35;1mBand Load (0.6ms)[0m   [0mSELECT * FROM "bands" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (114.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (89.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100531181718)
+  [4;36;1mSQL (90.3ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "address" text, "email" varchar(255), "gender" varchar(255), "phone1" varchar(255), "phone2" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (56.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531181718')[0m
+Migrating to CreateBands (20100531184337)
+  [4;36;1mSQL (116.1ms)[0m   [0;1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "style" varchar(255), "homepage" varchar(255), "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (67.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531184337')[0m
+Migrating to CreateServices (20100531185228)
+  [4;36;1mSQL (127.8ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "price" float NOT NULL, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (90.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531185228')[0m
+Migrating to CreateClients (20100531190606)
+  [4;36;1mSQL (105.5ms)[0m   [0;1mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "person_id" integer) [0m
+  [4;35;1mSQL (56.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531190606')[0m
+Migrating to CreateAgendas (20100531191234)
+  [4;36;1mSQL (115.8ms)[0m   [0;1mCREATE TABLE "agendas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime NOT NULL, "duration" integer NOT NULL, "room" integer NOT NULL, "status" varchar(255) NOT NULL, "total_price" float, "created_at" datetime, "updated_at" datetime, "band_id" integer, "service_id" integer) [0m
+  [4;35;1mSQL (56.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531191234')[0m
+Migrating to CreateEquips (20100609191940)
+  [4;36;1mSQL (105.3ms)[0m   [0;1mCREATE TABLE "equips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar(255), "description" varchar(255), "type" varchar(255), "external_price" float NOT NULL, "internal_price" float NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (56.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609191940')[0m
+Migrating to CreateInternalRents (20100609202534)
+  [4;36;1mSQL (116.4ms)[0m   [0;1mCREATE TABLE "internal_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "agenda_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (56.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202534')[0m
+Migrating to CreateExternalRents (20100609202554)
+  [4;36;1mSQL (148.8ms)[0m   [0;1mCREATE TABLE "external_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "status" varchar(255), "price" float, "client_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (67.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202554')[0m
+Migrating to BandsPeople (20100610035917)
+  [4;36;1mSQL (161.5ms)[0m   [0;1mCREATE TABLE "bands_people" ("band_id" integer, "person_id" integer) [0m
+  [4;35;1mSQL (123.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100610035917')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("agendas")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("bands_people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("equips")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("external_rents")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("internal_rents")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("services")[0m
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 01:01:04) [GET]
+  [4;36;1mBand Load (0.6ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-06-10 01:01:06) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+Rendered bands/_form (7.7ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-06-10 01:01:19) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"Pearl Jam", "password_confirmation"=>"teste", "homepage"=>"www.pearljam.com", "password"=>"teste", "login"=>"pearl_jam", "style"=>"Rock"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mBand Exists (0.1ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."login" = 'pearl_jam') LIMIT 1[0m
+  [4;36;1mBand Create (0.2ms)[0m   [0;1mINSERT INTO "bands" ("name", "created_at", "updated_at", "homepage", "login", "password", "style") VALUES('Pearl Jam', '2010-06-10 04:01:19', '2010-06-10 04:01:19', 'www.pearljam.com', 'pearl_jam', 'teste', 'Rock')[0m
+Redirected to #<Band:0xb653a08c>
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:01:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mPerson Load (0.2ms)[0m   [0;1mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 01:01:25) [GET]
+  [4;35;1mBand Load (1.0ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 01:02:46) [GET]
+  [4;36;1mBand Load (0.8ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 01:03:03) [GET]
+  [4;35;1mBand Load (0.8ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 01:03:22) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 01:03:24) [GET]
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-06-10 01:03:25) [GET]
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (8.5ms)
+Completed in 25ms (View: 14, DB: 0) | 200 OK [http://localhost/people/new]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 01:04:16) [GET]
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-06-10 01:04:18) [GET]
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (10.2ms)
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/people/new]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-06-10 01:06:14) [GET]
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (8.1ms)
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-06-10 01:06:26) [POST]
+  Parameters: {"person"=>{"address"=>"asdfsdf", "name"=>"Rodrigo", "cpf"=>"03076884530", "phone1"=>"33297171", "gender"=>"male", "phone2"=>"", "email"=>""}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;36;1mPerson Exists (0.3ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530') LIMIT 1[0m
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (7.8ms)
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-06-10 01:06:34) [POST]
+  Parameters: {"person"=>{"address"=>"asdfsdf", "name"=>"Rodrigo", "cpf"=>"03076884530", "phone1"=>"33297171", "gender"=>"male", "phone2"=>"", "email"=>"diguliu@gmail.com"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Exists (0.2ms)[0m   [0mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530') LIMIT 1[0m
+  [4;36;1mPerson Create (0.3ms)[0m   [0;1mINSERT INTO "people" ("name", "address", "created_at", "cpf", "updated_at", "gender", "phone1", "phone2", "email") VALUES('Rodrigo', 'asdfsdf', '2010-06-10 04:06:34', '03076884530', '2010-06-10 04:06:34', 'male', '33297171', '', 'diguliu@gmail.com')[0m
+Redirected to #<Person:0xb66b8fe4>
+Completed in 74ms (DB: 1) | 302 Found [http://localhost/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-06-10 01:06:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+Completed in 18ms (View: 7, DB: 0) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 01:06:37) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 01:23:48) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-06-10 01:23:50) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:23:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mPerson Load (0.2ms)[0m   [0;1mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #26 of app/views/bands/show.html.erb:
+23: <div class=cool_box>
+24:   <b>Add member: </b>
+25:   <% form_tag :action => "add" do %>
+26:     <%= hidden_field "band", "id", :id => @badn.id %>
+27:     <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
+28:     <br /><br />
+29:     <%= submit_tag "Add" %>
+
+    app/views/bands/show.html.erb:26
+    vendor/rails/actionpack/lib/action_view/helpers/capture_helper.rb:36:in `call'
+    vendor/rails/actionpack/lib/action_view/helpers/capture_helper.rb:36:in `capture'
+    vendor/rails/actionpack/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+    vendor/rails/actionpack/lib/action_view/helpers/capture_helper.rb:36:in `capture'
+    vendor/rails/actionpack/lib/action_view/helpers/form_tag_helper.rb:460:in `form_tag_in_block'
+    vendor/rails/actionpack/lib/action_view/helpers/form_tag_helper.rb:39:in `form_tag'
+    app/views/bands/show.html.erb:25
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/bands_controller.rb:19:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (32.2ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:24:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mPerson Load (0.2ms)[0m   [0mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+Completed in 31ms (View: 15, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#add (for 127.0.0.1 at 2010-06-10 01:24:33) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Add", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+
+
+NoMethodError (undefined method `members' for #<Band:0xb66f41fc>):
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /app/controllers/bands_controller.rb:92:in `add'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/bands_controller.rb:91:in `add'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (24.5ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#add (for 127.0.0.1 at 2010-06-10 01:25:16) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Add", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "bands_people" ("person_id", "band_id") VALUES (1, 1)[0m
+Redirected to #<Band:0xb6578490>
+Completed in 102ms (DB: 1) | 302 Found [http://localhost/bands/add]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:25:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+Completed in 32ms (View: 15, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-06-10 01:25:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/people/1]
+
+
+Processing BandsController#add (for 127.0.0.1 at 2010-06-10 01:25:52) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Add", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "bands_people" ("person_id", "band_id") VALUES (1, 1)[0m
+Redirected to #<Band:0xb6687c28>
+Completed in 89ms (DB: 1) | 302 Found [http://localhost/bands/add]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:25:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+Completed in 32ms (View: 15, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#add (for 127.0.0.1 at 2010-06-10 01:26:20) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Add", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "bands_people" ("person_id", "band_id") VALUES (1, 1)[0m
+Redirected to #<Band:0xb64f07fc>
+Completed in 123ms (DB: 1) | 302 Found [http://localhost/bands/add]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:26:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+Completed in 31ms (View: 15, DB: 2) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#add (for 127.0.0.1 at 2010-06-10 01:26:38) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Add", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "bands_people" ("person_id", "band_id") VALUES (1, 1)[0m
+Redirected to #<Band:0xb6686620>
+Completed in 89ms (DB: 1) | 302 Found [http://localhost/bands/add]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-06-10 01:26:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" INNER JOIN "bands_people" ON "people".id = "bands_people".person_id WHERE ("bands_people".band_id = 1 ) [0m
+Completed in 34ms (View: 17, DB: 2) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#remove (for 127.0.0.1 at 2010-06-10 01:26:52) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Remove", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+
+
+ActiveRecord::AssociationTypeMismatch (Person(#-618114988) expected, got NilClass(#-608265788)):
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:256:in `raise_on_type_mismatch'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `delete'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `each'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `delete'
+    /app/controllers/bands_controller.rb:109:in `remove'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/bands_controller.rb:108:in `remove'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (23.8ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#remove (for 127.0.0.1 at 2010-06-10 01:28:23) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Remove", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+
+
+ActiveRecord::AssociationTypeMismatch (Person(#-617054598) expected, got NilClass(#-608265788)):
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:256:in `raise_on_type_mismatch'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `delete'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `each'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `delete'
+    /app/controllers/bands_controller.rb:109:in `remove'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/bands_controller.rb:108:in `remove'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (25.6ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BandsController#remove (for 127.0.0.1 at 2010-06-10 01:28:27) [POST]
+  Parameters: {"person"=>{"id"=>"1"}, "commit"=>"Remove", "band"=>{"id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+
+
+ActiveRecord::AssociationTypeMismatch (Person(#-617848288) expected, got NilClass(#-608265788)):
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:256:in `raise_on_type_mismatch'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `delete'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `each'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:195:in `delete'
+    /app/controllers/bands_controller.rb:109:in `remove'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/bands_controller.rb:108:in `remove'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (25.1ms)
+Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
