@@ -25,6 +25,12 @@ class ClientsController < ApplicationController
   # GET /clients/new.xml
   def new
     @client = Client.new
+    @people = Person.find(:all)
+    @clients = Client.find(:all)
+
+    @clients.each do |client|
+      @people.delete_if {|person| person.id == client.person_id}
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +41,19 @@ class ClientsController < ApplicationController
   # GET /clients/1/edit
   def edit
     @client = Client.find(params[:id])
+    @people = Person.find(:all)
   end
 
   # POST /clients
   # POST /clients.xml
   def create
     @client = Client.new(params[:client])
+    @people = Person.find(:all)
+    @clients = Client.find(:all)
+
+    @clients.each do |client|
+      @people.delete_if {|person| person.id == client.person_id}
+    end
 
     respond_to do |format|
       if @client.save

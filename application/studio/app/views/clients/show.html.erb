@@ -1,3 +1,9 @@
+<h1>Showing client</h1>
+
+<b>Name: </b>
+<%= link_to(Person.find(@client.person_id).name, Person.find(@client.person_id)) %> <br />
+
+<b>Login: </b> <%= @client.login %><br />
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>

@@ -1,4 +1,6 @@
-<h1><%= @band.name %></h1>
+<h1>Showing Band</h1>
+
+<b>Name: </b> <%= @band.name %><br />
 
 <b>Login: </b> <%= @band.login %><br />
 
@@ -20,25 +22,23 @@
   <% end %>
 <% end %>
 
-<div class=cool_box>
-  <b>Add member: </b>
-  <% form_tag :action => "add" do %>
-    <%= hidden_field "band", "id", :id => @band.id %>
-    <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
-    <br /><br />
-    <%= submit_tag "Add" %>
-  <% end %>
-</div>
+<b>Add member: </b>
+<% form_tag :action => "add" do %>
+  <%= hidden_field "band", "id", :id => @band.id %>
+  <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
+  <br /><br />
+  <%= submit_tag "Add" %>
+<% end %>
+
 <br /><br />
-<div class=cool_box>
-  <b> Remove member: </b>
-  <% form_tag :action => "remove" do %>
-    <%= hidden_field "band", "id", :id => @band.id %>
-    <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
-    <br /><br />
-    <%= submit_tag "Remove" %>
-  <% end %>
-</div>
+
+<b> Remove member: </b>
+<% form_tag :action => "remove" do %>
+  <%= hidden_field "band", "id", :id => @band.id %>
+  <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
+  <br /><br />
+  <%= submit_tag "Remove" %>
+<% end %>
 
 
 <%= link_to 'Edit', edit_band_path(@band) %> |

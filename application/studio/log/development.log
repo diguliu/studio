@@ -9044,3 +9044,1957 @@ ActiveRecord::AssociationTypeMismatch (Person(#-617848288) expected, got NilClas
 Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (25.1ms)
 Rendered /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
 Rendering /home/rodrigo/projetos/studio/application/studio/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 17:22:24) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 17:22:30) [GET]
+  [4;36;1mPerson Load (0.9ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-06-10 17:22:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/show
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/people/1]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-06-10 17:22:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/people
+Rendering people/edit
+Rendered people/_form (8.5ms)
+Completed in 37ms (View: 27, DB: 0) | 200 OK [http://localhost/people/1/edit]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-06-10 17:22:41) [DELETE]
+  Parameters: {"authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;36;1mBand Load (5.8ms)[0m   [0;1mSELECT * FROM "bands" INNER JOIN "bands_people" ON "bands".id = "bands_people".band_id WHERE ("bands_people".person_id = 1 ) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDELETE FROM "bands_people" WHERE person_id = 1 AND band_id IN (1,1,1,1)[0m
+  [4;36;1mPerson Destroy (0.1ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/people
+Completed in 202ms (DB: 7) | 302 Found [http://localhost/people/1]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 17:22:41) [GET]
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-06-10 17:22:43) [GET]
+Rendering template within layouts/people
+Rendering people/new
+Rendered people/_form (17.0ms)
+Completed in 56ms (View: 46, DB: 0) | 200 OK [http://localhost/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-06-10 17:22:52) [POST]
+  Parameters: {"person"=>{"address"=>"", "name"=>"Rodrigo", "cpf"=>"03076884530", "phone1"=>"33297171", "gender"=>"male", "phone2"=>"", "email"=>"diguliu@gmail.com"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;36;1mPerson Exists (0.2ms)[0m   [0;1mSELECT "people".id FROM "people" WHERE ("people"."cpf" = '03076884530') LIMIT 1[0m
+  [4;35;1mPerson Create (0.2ms)[0m   [0mINSERT INTO "people" ("name", "address", "created_at", "cpf", "updated_at", "gender", "phone1", "phone2", "email") VALUES('Rodrigo', '', '2010-06-10 20:22:52', '03076884530', '2010-06-10 20:22:52', 'male', '33297171', '', 'diguliu@gmail.com')[0m
+Redirected to #<Person:0xb64443bc>
+Completed in 92ms (DB: 0) | 302 Found [http://localhost/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-06-10 17:22:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Rendering template within layouts/people
+Rendering people/show
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/people/2]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 17:22:54) [GET]
+  [4;35;1mPerson Load (0.9ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 17:22:58) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:23:01) [GET]
+  [4;36;1mClient Load (0.9ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 45ms (View: 26, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:33:15) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<Client:0xb64f02d4>) on line #20 of app/views/clients/_form.html.erb:
+17:   <div class="field required"> 
+18:     <font color="#F00" style="float: left;">*</font>
+19:     <%= f.label :password_confirmation, "Password confirmation: ", :class => "field_label" %>  
+20:     <%= f.password_field :password_confirmation %>
+21:   </div>
+22: 
+23:   <p><font color="red">* Required Fields</font></p>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:653:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:653:in `value_before_type_cast'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:641:in `value_before_type_cast'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:560:in `to_input_field_tag'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:376:in `password_field'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:745:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:745:in `password_field'
+    app/views/clients/_form.html.erb:20
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/clients/_form.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/clients/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:29:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (125.7ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:35:01) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (5.2ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:42:03) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.7ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:42:59) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+
+
+ActionView::TemplateError (undefined method `merge' for :name:Symbol) on line #25 of app/views/clients/_form.html.erb:
+22: 
+23:   <div class="field required"> 
+24:     <font color="#F00" style="float: left;">*</font>
+25:     <%= f.collection_select(:person, :id, @people, :id, :name, :class =>"Person") %>
+26:   </div>
+27: 
+28:   <p><font color="red">* Required Fields</font></p>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:799:in `objectify_options'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:380:in `collection_select'
+    app/views/clients/_form.html.erb:25
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/clients/_form.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/clients/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:30:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (54.5ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:43:12) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.4ms)
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:44:43) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (71.4ms)
+Completed in 90ms (View: 76, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:44:53) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.4ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:49:39) [POST]
+  Parameters: {"person"=>{"id"=>"2"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"asdf", "password"=>"", "login"=>"asdf"}}
+  [4;36;1mClient Exists (0.4ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'asdf') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #26 of app/views/clients/_form.html.erb:
+23:   <div class="field required"> 
+24:     <font color="#F00" style="float: left;">*</font>
+25:     <%= f.label :person_id, "Person: ", :class => "field_label" %>  
+26:     <%= collection_select(:person, :id, @people, :id, :name, :class =>"Person") %>
+27:   </div>
+28: 
+29:   <p><font color="red">* Required Fields</font></p>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:212:in `options_from_collection_for_select'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:345:in `to_collection_select_tag'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:133:in `collection_select'
+    app/views/clients/_form.html.erb:26
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/clients/_form.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/clients/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/clients_controller.rb:53:in `create'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:47:in `create'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (121.8ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:52:29) [POST]
+  Parameters: {"person"=>{"id"=>"2"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"asdf", "password"=>"", "login"=>"asdf"}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'asdf') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 27ms (View: 6, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:52:53) [POST]
+  Parameters: {"person"=>{"id"=>"2"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"asdf", "password"=>"", "login"=>"asdf"}}
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'asdf') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 26ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:52:56) [GET]
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:53:00) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (66.1ms)
+Completed in 85ms (View: 71, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:53:07) [GET]
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 17:53:09) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-06-10 17:53:10) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/people]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 17:53:13) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:53:14) [GET]
+  [4;35;1mClient Load (0.5ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:53:16) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.7ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:53:23) [POST]
+  Parameters: {"person"=>{"id"=>"2"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"asdfsd", "password"=>"sdfsdasd", "login"=>"sdfsad"}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'sdfsad') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:53:29) [GET]
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:53:32) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.7ms)
+Completed in 27ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:53:36) [POST]
+  Parameters: {"person"=>{"id"=>"2"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}}
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = '') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 23ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:53:42) [POST]
+  Parameters: {"person"=>{"id"=>"2"}, "commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = '') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 25ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:53:47) [GET]
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:53:49) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.9ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:54:10) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.1ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:54:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "person_id"=>"2", "password"=>"", "login"=>""}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = '') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 25ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:54:30) [GET]
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:54:32) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.3ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:54:47) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (5.2ms)
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:54:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = '') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 22ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:55:36) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+ERROR: compiling _run_erb_app47views47clients47_form46html46erb_locals_form_object RAISED compile error
+/home/rodrigo/projetos/studio/application/studio/app/views/clients/_form.html.erb:31: syntax error, unexpected kENSURE, expecting kEND
+/home/rodrigo/projetos/studio/application/studio/app/views/clients/_form.html.erb:33: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47clients47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  form_for(@client) do |f| ; @output_buffer.concat "\n\n  "
+
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\n  <div class=\"field required\"> \n    <font color=\"#F00\" style=\"float: left;\">*</font>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :login, "Login: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.text_field :login ).to_s); @output_buffer.concat "\n  </div>\n\n  <div class=\"field required\"> \n    <font color=\"#F00\" style=\"float: left;\">*</font>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :password, "Password: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "\n  </div>\n\n  <div class=\"field required\"> \n    <font color=\"#F00\" style=\"float: left;\">*</font>\n    "
+
+
+
+
+; @output_buffer.concat(( f.label :password_confirmation, "Password confirmation: ", :class => "field_label" ).to_s); @output_buffer.concat "  \n    "
+; @output_buffer.concat(( f.password_field :password_confirmation ).to_s); @output_buffer.concat "\n  </div>\n\n\n  <p><font color=\"red\">* Required Fields</font></p>\n\n  "
+
+
+
+
+
+; @output_buffer.concat(( f.submit @submit_message ).to_s); @output_buffer.concat "\n\n\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rodrigo/projetos/studio/application/studio/app/views/clients/_form.html.erb:33:in `compile!'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:66:in `compile'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:64:in `synchronize'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:64:in `compile'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:26:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+/home/rodrigo/projetos/studio/application/studio/app/views/clients/new.html.erb:4:in `_run_erb_app47views47clients47new46html46erb'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/rodrigo/projetos/studio/application/studio/app/controllers/clients_controller.rb:29:in `new'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+/usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:282
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+/home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+/home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/rodrigo/projetos/studio/application/studio/app/views/clients/_form.html.erb:31: syntax error, unexpected kENSURE, expecting kEND
+/home/rodrigo/projetos/studio/application/studio/app/views/clients/_form.html.erb:33: syntax error, unexpected $end, expecting kEND) on line #31 of app/views/clients/_form.html.erb:
+0
+    app/views/clients/_form.html.erb:33:in `compile!'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:66:in `compile'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:64:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:64:in `compile'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:26:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/clients/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:29:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (51.1ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:55:44) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (5.0ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:55:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}}
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = '') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (5.8ms)
+Completed in 30ms (View: 11, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:55:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = '') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (5.4ms)
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:56:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"", "password"=>"", "login"=>"gg"}}
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'gg') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (5.2ms)
+Completed in 28ms (View: 10, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:58:30) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.8ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 17:58:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"sadsad", "person_id"=>"2", "password"=>"ds", "login"=>"asdsa"}}
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'asdsa') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 97ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 17:59:47) [GET]
+  [4;35;1mClient Load (0.6ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 17:59:49) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.3ms)
+Completed in 28ms (View: 15, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:00:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"1234", "person_id"=>"2", "password"=>"1234", "login"=>"diguliu"}}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'diguliu') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.9ms)
+Completed in 35ms (View: 14, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:00:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"12345", "person_id"=>"2", "password"=>"12345", "login"=>"diguliu"}}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Exists (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'diguliu') LIMIT 1[0m
+  [4;35;1mClient Create (0.2ms)[0m   [0mINSERT INTO "clients" ("created_at", "updated_at", "person_id", "login", "password") VALUES('2010-06-10 21:00:07', '2010-06-10 21:00:07', 2, 'diguliu', '12345')[0m
+Redirected to #<Client:0xb62d72cc>
+Completed in 147ms (DB: 1) | 302 Found [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:00:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+
+
+ActionView::TemplateError (undefined method `person' for #<Client:0xb6684cf8>) on line #1 of app/views/clients/show.html.erb:
+1: <h1><%= link_to(@client.person.name, @client.person) %></h1>
+2: 
+3: <b>Login: </b> <%= @client.login %><br />
+4: 
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/clients/show.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:18:in `show'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (42.9ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:01:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+
+
+ActionView::TemplateError (undefined method `person' for #<Client:0xb630b4b4>) on line #1 of app/views/clients/show.html.erb:
+1: <h1><%= link_to(Person.find(@client.person.id).name, Person.find(@client.person.id)) %></h1>
+2: 
+3: <b>Login: </b> <%= @client.login %><br />
+4: 
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/clients/show.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:18:in `show'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (44.8ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:01:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:02:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:02:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:03:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:03:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:05:16) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:05:28) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:05:30) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:05:46) [GET]
+  [4;36;1mClient Load (0.9ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:05:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.4ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:05:51) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:06:22) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:06:50) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:06:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/1]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:07:03) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2010-06-10 18:07:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/edit
+Rendered clients/_form (10.4ms)
+Completed in 88ms (View: 18, DB: 1) | 200 OK [http://localhost/clients/1/edit]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:07:11) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:07:12) [GET]
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.2ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:12:20) [GET]
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.9ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:12:26) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (66.5ms)
+Completed in 85ms (View: 71, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:14:37) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:14:43) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:14:45) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:14:47) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#destroy (for 127.0.0.1 at 2010-06-10 18:14:53) [DELETE]
+  Parameters: {"authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;35;1mClient Destroy (0.2ms)[0m   [0mDELETE FROM "clients" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/clients
+Completed in 127ms (DB: 1) | 302 Found [http://localhost/clients/1]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:14:53) [GET]
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:14:54) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.0ms)
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:15:07) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.8ms)
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:15:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"12345", "person_id"=>"2", "password"=>"12345", "login"=>"diguliu"}}
+  [4;35;1mClient Exists (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'diguliu') LIMIT 1[0m
+  [4;36;1mClient Create (0.2ms)[0m   [0;1mINSERT INTO "clients" ("created_at", "updated_at", "person_id", "login", "password") VALUES('2010-06-10 21:15:16', '2010-06-10 21:15:16', 2, 'diguliu', '12345')[0m
+Redirected to #<Client:0xb62b6cac>
+Completed in 321ms (DB: 0) | 302 Found [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:15:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/clients/2]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:15:19) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:15:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/2]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:15:22) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:15:31) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:15:32) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#destroy (for 127.0.0.1 at 2010-06-10 18:15:35) [DELETE]
+  Parameters: {"authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"2"}
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 2) [0m
+  [4;35;1mClient Destroy (0.2ms)[0m   [0mDELETE FROM "clients" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/clients
+Completed in 215ms (DB: 1) | 302 Found [http://localhost/clients/2]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:15:35) [GET]
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:15:36) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.8ms)
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:15:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"12345", "person_id"=>"2", "password"=>"12345", "login"=>"diguliu"}}
+  [4;35;1mClient Exists (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'diguliu') LIMIT 1[0m
+  [4;36;1mClient Create (0.2ms)[0m   [0;1mINSERT INTO "clients" ("created_at", "updated_at", "person_id", "login", "password") VALUES('2010-06-10 21:15:48', '2010-06-10 21:15:48', 2, 'diguliu', '12345')[0m
+Redirected to #<Client:0xb6675410>
+Completed in 331ms (DB: 0) | 302 Found [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:15:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/3]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2010-06-10 18:15:52) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/edit
+Rendered clients/_form (0.3ms)
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/clients/3/edit]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:16:00) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:16:51) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 75ms (View: 11, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#edit (for 127.0.0.1 at 2010-06-10 18:16:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/clients
+Rendering clients/edit
+Rendered clients/_form (10.4ms)
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/clients/3/edit]
+
+
+Processing ClientsController#update (for 127.0.0.1 at 2010-06-10 18:16:59) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"3", "client"=>{"password_confirmation"=>"12345", "person_id"=>"2", "password"=>"12345", "login"=>"diguliu"}}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;36;1mClient Exists (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'diguliu' AND "clients".id <> 3) LIMIT 1[0m
+Redirected to #<Client:0xb64ca5ac>
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/clients/3]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:17:00) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/3]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:17:01) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:17:03) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 24ms (View: 6, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:17:04) [GET]
+  [4;35;1mClient Load (0.7ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#destroy (for 127.0.0.1 at 2010-06-10 18:17:07) [DELETE]
+  Parameters: {"authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"3"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 3) [0m
+  [4;35;1mClient Destroy (0.2ms)[0m   [0mDELETE FROM "clients" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/clients
+Completed in 129ms (DB: 0) | 302 Found [http://localhost/clients/3]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:17:07) [GET]
+  [4;36;1mClient Load (0.6ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:17:08) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.9ms)
+Completed in 86ms (View: 16, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:17:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"jasdhfk", "person_id"=>"2", "password"=>"alkfdjlkaf", "login"=>"adsjfl"}}
+  [4;35;1mClient Exists (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'adsjfl') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:17:21) [GET]
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:17:22) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.4ms)
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:17:40) [GET]
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (10.3ms)
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:17:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"lasjdflajsd", "person_id"=>"2", "password"=>"sdfjla", "login"=>"asdf"}}
+  [4;35;1mClient Exists (0.3ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'asdf') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+
+
+ActionView::TemplateError (undefined method `map' for 1:Fixnum) on line #28 of app/views/clients/_form.html.erb:
+25:   <div class="field required"> 
+26:     <font color="#F00" style="float: left;">*</font>
+27:     <%= f.label :person_id, "Person: ", :class => "field_label" %>  
+28:     <%= f.collection_select(:person_id, @people, :id, :name, :class =>"Person") %>
+29:   </div>
+30: 
+31:   <p><font color="red">* Required Fields</font></p>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:212:in `options_from_collection_for_select'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:345:in `to_collection_select_tag'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:133:in `collection_select'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:380:in `collection_select'
+    app/views/clients/_form.html.erb:28
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/clients/_form.html.erb:2
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/clients/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/clients_controller.rb:60:in `create'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:54:in `create'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (53.5ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:20:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"lasjdflajsd", "person_id"=>"2", "password"=>"sdfjla", "login"=>"asdf"}}
+  [4;36;1mClient Exists (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'asdf') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (0.3ms)
+Completed in 24ms (View: 6, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:20:36) [GET]
+  [4;35;1mClient Load (0.6ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:20:39) [GET]
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+
+
+ActionView::TemplateError (undefined method `people#<Person:0xb64f9154>' for #<Array:0xb64f9168>) on line #31 of app/views/clients/_form.html.erb:
+28:     <%= f.collection_select(:person_id, @people, :id, :name, :class =>"Person") %>
+29:   </div>
+30:   
+31:   <%= hidden_field "people",  :people => @people %>
+32: 
+33:   <p><font color="red">* Required Fields</font></p>
+34: 
+
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:653:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:653:in `value_before_type_cast'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:641:in `value_before_type_cast'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:560:in `to_input_field_tag'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:394:in `hidden_field'
+    app/views/clients/_form.html.erb:31
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/clients/_form.html.erb:2
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/clients/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clients_controller.rb:36:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (118.9ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-06-10 18:21:30) [GET]
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (9.1ms)
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:21:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"asdfas", "person_id"=>"2", "password"=>"asdfasd", "login"=>"sadfas"}}
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" [0m
+  [4;36;1mClient Exists (0.3ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'sadfas') LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Rendered clients/_form (8.5ms)
+Completed in 34ms (View: 14, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-06-10 18:21:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "client"=>{"password_confirmation"=>"12345", "person_id"=>"2", "password"=>"12345", "login"=>"sadfas"}}
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" [0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" [0m
+  [4;35;1mClient Exists (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."login" = 'sadfas') LIMIT 1[0m
+  [4;36;1mClient Create (0.2ms)[0m   [0;1mINSERT INTO "clients" ("created_at", "updated_at", "person_id", "login", "password") VALUES('2010-06-10 21:21:47', '2010-06-10 21:21:47', 2, 'sadfas', '12345')[0m
+Redirected to #<Client:0xb62d5bfc>
+Completed in 520ms (DB: 1) | 302 Found [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:21:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 4) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/4]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:21:50) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#show (for 127.0.0.1 at 2010-06-10 18:22:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 4) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/4]

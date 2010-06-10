@@ -1,6 +1,9 @@
 class Client < ActiveRecord::Base
-  validates_presence_of :login, :password, :person_id
+  validates_presence_of :login, :password, :password_confirmation, :person_id
+  validates_length_of :login, :within => 3..40
+  validates_length_of :password, :within => 5..40
   validates_uniqueness_of  :login
+  validates_confirmation_of :password
 
   has_many :external_rents
   has_many :equips, :through => :external_rents

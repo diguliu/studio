@@ -1,0 +1,39 @@
+<% if !@people.blank? %>
+<% form_for(@client) do |f| %>
+
+  <%= f.error_messages %>
+
+
+  <div class="field required"> 
+    <font color="#F00" style="float: left;">*</font>
+    <%= f.label :login, "Login: ", :class => "field_label" %>  
+    <%= f.text_field :login %>
+  </div>
+
+  <div class="field required"> 
+    <font color="#F00" style="float: left;">*</font>
+    <%= f.label :password, "Password: ", :class => "field_label" %>  
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field required"> 
+    <font color="#F00" style="float: left;">*</font>
+    <%= f.label :password_confirmation, "Password confirmation: ", :class => "field_label" %>  
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="field required"> 
+    <font color="#F00" style="float: left;">*</font>
+    <%= f.label :person_id, "Person: ", :class => "field_label" %>  
+    <%= f.collection_select(:person_id, @people, :id, :name, :class =>"Person") %>
+  </div>
+  
+  <p><font color="red">* Required Fields</font></p>
+
+  <%= f.submit @submit_message %>
+
+<% end %>
+<% else %>
+  <p><b>Sorry, you can't create a client without any person!</b></p>
+<% end %>
+
