@@ -1,11 +1,9 @@
 <h1>Listing services</h1>
 
 <table>
-  <tr>
-  </tr>
-
 <% for service in @services %>
   <tr>
+    <td><%= service.name %></td>
     <td><%= link_to 'Show', service %></td>
     <td><%= link_to 'Edit', edit_service_path(service) %></td>
     <td><%= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -16,3 +14,4 @@
 <br />
 
 <%= link_to 'New service', new_service_path %>
+<%= link_to 'Home', root_path %>

@@ -1,0 +1,27 @@
+<% form_for(@service) do |f| %>
+
+  <%= f.error_messages %>
+
+  <div class="field required"> 
+    <font color="#F00" style="float: left;">*</font>
+    <%= f.label :name, "Name: ", :class => "field_label" %>  
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field required"> 
+    <font color="#F00" style="float: left;">*</font>
+    <%= f.label :price, "Price: ", :class => "field_label" %>  
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field"> 
+    <%= f.label :description, "Description: ", :class => "field_label" %>  
+    <%= f.text_area :description, :cols => 34, :rows => 3 %>
+  </div>
+  
+  <p><font color="red">* Required Fields</font></p>
+
+  <%= f.submit @submit_message %>
+
+<% end %>
+

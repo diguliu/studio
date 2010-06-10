@@ -11457,3 +11457,336 @@ Rendering agendas/show
   [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
   [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
 Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:20:42) [GET]
+  [4;36;1mAgenda Load (0.7ms)[0m   [0;1mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 78ms (View: 69, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 19:20:44) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:20:49) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing ServicesController#edit (for 127.0.0.1 at 2010-06-10 19:20:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/edit
+Completed in 35ms (View: 27, DB: 0) | 200 OK [http://localhost/services/1/edit]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:42:38) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:42:48) [GET]
+  [4;36;1mService Load (0.7ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:44:57) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing ServicesController#edit (for 127.0.0.1 at 2010-06-10 19:44:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/edit
+Rendered services/_form (5.5ms)
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/services/1/edit]
+
+
+Processing ServicesController#edit (for 127.0.0.1 at 2010-06-10 19:46:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/edit
+Rendered services/_form (5.7ms)
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/services/1/edit]
+
+
+Processing ServicesController#edit (for 127.0.0.1 at 2010-06-10 19:46:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/edit
+Rendered services/_form (5.4ms)
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/services/1/edit]
+
+
+Processing ServicesController#update (for 127.0.0.1 at 2010-06-10 19:46:58) [PUT]
+  Parameters: {"commit"=>"Update", "service"=>{"price"=>"20.0", "name"=>"Ensaio", "description"=>""}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mService Update (0.3ms)[0m   [0;1mUPDATE "services" SET "updated_at" = '2010-06-10 22:46:58', "price" = 20.0, "description" = '' WHERE "id" = 1[0m
+Redirected to #<Service:0xb672b620>
+Completed in 103ms (DB: 1) | 302 Found [http://localhost/services/1]
+
+
+Processing ServicesController#show (for 127.0.0.1 at 2010-06-10 19:46:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/show
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.description) on line #7 of app/views/services/show.html.erb:
+4: 
+5: <b>Price: </b> <%= @service.price %><br />
+6: 
+7: <% if !@person.description.blank? %>
+8:   <b>Description: </b> <%= @person.description %><br />
+9: <% end %>
+10: 
+
+    app/views/services/show.html.erb:7
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/services_controller.rb:18:in `show'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (42.5ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ServicesController#show (for 127.0.0.1 at 2010-06-10 19:47:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mService Load (0.4ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/services/1]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:47:54) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:48:13) [GET]
+  [4;36;1mService Load (0.7ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 19:48:14) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:48:31) [GET]
+  [4;35;1mAgenda Load (0.8ms)[0m   [0mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:48:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 88ms (View: 77, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:52:01) [GET]
+  [4;35;1mAgenda Load (0.8ms)[0m   [0mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:52:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.8ms)
+Completed in 48ms (View: 28, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:52:11) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"2", "start(1i)"=>"2011", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Update (0.2ms)[0m   [0;1mUPDATE "agendas" SET "updated_at" = '2010-06-10 22:52:11', "total_price" = 40.0, "duration" = 2 WHERE "id" = 1[0m
+Redirected to #<Agenda:0xb6314474>
+Completed in 128ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:52:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.5ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:52:36) [GET]
+  [4;36;1mAgenda Load (0.8ms)[0m   [0;1mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 19:52:38) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:52:41) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing ServicesController#show (for 127.0.0.1 at 2010-06-10 19:52:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/show
+Completed in 71ms (View: 5, DB: 0) | 200 OK [http://localhost/services/1]
+
+
+Processing ServicesController#edit (for 127.0.0.1 at 2010-06-10 19:52:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/edit
+Rendered services/_form (5.6ms)
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/services/1/edit]
+
+
+Processing ServicesController#update (for 127.0.0.1 at 2010-06-10 19:52:52) [PUT]
+  Parameters: {"commit"=>"Update", "service"=>{"price"=>"20.0", "name"=>"Ensaio", "description"=>"Bla bla"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;35;1mService Update (0.2ms)[0m   [0mUPDATE "services" SET "updated_at" = '2010-06-10 22:52:52', "description" = 'Bla bla' WHERE "id" = 1[0m
+Redirected to #<Service:0xb6541a44>
+Completed in 327ms (DB: 1) | 302 Found [http://localhost/services/1]
+
+
+Processing ServicesController#show (for 127.0.0.1 at 2010-06-10 19:52:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mService Load (0.4ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Rendering template within layouts/services
+Rendering services/show
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/services/1]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:52:55) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 19:53:06) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 63ms (View: 61, DB: 0) | 200 OK [http://localhost/]
