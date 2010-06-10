@@ -25,6 +25,8 @@ class AgendasController < ApplicationController
   # GET /agendas/new.xml
   def new
     @agenda = Agenda.new
+    @bands = Band.find(:all)
+    @services = Service.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +37,18 @@ class AgendasController < ApplicationController
   # GET /agendas/1/edit
   def edit
     @agenda = Agenda.find(params[:id])
+    @bands = Band.find(:all)
+    @services = Service.find(:all)
   end
 
   # POST /agendas
   # POST /agendas.xml
   def create
     @agenda = Agenda.new(params[:agenda])
+    @agenda.status = "reserved"
+    @agenda.total_price = 0
+    @bands = Band.find(:all)
+    @services = Service.find(:all)
 
     respond_to do |format|
       if @agenda.save

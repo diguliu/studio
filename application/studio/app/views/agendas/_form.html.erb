@@ -1,0 +1,52 @@
+<% if !@bands.blank? && !@services.blank?%>
+
+  <% form_for(@agenda) do |f| %>
+
+    <%= f.error_messages %>
+
+    <div class="field required"> 
+      <font color="#F00" style="float: left;">*</font>
+      <%= f.label :band, "Band: ", :class => "field_label" %>  
+      <%= f.collection_select(:band_id, @bands, :id, :name, :class =>"Band") %>
+    </div>
+
+    <div class="field required"> 
+      <font color="#F00" style="float: left;">*</font>
+      <%= f.label :service, "Service: ", :class => "field_label" %>  
+      <%= f.collection_select(:service_id, @services, :id, :name, :class =>"Service") %>
+    </div>
+
+    <div class="field required"> 
+      <font color="#F00" style="float: left;">*</font>
+      <%= f.label :start, "Starts at: ", :class => "field_label" %>  
+      <%= f.datetime_select :start %>
+    </div>
+
+    <div class="field required"> 
+      <font color="#F00" style="float: left;">*</font>
+      <%= f.label :duration, "Duration: ", :class => "field_label" %>  
+      <%= f.text_field :duration %>
+    </div>
+
+    <div class="field">
+      <%= f.label :room, "Room: ", :class => "field_label" %>  
+      <%= f.text_field :room %>
+    </div>
+
+    <p><font color="red">* Required Fields</font></p>
+
+    <%= f.submit @submit_message %>
+
+  <% end %>
+<% else %>
+  Sorry, but you can't schedule something without: <br />
+  <ul>
+  <% if @bands.blank? %>
+    <li>Band</li>
+  <% end %> 
+
+  <% if @services.blank? %>
+    <li>Service</li>
+  <% end %> 
+  </ul>
+<% end %>

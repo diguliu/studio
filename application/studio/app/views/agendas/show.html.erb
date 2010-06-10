@@ -1,3 +1,22 @@
+<h1>Showing agenda</h1>
 
-<%= link_to 'Edit', edit_agenda_path(@agenda) %> |
+<b>Band: </b> <%= @agenda.band.name%><br />
+
+<b>Service: </b> <%= @agenda.service.name %><br />
+
+<b>Starts at: </b> <%= @agenda.start %><br />
+
+<b>Duration: </b> <%= @agenda.duration %>h<br />
+
+<%  case @agenda.status
+      when "done"     then color="green"
+      when "reserved" then color="orange"
+      when "canceled" then color="red"
+    end
+%>
+<b>Status: </b><font color="<%=color%>" > <%= @agenda.status %></font><br />
+
+<b>Total price: </b> <%= @agenda.total_price %><br />
+
+<%= link_to 'Edit', edit_agenda_path(@agenda) %>
 <%= link_to 'Back', agendas_path %>

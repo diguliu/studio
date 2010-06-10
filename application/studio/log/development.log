@@ -10998,3 +10998,462 @@ Rendering clients/show
   [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
 Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/clients/4]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2010-06-10 18:23:18) [GET]
+  [4;36;1mClient Load (0.7ms)[0m   [0;1mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/clients]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 18:23:20) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 18:23:57) [GET]
+  [4;35;1mAgenda Load (0.9ms)[0m   [0mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 42ms (View: 18, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 18:51:24) [GET]
+  [4;36;1mAgenda Load (0.6ms)[0m   [0;1mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 18:51:25) [GET]
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 53ms (View: 11, DB: 1) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 18:53:12) [GET]
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.2ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (127.3ms)
+Completed in 207ms (View: 133, DB: 1) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 18:58:26) [GET]
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.2ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (0.3ms)
+Completed in 26ms (View: 5, DB: 1) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 18:58:30) [GET]
+  [4;35;1mAgenda Load (0.5ms)[0m   [0mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 18:58:32) [GET]
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" [0m
+  [4;35;1mService Load (0.2ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (0.3ms)
+Completed in 24ms (View: 5, DB: 0) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 19:01:38) [GET]
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" [0m
+  [4;35;1mService Load (0.2ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (0.3ms)
+Completed in 27ms (View: 6, DB: 1) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:01:49) [GET]
+  [4;36;1mAgenda Load (0.5ms)[0m   [0;1mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:03:47) [GET]
+  [4;35;1mAgenda Load (0.5ms)[0m   [0mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 19:03:49) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:04:00) [GET]
+  [4;36;1mService Load (1.1ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/services]
+  [4;36;1mService Create (0.7ms)[0m   [0;1mINSERT INTO "services" ("name", "price", "created_at", "updated_at", "description") VALUES('Ensaio', 10.0, '2010-06-10 22:05:11', '2010-06-10 22:05:11', NULL)[0m
+
+
+Processing ServicesController#index (for 127.0.0.1 at 2010-06-10 19:05:13) [GET]
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/services
+Rendering services/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/services]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:05:16) [GET]
+  [4;36;1mAgenda Load (0.6ms)[0m   [0;1mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 19:05:22) [GET]
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (28.3ms)
+Completed in 55ms (View: 35, DB: 1) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#create (for 127.0.0.1 at 2010-06-10 19:05:40) [POST]
+  Parameters: {"commit"=>"Create", "agenda"=>{"duration"=>"3", "service"=>"1", "band"=>"1", "start(1i)"=>"2010", "start(2i)"=>"6", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+
+
+ActiveRecord::AssociationTypeMismatch (Band(#-619245218) expected, got String(#-608429568)):
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/associations/association_proxy.rb:256:in `raise_on_type_mismatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/associations/belongs_to_association.rb:22:in `replace'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/associations.rb:1276:in `band='
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/base.rb:2589:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/base.rb:2589:in `attributes='
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/base.rb:2585:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/base.rb:2585:in `attributes='
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/base.rb:2285:in `initialize'
+    /app/controllers/agendas_controller.rb:47:in `new'
+    /app/controllers/agendas_controller.rb:47:in `create'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (97.3ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2010-06-10 19:06:27) [GET]
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (21.3ms)
+Completed in 48ms (View: 27, DB: 1) | 200 OK [http://localhost/agendas/new]
+
+
+Processing AgendasController#create (for 127.0.0.1 at 2010-06-10 19:06:31) [POST]
+  Parameters: {"commit"=>"Create", "agenda"=>{"duration"=>"3", "start(1i)"=>"2010", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Rendered agendas/_form (17.6ms)
+Completed in 49ms (View: 23, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#create (for 127.0.0.1 at 2010-06-10 19:07:27) [POST]
+  Parameters: {"commit"=>"Create", "agenda"=>{"duration"=>"3", "start(1i)"=>"2010", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d"}
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.4ms)[0m   [0;1mSELECT * FROM "services" [0m
+  [4;35;1mService Load (0.7ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Create (0.4ms)[0m   [0;1mINSERT INTO "agendas" ("duration", "created_at", "total_price", "updated_at", "service_id", "start", "room", "status", "band_id") VALUES(3, '2010-06-10 22:07:27', 30.0, '2010-06-10 22:07:27', 1, '2010-06-16 13:00:00', 1, 'done', 1)[0m
+Redirected to #<Agenda:0xb672ec30>
+Completed in 229ms (DB: 2) | 302 Found [http://localhost/agendas]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:07:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:08:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.0ms)
+Completed in 47ms (View: 27, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:08:14) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"3", "start(1i)"=>"2009", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Update (0.2ms)[0m   [0;1mUPDATE "agendas" SET "updated_at" = '2010-06-10 22:08:14', "start" = '2009-06-16 13:00:00', "status" = 'reserved' WHERE "id" = 1[0m
+Redirected to #<Agenda:0xb62d6e94>
+Completed in 222ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:08:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 34ms (View: 22, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:08:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.6ms)
+Completed in 47ms (View: 27, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:08:22) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"3", "start(1i)"=>"2011", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Update (0.3ms)[0m   [0;1mUPDATE "agendas" SET "updated_at" = '2010-06-10 22:08:22', "start" = '2011-06-16 13:00:00', "status" = 'done' WHERE "id" = 1[0m
+Redirected to #<Agenda:0xb6304de4>
+Completed in 165ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:08:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.4ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:08:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.4ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.9ms)
+Completed in 49ms (View: 28, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:08:53) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"3", "start(1i)"=>"2011", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Update (0.2ms)[0m   [0;1mUPDATE "agendas" SET "updated_at" = '2010-06-10 22:08:53', "status" = 'reserved' WHERE "id" = 1[0m
+Redirected to #<Agenda:0xb634a704>
+Completed in 208ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:08:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.5ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 35ms (View: 22, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:08:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.4ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.8ms)
+Completed in 48ms (View: 28, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:08:58) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"3", "start(1i)"=>"2009", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Update (0.2ms)[0m   [0;1mUPDATE "agendas" SET "updated_at" = '2010-06-10 22:08:58', "start" = '2009-06-16 13:00:00', "status" = 'done' WHERE "id" = 1[0m
+Redirected to #<Agenda:0xb637d44c>
+Completed in 191ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:08:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (57.1ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.4ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 92ms (View: 23, DB: 58) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:09:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.6ms)
+Completed in 48ms (View: 28, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:09:49) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"3", "start(1i)"=>"2009", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Redirected to #<Agenda:0xb63f79f4>
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:09:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.3ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 90ms (View: 79, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:10:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (21.9ms)
+Completed in 49ms (View: 28, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2010-06-10 19:10:06) [GET]
+  [4;36;1mAgenda Load (0.8ms)[0m   [0;1mSELECT * FROM "agendas" [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/agendas]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:11:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/agendas/1]
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2010-06-10 19:11:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Load (0.4ms)[0m   [0;1mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" [0m
+  [4;36;1mService Load (0.3ms)[0m   [0;1mSELECT * FROM "services" [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Rendered agendas/_form (22.8ms)
+Completed in 51ms (View: 29, DB: 1) | 200 OK [http://localhost/agendas/1/edit]
+
+
+Processing AgendasController#update (for 127.0.0.1 at 2010-06-10 19:11:15) [PUT]
+  Parameters: {"commit"=>"Update", "agenda"=>{"duration"=>"3", "start(1i)"=>"2011", "start(2i)"=>"6", "service_id"=>"1", "start(3i)"=>"16", "start(4i)"=>"13", "start(5i)"=>"00", "room"=>"1", "band_id"=>"1"}, "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+  [4;36;1mInternalRent Load (0.2ms)[0m   [0;1mSELECT * FROM "internal_rents" WHERE ("internal_rents".agenda_id = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+  [4;36;1mAgenda Update (0.2ms)[0m   [0;1mUPDATE "agendas" SET "updated_at" = '2010-06-10 22:11:15', "start" = '2011-06-16 13:00:00', "status" = 'reserved' WHERE "id" = 1[0m
+Redirected to #<Agenda:0xb6545ea0>
+Completed in 179ms (DB: 1) | 302 Found [http://localhost/agendas/1]
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2010-06-10 19:11:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Load (0.4ms)[0m   [0mSELECT * FROM "agendas" WHERE ("agendas"."id" = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;35;1mService Load (0.3ms)[0m   [0mSELECT * FROM "services" WHERE ("services"."id" = 1) [0m
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/agendas/1]

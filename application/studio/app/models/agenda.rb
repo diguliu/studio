@@ -34,7 +34,7 @@ class Agenda < ActiveRecord::Base
 
   def set_status
     puts "-- Setting status..."
-    if((start <=> 3.day.ago) < 0)
+    if((start <=> 3.day.ago) > 0)
       self.status = "reserved"
     else
       self.status = "done"

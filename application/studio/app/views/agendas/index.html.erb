@@ -6,6 +6,7 @@
 
 <% for agenda in @agendas %>
   <tr>
+    <td><%= agenda.id %></td>
     <td><%= link_to 'Show', agenda %></td>
     <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
     <td><%= link_to 'Destroy', agenda, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -16,3 +17,5 @@
 <br />
 
 <%= link_to 'New agenda', new_agenda_path %>
+<%= link_to 'Home', root_path %>
+
