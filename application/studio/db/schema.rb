@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20100610035917) do
   create_table "equips", :force => true do |t|
     t.string   "model"
     t.string   "description"
-    t.string   "type"
+    t.string   "classification", :null => false
     t.float    "external_price", :null => false
     t.float    "internal_price", :null => false
     t.datetime "created_at"

@@ -6,6 +6,7 @@
 
 <% for equip in @equips %>
   <tr>
+    <td><%= equip.classification %></td>
     <td><%= link_to 'Show', equip %></td>
     <td><%= link_to 'Edit', edit_equip_path(equip) %></td>
     <td><%= link_to 'Destroy', equip, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -15,4 +16,5 @@
 
 <br />
 
-<%= link_to 'New equip', new_equip_path %>
+<%= link_to 'New equipment', new_equip_path %>
+<%= link_to 'Home', root_path %>

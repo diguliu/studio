@@ -1,5 +1,5 @@
 class Equip < ActiveRecord::Base
-  validates_presence_of :external_price, :internal_price
+  validates_presence_of :external_price, :internal_price, :classification
 
   has_many :internal_rents
   has_many :agendas, :through => :internal_rents

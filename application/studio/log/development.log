@@ -11790,3 +11790,924 @@ Processing HomeController#index (for 127.0.0.1 at 2010-06-10 19:53:06) [GET]
 Rendering template within layouts/home
 Rendering home/index
 Completed in 63ms (View: 61, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:12:51) [GET]
+  [4;36;1mEquip Load (0.9ms)[0m   [0;1mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 38ms (View: 14, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:12:53) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/equips/_form.html.erb:
+1:   <% form_for(@equipment) do |f| %>
+2:     <%= f.error_messages %>
+3: 
+4:     <div class="field"> 
+
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/record_identifier.rb:76:in `dom_id'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/record_identification_helper.rb:16:in `dom_id'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:264:in `apply_form_for_options!'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:248:in `form_for'
+    app/views/equips/_form.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/equips/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/equips_controller.rb:29:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (118.4ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:13:16) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+
+
+ActionView::TemplateError (undefined method `service_id' for #<Equip:0xb65ed68c>) on line #22 of app/views/equips/_form.html.erb:
+19:     <div class="field required"> 
+20:       <font color="#F00" style="float: left;">*</font>
+21:       <%= f.label :service, "Service: ", :class => "field_label" %>  
+22:       <%= f.collection_select(:service_id, @services, :id, :name, :class =>"Service") %>
+23:     </div>
+24: 
+25:     <div class="field required"> 
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:646:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:646:in `value'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:637:in `value'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:343:in `to_collection_select_tag'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:133:in `collection_select'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_options_helper.rb:380:in `collection_select'
+    app/views/equips/_form.html.erb:22
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/equips/_form.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/equips/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/equips_controller.rb:29:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (54.6ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:14:17) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+
+
+ActionView::TemplateError (undefined method `intenal_price' for #<Equip:0xb66423e4>) on line #22 of app/views/equips/_form.html.erb:
+19:     <div class="field required"> 
+20:       <font color="#F00" style="float: left;">*</font>
+21:       <%= f.label :internal_price, "Internal price: ", :class => "field_label" %>  
+22:       <%= f.text_field :intenal_price %>
+23:     </div>
+24: 
+25:     <div class="field required"> 
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:653:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:653:in `value_before_type_cast'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:641:in `value_before_type_cast'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:560:in `to_input_field_tag'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:354:in `text_field'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:745:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:745:in `text_field'
+    app/views/equips/_form.html.erb:22
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/equips/_form.html.erb:1
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:20:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:19:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/partials.rb:152:in `render_partial'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:258:in `render'
+    app/views/equips/new.html.erb:4
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/equips_controller.rb:29:in `new'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (55.2ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:14:35) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+Rendered equips/_form (7.2ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/equips/new]
+
+
+Processing EquipsController#create (for 127.0.0.1 at 2010-06-10 20:16:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "equip"=>{"internal_price"=>"3", "model"=>"Les Paul", "type"=>"Guitar", "description"=>"", "external_price"=>"20.5"}}
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mEquip Create (0.3ms)[0m   [0mINSERT INTO "equips" ("model", "internal_price", "created_at", "updated_at", "type", "description", "external_price") VALUES('Les Paul', 3.0, '2010-06-10 23:16:03', '2010-06-10 23:16:03', NULL, '', 20.5)[0m
+Redirected to #<Equip:0xb6565b9c>
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/equips]
+
+
+Processing EquipsController#show (for 127.0.0.1 at 2010-06-10 20:16:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquip Load (0.3ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:16:13) [GET]
+  [4;35;1mEquip Load (0.7ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+
+
+ActionView::TemplateError (undefined method `name' for #<Equip:0xb63478ec>) on line #9 of app/views/equips/index.html.erb:
+6: 
+7: <% for equip in @equips %>
+8:   <tr>
+9:     <td><%= equip.name %></td>
+10:     <td><%= link_to 'Show', equip %></td>
+11:     <td><%= link_to 'Edit', edit_equip_path(equip) %></td>
+12:     <td><%= link_to 'Destroy', equip, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/equips/index.html.erb:9
+    app/views/equips/index.html.erb:7:in `each'
+    app/views/equips/index.html.erb:7
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/equips_controller.rb:7:in `index'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (47.4ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:18:34) [GET]
+  [4;36;1mEquip Load (0.8ms)[0m   [0;1mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+
+
+ActionView::TemplateError (undefined method `name' for #<Equip:0xb643af88>) on line #9 of app/views/equips/index.html.erb:
+6: 
+7: <% for equip in @equips %>
+8:   <tr>
+9:     <td><%= equip.name %></td>
+10:     <td><%= link_to 'Show', equip %></td>
+11:     <td><%= link_to 'Edit', edit_equip_path(equip) %></td>
+12:     <td><%= link_to 'Destroy', equip, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/equips/index.html.erb:9
+    app/views/equips/index.html.erb:7:in `each'
+    app/views/equips/index.html.erb:7
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/equips_controller.rb:7:in `index'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (114.2ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:19:21) [GET]
+  [4;35;1mEquip Load (0.7ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#show (for 127.0.0.1 at 2010-06-10 20:19:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquip Load (0.5ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/show
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:19:25) [GET]
+  [4;35;1mEquip Load (0.7ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#show (for 127.0.0.1 at 2010-06-10 20:19:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquip Load (0.3ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/show
+Completed in 73ms (View: 6, DB: 0) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:19:30) [GET]
+  [4;35;1mEquip Load (0.8ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#edit (for 127.0.0.1 at 2010-06-10 20:19:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquip Load (0.3ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/edit
+Rendered equips/_form (7.4ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/equips/1/edit]
+
+
+Processing EquipsController#update (for 127.0.0.1 at 2010-06-10 20:20:06) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1", "equip"=>{"internal_price"=>"3.0", "model"=>"Les Paul", "type"=>"Guitar", "description"=>"", "external_price"=>"20.5"}}
+  [4;35;1mEquip Load (0.3ms)[0m   [0mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: type
+Rendering template within layouts/equips
+Rendering equips/edit
+Rendered equips/_form (6.3ms)
+Completed in 28ms (View: 12, DB: 0) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#update (for 127.0.0.1 at 2010-06-10 20:20:12) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1", "equip"=>{"internal_price"=>"3.0", "model"=>"Les Paul", "type"=>"Guitar", "description"=>"", "external_price"=>"20.5"}}
+  [4;36;1mEquip Load (0.3ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: type
+Rendering template within layouts/equips
+Rendering equips/edit
+Rendered equips/_form (6.2ms)
+Completed in 27ms (View: 12, DB: 0) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:20:19) [GET]
+  [4;35;1mEquip Load (0.7ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#destroy (for 127.0.0.1 at 2010-06-10 20:20:23) [DELETE]
+  Parameters: {"authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "id"=>"1"}
+  [4;36;1mEquip Load (0.3ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+  [4;35;1mEquip Destroy (0.2ms)[0m   [0mDELETE FROM "equips" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/equips
+Completed in 137ms (DB: 1) | 302 Found [http://localhost/equips/1]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:20:23) [GET]
+  [4;36;1mEquip Load (0.6ms)[0m   [0;1mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:20:23) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+Rendered equips/_form (6.6ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/equips/new]
+
+
+Processing EquipsController#create (for 127.0.0.1 at 2010-06-10 20:20:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "equip"=>{"internal_price"=>"3", "model"=>"Les Paul", "type"=>"Guitar", "description"=>"", "external_price"=>"20.5"}}
+WARNING: Can't mass-assign these protected attributes: type
+Rendering template within layouts/equips
+Rendering equips/new
+Rendered equips/_form (6.5ms)
+Completed in 28ms (View: 12, DB: 0) | 200 OK [http://localhost/equips]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (351.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (84.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100531181718)
+  [4;36;1mSQL (338.7ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "address" text, "email" varchar(255), "gender" varchar(255), "phone1" varchar(255), "phone2" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (82.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531181718')[0m
+Migrating to CreateBands (20100531184337)
+  [4;36;1mSQL (282.4ms)[0m   [0;1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "style" varchar(255), "homepage" varchar(255), "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (65.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531184337')[0m
+Migrating to CreateServices (20100531185228)
+  [4;36;1mSQL (309.3ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "price" float NOT NULL, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (95.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531185228')[0m
+Migrating to CreateClients (20100531190606)
+  [4;36;1mSQL (83.2ms)[0m   [0;1mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "person_id" integer) [0m
+  [4;35;1mSQL (77.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531190606')[0m
+Migrating to CreateAgendas (20100531191234)
+  [4;36;1mSQL (82.3ms)[0m   [0;1mCREATE TABLE "agendas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime NOT NULL, "duration" integer NOT NULL, "room" integer NOT NULL, "status" varchar(255) NOT NULL, "total_price" float, "created_at" datetime, "updated_at" datetime, "band_id" integer, "service_id" integer) [0m
+  [4;35;1mSQL (77.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531191234')[0m
+Migrating to CreateEquips (20100609191940)
+  [4;36;1mSQL (108.4ms)[0m   [0;1mCREATE TABLE "equips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar(255), "description" varchar(255), "type" varchar(255) NOT NULL, "external_price" float NOT NULL, "internal_price" float NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (74.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609191940')[0m
+Migrating to CreateInternalRents (20100609202534)
+  [4;36;1mSQL (82.9ms)[0m   [0;1mCREATE TABLE "internal_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "agenda_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (70.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202534')[0m
+Migrating to CreateExternalRents (20100609202554)
+  [4;36;1mSQL (99.9ms)[0m   [0;1mCREATE TABLE "external_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "status" varchar(255), "price" float, "client_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (103.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202554')[0m
+Migrating to BandsPeople (20100610035917)
+  [4;36;1mSQL (124.1ms)[0m   [0;1mCREATE TABLE "bands_people" ("band_id" integer, "person_id" integer) [0m
+  [4;35;1mSQL (92.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100610035917')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("agendas")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("bands_people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("equips")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("external_rents")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("internal_rents")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("services")[0m
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:21:09) [GET]
+  [4;35;1mEquip Load (0.5ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 20:21:11) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:21:13) [GET]
+  [4;36;1mEquip Load (0.5ms)[0m   [0;1mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:21:41) [GET]
+  [4;35;1mEquip Load (0.5ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:21:42) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+Rendered equips/_form (7.1ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/equips/new]
+
+
+Processing EquipsController#create (for 127.0.0.1 at 2010-06-10 20:21:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "equip"=>{"internal_price"=>"3", "model"=>"Les Paul", "type"=>"Guitar", "description"=>"", "external_price"=>"20.5"}}
+WARNING: Can't mass-assign these protected attributes: type
+Rendering template within layouts/equips
+Rendering equips/new
+Rendered equips/_form (5.9ms)
+Completed in 27ms (View: 11, DB: 0) | 200 OK [http://localhost/equips]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (136.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (81.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100531181718)
+  [4;36;1mSQL (143.9ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "address" text, "email" varchar(255), "gender" varchar(255), "phone1" varchar(255), "phone2" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (79.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531181718')[0m
+Migrating to CreateBands (20100531184337)
+  [4;36;1mSQL (71.8ms)[0m   [0;1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "style" varchar(255), "homepage" varchar(255), "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (77.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531184337')[0m
+Migrating to CreateServices (20100531185228)
+  [4;36;1mSQL (85.2ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "price" float NOT NULL, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (64.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531185228')[0m
+Migrating to CreateClients (20100531190606)
+  [4;36;1mSQL (61.1ms)[0m   [0;1mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "password" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "person_id" integer) [0m
+  [4;35;1mSQL (77.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531190606')[0m
+Migrating to CreateAgendas (20100531191234)
+  [4;36;1mSQL (71.5ms)[0m   [0;1mCREATE TABLE "agendas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime NOT NULL, "duration" integer NOT NULL, "room" integer NOT NULL, "status" varchar(255) NOT NULL, "total_price" float, "created_at" datetime, "updated_at" datetime, "band_id" integer, "service_id" integer) [0m
+  [4;35;1mSQL (77.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531191234')[0m
+Migrating to CreateEquips (20100609191940)
+  [4;36;1mSQL (99.6ms)[0m   [0;1mCREATE TABLE "equips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "model" varchar(255), "description" varchar(255), "classification" varchar(255) NOT NULL, "external_price" float NOT NULL, "internal_price" float NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (82.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609191940')[0m
+Migrating to CreateInternalRents (20100609202534)
+  [4;36;1mSQL (116.4ms)[0m   [0;1mCREATE TABLE "internal_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "agenda_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (99.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202534')[0m
+Migrating to CreateExternalRents (20100609202554)
+  [4;36;1mSQL (95.3ms)[0m   [0;1mCREATE TABLE "external_rents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "duration" integer, "status" varchar(255), "price" float, "client_id" integer, "equip_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (109.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100609202554')[0m
+Migrating to BandsPeople (20100610035917)
+  [4;36;1mSQL (96.4ms)[0m   [0;1mCREATE TABLE "bands_people" ("band_id" integer, "person_id" integer) [0m
+  [4;35;1mSQL (98.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100610035917')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("agendas")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("bands_people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("equips")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("external_rents")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("internal_rents")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("services")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 20:25:50) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:25:51) [GET]
+  [4;36;1mEquip Load (0.5ms)[0m   [0;1mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#new (for 127.0.0.1 at 2010-06-10 20:25:53) [GET]
+Rendering template within layouts/equips
+Rendering equips/new
+Rendered equips/_form (7.3ms)
+Completed in 24ms (View: 13, DB: 0) | 200 OK [http://localhost/equips/new]
+
+
+Processing EquipsController#create (for 127.0.0.1 at 2010-06-10 20:26:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1911247ccf4e4347b53954b8f327c1f0a48dc29d", "equip"=>{"internal_price"=>"3", "model"=>"Les Paul", "description"=>"", "classification"=>"Guitar", "external_price"=>"20.5"}}
+  [4;35;1mEquip Create (0.3ms)[0m   [0mINSERT INTO "equips" ("model", "internal_price", "created_at", "updated_at", "description", "classification", "external_price") VALUES('Les Paul', 3.0, '2010-06-10 23:26:00', '2010-06-10 23:26:00', '', 'Guitar', 20.5)[0m
+Redirected to #<Equip:0xb65d8d40>
+Completed in 93ms (DB: 0) | 302 Found [http://localhost/equips]
+
+
+Processing EquipsController#show (for 127.0.0.1 at 2010-06-10 20:26:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquip Load (0.4ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/show
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:26:03) [GET]
+  [4;35;1mEquip Load (0.7ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-10 20:26:14) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:26:17) [GET]
+  [4;36;1mEquip Load (0.8ms)[0m   [0;1mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/equips]
+
+
+Processing EquipsController#show (for 127.0.0.1 at 2010-06-10 20:26:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEquip Load (0.3ms)[0m   [0mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/equips/1]
+
+
+Processing EquipsController#edit (for 127.0.0.1 at 2010-06-10 20:26:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquip Load (0.3ms)[0m   [0;1mSELECT * FROM "equips" WHERE ("equips"."id" = 1) [0m
+Rendering template within layouts/equips
+Rendering equips/edit
+Rendered equips/_form (7.2ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/equips/1/edit]
+
+
+Processing EquipsController#index (for 127.0.0.1 at 2010-06-10 20:26:31) [GET]
+  [4;35;1mEquip Load (0.8ms)[0m   [0mSELECT * FROM "equips" [0m
+Rendering template within layouts/equips
+Rendering equips/index
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/equips]

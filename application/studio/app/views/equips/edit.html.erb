@@ -1,12 +1,7 @@
 <h1>Editing equip</h1>
 
-<% form_for(@equip) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
+<% @submit_message = "Update" %>
+<%= render :partial => "form" %>
 
 <%= link_to 'Show', @equip %> |
 <%= link_to 'Back', equips_path %>
