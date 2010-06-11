@@ -42,6 +42,12 @@ class ClientsController < ApplicationController
   def edit
     @client = Client.find(params[:id])
     @people = Person.find(:all)
+    @clients = Client.find(:all)
+
+    @clients.each do |client|
+      @people.delete_if {|person| person.id == client.person_id}
+    end
+    @people << Person.find(@client.person_id)
   end
 
   # POST /clients
