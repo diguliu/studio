@@ -84,7 +84,7 @@ class BandsController < ApplicationController
     end
   end
 
-  def add
+  def add_member
     @member = Person.find(params[:person][:id])
     @band = Band.find(params[:band][:id])
 
@@ -101,8 +101,8 @@ class BandsController < ApplicationController
     end
   end
 
-  def remove
-    @person = Person.find(params[:person][:id])
+  def remove_member
+    @member = Person.find(params[:person][:id])
     @band = Band.find(params[:band][:id])
 
     respond_to do |format|

@@ -16,28 +16,34 @@
 
 <% if @band.people.length > 0 %>
   <b>Members:</b>
-  <% @band.people.each do |person| %><br />
-    <li><%= link_to(person.name, person) %></li>
-    <% @aux.delete(person) %>
+  <ul>
+    <% @band.people.each do |person| %>
+      <li><%= link_to(person.name, person) %></li>
+      <% @aux.delete(person) %>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @aux.length > 0%>
+  <b>Add member: </b>
+  <% form_tag :action => "add_member" do %>
+    <%= hidden_field "band", "id", :id => @band.id %>
+    <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
+    <br /><br />
+    <%= submit_tag "Add!" %>
   <% end %>
 <% end %>
 
-<b>Add member: </b>
-<% form_tag :action => "add" do %>
-  <%= hidden_field "band", "id", :id => @band.id %>
-  <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
-  <br /><br />
-  <%= submit_tag "Add" %>
-<% end %>
+<br />
 
-<br /><br />
-
-<b> Remove member: </b>
-<% form_tag :action => "remove" do %>
-  <%= hidden_field "band", "id", :id => @band.id %>
-  <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
-  <br /><br />
-  <%= submit_tag "Remove" %>
+<% if @band.people.length > 0%>
+  <b> Remove member: </b>
+  <% form_tag :action => "remove_member" do %>
+    <%= hidden_field "band", "id", :id => @band.id %>
+    <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
+    <br /><br />
+    <%= submit_tag "Remove!" %>
+  <% end %>
 <% end %>
 
 

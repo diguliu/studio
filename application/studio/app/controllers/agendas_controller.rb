@@ -14,6 +14,7 @@ class AgendasController < ApplicationController
   # GET /agendas/1.xml
   def show
     @agenda = Agenda.find(params[:id])
+    @equips = Equip.find(:all)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -88,6 +89,40 @@ class AgendasController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(agendas_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def add_equip
+    @equip = Equip.find(params[:equip][:id])
+    @agenda = Agenda.find(params[:agenda][:id])
+
+    respond_to do |format|
+      if @agenda.add_equip(@equip, params[:internal_rent][:start], params[:duration])
+        flash[:notice] = "Equipment added to the agenda."
+        format.html {redirect_to(@agenda)}
+        format.xml {head :ok}
+      else
+        flash[:notice] = "Failed to add the equipment to the agenda."
+        format.html {redirect_to(@agenda)}
+        format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def remove_equip
+    @equip = Equip.find(params[:equip][:id])
+    @agenda = Agenda.find(params[:agenda][:id])
+
+    respond_to do |format|
+      if @agenda.remove_equip(@equip)
+        flash[:notice] = "Equipment removed from the agenda."
+        format.html {redirect_to(@agenda)}
+        format.xml {head :ok}
+      else
+        flash[:notice] = "Failed to remove the equipment from the agenda."
+        format.html {redirect_to(@agenda)}
+        format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
+      end
     end
   end
 end

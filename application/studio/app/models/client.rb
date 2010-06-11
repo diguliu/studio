@@ -10,12 +10,12 @@ class Client < ActiveRecord::Base
 
 
   def add_equip(equip, start, duration)
-    external_rent = ExternalRent.create!(:start => start, :duration => duration, :client => self, :equip => equip, :status => "reserved", :price => 0)
+    ExternalRent.create!(:start => start, :duration => duration, :client => self, :equip => equip, :status => "reserved", :price => 0)
   end
 
   def remove_equip(equip)
-    internal_rents.delete_if {|internal_rent| internal_rent.equip == equip}
-    self.save
+    er = ExternalRent.find(:first, :conditions => {:equip_id => equip.id})
+    er.destroy
   end
 
 end

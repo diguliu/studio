@@ -16,7 +16,53 @@
 %>
 <b>Status: </b><font color="<%=color%>" > <%= @agenda.status %></font><br />
 
-<b>Total price: </b> <%= @agenda.total_price %><br />
+<b>Total price: </b> <%= @agenda.total_price %><br /><br />
+
+<% @aux = @equips %>
+
+<% if @agenda.equips.length > 0 %>
+  <b>Equipments:</b>
+  <ul>
+    <% @agenda.equips.each do |equip| %>
+      <li><%= link_to(equip.classification, equip) %></li>
+      <% @aux.delete(equip) %>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @aux.length > 0%>
+  <% form_tag :action => "add_equip" do %>
+    <%= hidden_field "agenda", "id", :id => @agenda.id %>
+
+    <b>Add equipment: </b>
+    <%= collection_select(:equip, :id, @aux, :id, :classification, :class =>"Equip") %>
+
+    <div class="field">
+      <%= label_tag :duration, "Duration: ", :class => "field_label" %>
+      <%= text_field_tag :duration%>
+    </div>
+
+    <div class="field">
+      <%= label_tag :start, "Start at: ", :class => "field_label" %>
+      <%= datetime_select :internal_rent, :start %>
+    </div>
+
+    <br /><br />
+    <%= submit_tag "Add!" %>
+  <% end %>
+<% end %>
+
+<br />
+
+<% if @agenda.equips.length > 0%>
+  <b> Remove equipment: </b>
+  <% form_tag :action => "remove_equip" do %>
+    <%= hidden_field "agenda", "id", :id => @agenda.id %>
+    <%= collection_select(:equip, :id, @agenda.equips, :id, :classification, :class =>"Equip") %>
+    <br /><br />
+    <%= submit_tag "Remove!" %>
+  <% end %>
+<% end %>
 
 <%= link_to 'Edit', edit_agenda_path(@agenda) %>
 <%= link_to 'Back', agendas_path %>
