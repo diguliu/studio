@@ -45,7 +45,6 @@ class Agenda < ActiveRecord::Base
       self.status = "reserved"
     elsif Time.now < start && start < Time.now+2.days
       self.status = "confirmed"
-      #blabla
     else
       self.status = "done"
     end
