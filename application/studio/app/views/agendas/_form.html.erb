@@ -18,12 +18,6 @@
 
     <div class="field required"> 
       <font color="#F00" style="float: left;">*</font>
-      <%= f.label :start, "Starts at: ", :class => "field_label" %>  
-      <%= f.datetime_select :start %>
-    </div>
-
-    <div class="field required"> 
-      <font color="#F00" style="float: left;">*</font>
       <%= f.label :duration, "Duration: ", :class => "field_label" %>  
       <%= f.text_field :duration %>
     </div>
@@ -31,6 +25,13 @@
     <div class="field">
       <%= f.label :room, "Room: ", :class => "field_label" %>  
       <%= f.text_field :room %>
+    </div>
+
+    <div class="field">
+      <%= f.label :start, "Starts at: ", :class => "field_label" %>  
+      <% fields_for :agenda do |ff|%>
+        <%= ff.calendar_date_select :start, :popup => "force" %>
+      <% end %>
     </div>
 
     <p><font color="red">* Required Fields</font></p>
