@@ -12,21 +12,23 @@ class Agenda < ActiveRecord::Base
 
   def add_equip(equip, start, duration)
     InternalRent.create!(:start => start, :duration => duration, :agenda => self, :equip => equip)
-    self.save
+    save
   end
 
   def remove_equip(equip)
     ir = InternalRent.find(:first, :conditions => {:equip_id => equip.id})
     ir.destroy
-    self.save
+    save
   end
 
-  def cancel_agenda
+  def cancel
     self.status = "canceled"
+    event.destroy
+    save
   end
 
   before_save :calculate_total_price, :set_status
-  after_save :create_event
+  after_create :create_event
 
   protected
 
@@ -41,12 +43,14 @@ class Agenda < ActiveRecord::Base
 
   def set_status
     puts "-- Setting status..."
-    if start > Time.now+2.days
-      self.status = "reserved"
-    elsif Time.now < start && start < Time.now+2.days
-      self.status = "confirmed"
-    else
-      self.status = "done"
+    if status != "canceled"
+      if start > Time.now+2.days
+        self.status = "reserved"
+      elsif Time.now < start && start < Time.now+2.days
+        self.status = "confirmed"
+      else
+        self.status = "done"
+      end
     end
   end
 
