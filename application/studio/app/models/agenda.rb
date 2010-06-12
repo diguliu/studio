@@ -1,7 +1,7 @@
 class Agenda < ActiveRecord::Base
 
   validates_presence_of :start, :duration, :room, :status, :band_id, :service_id
-  validates_inclusion_of :status, :in => %w(reserved done canceled)
+  validates_inclusion_of :status, :in => %w(reserved confirmed done canceled)
 
   belongs_to :band
   belongs_to :service
@@ -21,6 +21,10 @@ class Agenda < ActiveRecord::Base
     self.save
   end
 
+  def cancel_agenda
+    self.status = "canceled"
+  end
+
   before_save :calculate_total_price, :set_status
   after_save :create_event
 
@@ -37,8 +41,10 @@ class Agenda < ActiveRecord::Base
 
   def set_status
     puts "-- Setting status..."
-    if((start <=> 3.day.ago) > 0)
+    if start > Time.now+2.days
       self.status = "reserved"
+    elsif Time.now < start && start < Time.now+2.days
+      self.status = "confirmed"
     else
       self.status = "done"
     end

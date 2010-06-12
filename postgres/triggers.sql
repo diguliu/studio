@@ -10,12 +10,12 @@ declare
 d integer;
 begin
 	if (TG_OP = 'INSERT' or TG_OP = 'UPDATE') then
-		select duration into d from agenda where agenda_id=NEW.agenda_id;
-		update agenda set duration=d where agenda_id=NEW.agenda_id;
+		select duration into d from agendas where id=NEW.id;
+		update agendas set duration=d where id=NEW.id;
 		return NEW;
 	elsif (TG_OP = 'DELETE') then
-		select duration into d from agenda where agenda_id=OLD.agenda_id;
-		update agenda set duration=d where agenda_id=OLD.agenda_id;
+		select duration into d from agendas where id=OLD.id;
+		update agenda set duration=d where id=OLD.id;
 		return OLD;
 	end if;
 	return null;
@@ -23,8 +23,8 @@ end;
 $update_agenda$
 language plpgsql;
 
-drop trigger if exists call_agenda_trigger on agenda_has_equipment;
-create trigger call_agenda_trigger after update or insert or delete on agenda_has_equipment
+drop trigger if exists call_agenda_trigger on internal_rents;
+create trigger call_agenda_trigger after update or insert or delete on internal_rents
 for each row execute procedure update_agenda();
 
 /*-------------------------*/
@@ -38,11 +38,11 @@ declare
 	equipments_price float;
 begin
 	select NEW.duration*service.price into service_price
-	from service where service_id = NEW.service_id;
+	from services where id = NEW.id;
 
-	select sum(ahe.duration*e.internalprice) into equipments_price
-	from agenda_has_equipment as ahe inner join equipment as e
-	on ahe.equipment_id = e.equipment_id where ahe.agenda_id = NEW.agenda_id;
+	select sum(ahe.duration*e.internal_price) into equipments_price
+	from internal_rents as ahe inner join equipments as e
+	on ahe.id = e.id where ahe.id = NEW.id;
 
 	if equipments_price is null then
 		equipments_price = 0;
@@ -54,8 +54,8 @@ end;
 $service_price$
 language plpgsql;
 
-drop trigger if exists calculate_service_price on agenda;
-create trigger calculate_service_price before update or insert on agenda
+drop trigger if exists calculate_service_price on agendas;
+create trigger calculate_service_price before update or insert on agendas
 for each row execute procedure service_price();
 
 /*----------------------*/
@@ -68,9 +68,9 @@ declare
 	equipments_price float;
 begin
 	equipments_price = 0;
-	select sum(cre.duration*e.externalprice) into equipments_price
-	from client_rents_equipment as cre inner join equipment as e
-	on cre.equipment_id = e.equipment_id where cre.client_login = NEW.client_login;
+	select sum(cre.duration*e.external_price) into equipments_price
+	from external_rents as cre inner join equipments as e
+	on cre.id = e.id where cre.login = NEW.login;
 
 	if equipments_price is null then
 		equipments_price = 0;
@@ -82,7 +82,7 @@ end;
 $rent_price$
 language plpgsql;
 
-drop trigger if exists calculate_rent_price on client_rents_equipment;
-create trigger calculate_rent_price before update or insert on client_rents_equipment
+drop trigger if exists calculate_rent_price on external_rents;
+create trigger calculate_rent_price before update or insert on external_rents
 for each row execute procedure rent_price();
 

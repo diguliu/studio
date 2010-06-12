@@ -10,9 +10,10 @@
   <b>Duration: </b> <%= @agenda.duration %>h<br />
 
   <%  case @agenda.status
-      when "done"     then color="green"
-      when "reserved" then color="orange"
-      when "canceled" then color="red"
+      when "reserved"   then color="orange"
+      when "confirmed"  then color="green"
+      when "done"       then color="azul"
+      when "canceled"   then color="red"
       end
     %>
     <b>Status: </b><font color="<%=color%>" > <%= @agenda.status %></font><br />
