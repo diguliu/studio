@@ -24,7 +24,8 @@
   <b>Equipments:</b>
   <ul>
     <% @agenda.equips.each do |equip| %>
-      <li><%= link_to(equip.classification, equip) %></li>
+      <% internal_rent = InternalRent.find(:first, :conditions => {:equip_id => equip.id}) %>
+      <li><%= link_to(equip.classification, equip)+" "+internal_rent.duration.to_s+'h '+(equip.internal_price*internal_rent.duration).to_s %></li>
       <% @aux.delete(equip) %>
     <% end %>
   </ul>
@@ -49,7 +50,7 @@
       <div class="field">
         <%= label_tag :start, "Starts at: ", :class => "field_label" %>  
         <% fields_for :internal_rent do |ff|%>
-          <%= ff.calendar_date_select :start, :popup => "force", :time => true %>
+          <%= ff.calendar_date_select :start, :popup => "force", :time => true, :default_time => @agenda.start %>
         <% end %>
       </div>
 

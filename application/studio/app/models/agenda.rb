@@ -11,13 +11,13 @@ class Agenda < ActiveRecord::Base
 
   def add_equip(equip, start, duration)
     InternalRent.create!(:start => start, :duration => duration, :agenda => self, :equip => equip)
-    calculate_total_price
+    self.save
   end
 
   def remove_equip(equip)
     ir = InternalRent.find(:first, :conditions => {:equip_id => equip.id})
     ir.destroy
-    calculate_total_price
+    self.save
   end
 
   before_save :calculate_total_price, :set_status

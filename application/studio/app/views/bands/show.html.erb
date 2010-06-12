@@ -25,24 +25,28 @@
 <% end %>
 
 <% if @aux.length > 0%>
-  <b>Add member: </b>
-  <% form_tag :action => "add_member" do %>
-    <%= hidden_field "band", "id", :id => @band.id %>
-    <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
-    <br /><br />
-    <%= submit_tag "Add!" %>
+  <div class="box">
+    <b>Add member: </b>
+    <% form_tag :action => "add_member" do %>
+      <%= hidden_field "band", "id", :id => @band.id %>
+      <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
+      <br /><br />
+      <%= submit_tag "Add!" %>
+    </div>
   <% end %>
 <% end %>
 
 <br />
 
 <% if @band.people.length > 0%>
-  <b> Remove member: </b>
-  <% form_tag :action => "remove_member" do %>
-    <%= hidden_field "band", "id", :id => @band.id %>
-    <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
-    <br /><br />
-    <%= submit_tag "Remove!" %>
+  <div class="box">
+    <b> Remove member: </b>
+    <% form_tag :action => "remove_member" do %>
+      <%= hidden_field "band", "id", :id => @band.id %>
+      <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
+      <br /><br />
+      <%= submit_tag "Remove!" %>
+    </div>
   <% end %>
 <% end %>
 
