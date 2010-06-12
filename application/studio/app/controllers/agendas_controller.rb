@@ -125,4 +125,20 @@ class AgendasController < ApplicationController
       end
     end
   end
+
+  def cancel
+    @agenda = Agenda.find(params[:id])
+
+    respond_to do |format|
+      if @agenda.cancel
+        flash[:notice] = "Agenda canceled."
+        format.html {redirect_to(@agenda)}
+        format.xml {head :ok}
+      else
+        flash[:notice] = "Failed to cancel agenda."
+        format.html {redirect_to(@agenda)}
+        format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
 end
