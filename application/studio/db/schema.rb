@@ -56,6 +56,15 @@ ActiveRecord::Schema.define(:version => 20100610035917) do
     t.datetime "updated_at"
   end
 
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "start_at",   :null => false
+    t.datetime "end_at",     :null => false
+    t.integer  "agenda_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "external_rents", :force => true do |t|
     t.datetime "start"
     t.integer  "duration"

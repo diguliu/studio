@@ -7,6 +7,7 @@ class Agenda < ActiveRecord::Base
   belongs_to :service
   has_many :internal_rents
   has_many :equips, :through => :internal_rents
+  has_one :event, :dependent => :destroy
 
 
   def add_equip(equip, start, duration)
@@ -21,6 +22,7 @@ class Agenda < ActiveRecord::Base
   end
 
   before_save :calculate_total_price, :set_status
+  after_save :create_event
 
   protected
 
@@ -40,6 +42,10 @@ class Agenda < ActiveRecord::Base
     else
       self.status = "done"
     end
+  end
+
+  def create_event
+    Event.create!(:start_at => start, :end_at => start+duration.hours, :agenda_id => id, :name => band.name)
   end
 
 end
