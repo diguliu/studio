@@ -1,12 +1,14 @@
 <h1>Showing service</h1>
 
-<b>Name: </b> <%= @service.name%><br />
+<div class="folder_header">
+  <b>Name: </b> <%= @service.name%><br />
 
-<b>Price: </b> <%= @service.price %><br />
+  <b>Price: </b> <%= @service.price %><br />
 
-<% if !@service.description.blank? %>
-  <b>Description: </b> <%= @service.description %><br />
-<% end %>
+  <% if !@service.description.blank? %>
+    <b>Description: </b> <%= @service.description %><br />
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>

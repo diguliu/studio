@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100610035917) do
+ActiveRecord::Schema.define(:version => 20100612021518) do
 
   create_table "agendas", :force => true do |t|
     t.datetime "start",       :null => false

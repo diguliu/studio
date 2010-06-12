@@ -45,13 +45,24 @@ pre {
   font-size: 11px;
 }
 
-.box {
+.folder_header {
   position: relative;
   border: 1px solid #888;
-  -moz-border-radius: 10px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
   padding: 6px 4px 9px 4px;
-  margin-top: -5px;
-  background: #EF2929;
+  background: #D3D7CF;
+  width: 250px;
+}
+
+.folder_body {
+  position: relative;
+  border: 1px solid #888;
+  -moz-border-radius-bottomleft: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-topright: 20px;
+  padding: 6px 4px 9px 4px;
+  background: #EEEEEC;
   width: 500px;
 }
 

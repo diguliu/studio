@@ -1,54 +1,54 @@
 <h1>Showing Band</h1>
 
-<b>Name: </b> <%= @band.name %><br />
+<div class="folder_header">
+  <b>Name: </b> <%= @band.name %><br />
 
-<b>Login: </b> <%= @band.login %><br />
+  <b>Login: </b> <%= @band.login %><br />
 
-<% if !@band.style.blank? %>
-  <b>Style: </b> <%= @band.style %><br />
-<% end %>
+  <% if !@band.style.blank? %>
+    <b>Style: </b> <%= @band.style %><br />
+  <% end %>
 
-<% if !@band.homepage.blank? %>
-  <b>Homepage: </b> <%= @band.homepage %><br />
-<% end %>
+  <% if !@band.homepage.blank? %>
+    <b>Homepage: </b> <%= @band.homepage %><br />
+  <% end %>
 
-<% @aux = @people %>
+  <% @aux = @people %>
 
-<% if @band.people.length > 0 %>
-  <b>Members:</b>
-  <ul>
-    <% @band.people.each do |person| %>
-      <li><%= link_to(person.name, person) %></li>
-      <% @aux.delete(person) %>
-    <% end %>
-  </ul>
-<% end %>
+  <% if @band.people.length > 0 %>
+    <b>Members:</b>
+    <ul>
+      <% @band.people.each do |person| %>
+        <li><%= link_to(person.name, person) %></li>
+        <% @aux.delete(person) %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
 
-<% if @aux.length > 0%>
-  <div class="box">
+<div class="folder_body">
+  <% if @aux.length > 0%>
     <b>Add member: </b>
     <% form_tag :action => "add_member" do %>
       <%= hidden_field "band", "id", :id => @band.id %>
       <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
       <br /><br />
       <%= submit_tag "Add!" %>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
 
-<br />
+  <br />
 
-<% if @band.people.length > 0%>
-  <div class="box">
+  <% if @band.people.length > 0%>
     <b> Remove member: </b>
     <% form_tag :action => "remove_member" do %>
       <%= hidden_field "band", "id", :id => @band.id %>
       <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
       <br /><br />
       <%= submit_tag "Remove!" %>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
 
 <%= link_to 'Edit', edit_band_path(@band) %> |
