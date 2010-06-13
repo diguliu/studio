@@ -101,4 +101,64 @@ class ClientsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def show_rent
+    @external_rent = ExternalRent.find(params[:id])
+    @equips = Equip.find(:all)
+    @equip = @external_rent.equip
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @external_rent }
+    end
+  end
+
+  def new_rent
+    @client = Client.find(params[:id])
+    @equips = Equip.find(:all)
+    @external_rent = ExternalRent.new
+
+#    respond_to do |format|
+#      format.html # new.html.erb
+#      format.xml  { render :xml => @client }
+#    end
+
+  end
+
+  def create_rent
+    @equips = Equip.find(:all)
+    @client = Client.find(params[:client][:id])
+    @external_rent = ExternalRent.new(params[:external_rent])
+    @external_rent.client_id = params[:client][:id]
+    @external_rent.status = "reserved"
+    @external_rent.price = 0
+
+    respond_to do |format|
+      if @external_rent.save
+        flash[:notice] = 'Client was successfully created.'
+        format.html { redirect_to(@client) }
+        format.xml  { render :xml => @external_rent, :status => :created, :location => @external_rent }
+      else
+        format.html { render :action => "new_rent" }
+        format.xml  { render :xml => @external_rent.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def cancel_rent
+    @external_rent = ExternalRent.find(params[:id])
+
+    respond_to do |format|
+      if @external_rent.cancel
+        flash[:notice] = "Rent canceled."
+        format.html {redirect_to({:action=> "show_rent", :id => @xternal_rent.id})}
+        format.xml {head :ok}
+      else
+        flash[:notice] = "Failed to cancel rent."
+        format.html {redirect_to({:action=> "show_rent", :id => @xternal_rent.id})}
+        format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
 end

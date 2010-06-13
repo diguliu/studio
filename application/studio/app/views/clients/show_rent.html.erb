@@ -1,0 +1,26 @@
+<h1>Showing rent</h1>
+
+<div class="folder_header">
+
+  <b>Equipment: </b> <%= link_to @equip.classification, @equip %><br />
+  <b>Duration: </b> <%= @external_rent.duration %> day(s)<br />
+  <b>Starts at: </b> <%= @external_rent.start %><br />
+  <b>Price: </b> <%= @external_rent.price %><br />
+
+  <%  
+    case @external_rent.status
+      when "reserved"   then color="orange"
+      when "confirmed"  then color="green"
+      when "done"       then color="blue"
+      when "canceled"   then color="red"
+    end
+  %>
+  <b>Status: </b><font color="<%=color%>" > <%= @external_rent.status %></font><br />
+
+
+  <% if @external_rent.status == "reserved" %>
+    <%= link_to 'Cancel rent', :action => 'cancel_rent', :id => @external_rent.id %>
+  <% end %>
+
+</div>
+  <%= link_to 'Back', clients_path %>

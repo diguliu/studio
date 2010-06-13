@@ -21,7 +21,7 @@
       <b>Total price: </b> <%= @agenda.total_price %><br /><br />
 
       <% if @agenda.status == "reserved" %>
-        <%= link_to 'Cancel agenda', :action => 'cancel', :id => @agenda.id%>
+        <%= link_to 'Cancel agenda', :action => 'cancel', :id => @agenda.id %>
       <% end %>
 
       <% @aux = @equips %>

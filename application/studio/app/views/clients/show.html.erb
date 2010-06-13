@@ -4,7 +4,20 @@
   <b>Name: </b>
   <%= link_to(Person.find(@client.person_id).name, Person.find(@client.person_id)) %> <br />
   <b>Login: </b> <%= @client.login %><br />
+  <%= link_to 'New rent', :action => "new_rent", :id => @client.id %>
 </div>
+<% if @client.external_rents.length > 0 %>
+  <div class="folder_body">
+    <ul>
+      <% @client.external_rents.each do |external_rent|%>
+        <li> <%= link_to(external_rent.equip.classification, :action => "show_rent", :id => external_rent.id) + " " + 
+                 external_rent.start.strftime("%m/%d/%Y") %> </li>
+      <% end %>
+    </ul>
+</div>
+<% end %>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
+<%#= event_calendar %>
+
+<%= link_to 'Edit', edit_client_path(@client) %>
 <%= link_to 'Back', clients_path %>
