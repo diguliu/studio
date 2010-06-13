@@ -1,85 +1,46 @@
 <h1>Showing agenda</h1>
 
 <div class="folder_header">
+
   <b>Band: </b> <%= @agenda.band.name%><br />
-
   <b>Service: </b> <%= @agenda.service.name %><br />
-
   <b>Starts at: </b> <%= @agenda.start %><br />
-
   <b>Duration: </b> <%= @agenda.duration %>h<br />
-
   <%  case @agenda.status
       when "reserved"   then color="orange"
       when "confirmed"  then color="green"
       when "done"       then color="blue"
       when "canceled"   then color="red"
       end
-      %>
-      <b>Status: </b><font color="<%=color%>" > <%= @agenda.status %></font><br />
+  %>
+  <b>Status: </b><font color="<%=color%>" > <%= @agenda.status %></font><br />
+  <b>Total price: </b> <%= @agenda.total_price %> <br />
 
-      <b>Total price: </b> <%= @agenda.total_price %><br /><br />
-
-      <% if @agenda.status == "reserved" %>
-        <%= link_to 'Cancel agenda', :action => 'cancel', :id => @agenda.id %>
+  <% @aux = @equips %>
+  <% if @agenda.equips.length > 0 %>
+    <b>Equipments:</b>
+    <ul>
+      <% @agenda.equips.each do |equip| %>
+        <% internal_rent = InternalRent.find(:first, :conditions => {:equip_id => equip.id}) %>
+        <li><%= link_to(equip.classification, equip)+" "+internal_rent.duration.to_s+'h '+(equip.internal_price*internal_rent.duration).to_s %></li>
+        <% @aux.delete(equip) %>
       <% end %>
+    </ul>
+  <% end %>
 
-      <% @aux = @equips %>
+  <% if @agenda.status == "reserved" %>
+    <%= link_to 'Cancel agenda', :action => 'cancel', :id => @agenda.id %>
+  <% end %>
 
-      <% if @agenda.equips.length > 0 %>
-        <b>Equipments:</b>
-        <ul>
-          <% @agenda.equips.each do |equip| %>
-            <% internal_rent = InternalRent.find(:first, :conditions => {:equip_id => equip.id}) %>
-            <li><%= link_to(equip.classification, equip)+" "+internal_rent.duration.to_s+'h '+(equip.internal_price*internal_rent.duration).to_s %></li>
-            <% @aux.delete(equip) %>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
+</div>
 
-    <% if @agenda.status == "reserved" || @agenda.status == "confirmed" %>
-      <div class="folder_body">
-        <% if @aux.length > 0%>
-          <% form_tag :action => "add_equip" do %>
-            <%= hidden_field "agenda", "id", :id => @agenda.id %>
+<% if @agenda.status == "reserved" || @agenda.status == "confirmed" %>
+  <div class="folder_body">
+    <%= render :partial => "add_equip" if @aux.length > 0 %>
+    <br />
+    <%= render :partial => "remove_equip" if @agenda.equips.length > 0 %>
+  </div>
+<% end %>
 
-            <b> Add equipment: </b>
-            <div class="field">
-              <%= label_tag :equip_id, "Equipment: ", :class => "field_label" %>
-              <%= collection_select(:equip, :id, @aux, :id, :classification, :class =>"Equip") %>
-            </div>
-
-            <div class="field">
-              <%= label_tag :duration, "Duration: ", :class => "field_label" %>
-              <%= text_field_tag :duration, nil, :size => 1 %>h
-            </div>
-
-            <div class="field">
-              <%= label_tag :start, "Starts at: ", :class => "field_label" %>
-              <% fields_for :internal_rent do |ff|%>
-                <%= ff.calendar_date_select :start, :popup => "force", :time => true, :default_time => @agenda.start %>
-              <% end %>
-            </div>
-
-            <br />
-            <%= submit_tag "Add!" %>
-          <% end %>
-        <% end %>
-
-        <br />
-
-        <% if @agenda.equips.length > 0%>
-          <b> Remove equipment: </b>
-          <% form_tag :action => "remove_equip" do %>
-            <%= hidden_field "agenda", "id", :id => @agenda.id %>
-            <%= collection_select(:equip, :id, @agenda.equips, :id, :classification, :class =>"Equip") %>
-            <br /><br />
-            <%= submit_tag "Remove!" %>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-
-    <%= link_to 'Edit', edit_agenda_path(@agenda) %>
-    <%= link_to 'Back', agendas_path %>
+<%= link_to 'Edit', edit_agenda_path(@agenda) %>
+<%= link_to 'Back', agendas_path %>

@@ -10,14 +10,8 @@ class Agenda < ActiveRecord::Base
   has_one :event, :dependent => :destroy
 
 
-  def add_equip(equip, start, duration)
-    InternalRent.create!(:start => start, :duration => duration, :agenda => self, :equip => equip)
-    save
-  end
-
-  def remove_equip(equip)
-    ir = InternalRent.find(:first, :conditions => {:equip_id => equip.id})
-    ir.destroy
+  def remove_equip(internal_rent)
+    internal_rent.destroy
     save
   end
 

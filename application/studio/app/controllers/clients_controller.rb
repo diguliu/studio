@@ -136,7 +136,7 @@ class ClientsController < ApplicationController
     respond_to do |format|
       if @external_rent.save
         flash[:notice] = 'Client was successfully created.'
-        format.html { redirect_to(@client) }
+        format.html { redirect_to(@external_rent) }
         format.xml  { render :xml => @external_rent, :status => :created, :location => @external_rent }
       else
         format.html { render :action => "new_rent" }
