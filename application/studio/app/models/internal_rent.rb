@@ -10,8 +10,12 @@ class InternalRent < ActiveRecord::Base
   private
 
   def inside_time
-    errors.add(:start, "The equipment rent can't start before the service.") if start < agenda.start
-    errors.add(:duration, "The equipmente rent can't last after the service end.") if start+duration > agenda.start+agenda.duration
+    if(start)
+      errors.add(:start, "The equipment rent can't start before the service.") if start < agenda.start
+    end
+    if(duration)
+      errors.add(:duration, "The equipmente rent can't last after the service end.") if start+duration > agenda.start+agenda.duration
+    end
   end
 
   def update_agenda
