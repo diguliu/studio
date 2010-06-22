@@ -1,23 +1,21 @@
 ActionController::Routing::Routes.draw do |map|
   map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
+
   map.resources :equips
-
   map.resources :services
-
   map.resources :agendas
-
   map.resources :bands
-
   map.resources :clients
-
   map.resources :people
 
   map.resource :band_session
   map.resource :client_session
-  map.root :controller => "band_sessions", :action => "new"
-  map.root :controller => "client_sessions", :action => "new"
-  map.resource :account, :controller => "bands"
 
+  map.band_login "band_login", :controller => "band_sessions", :action => "new"
+  map.client_login "client_login", :controller => "client_sessions", :action => "new"
+
+  map.band_logout "band_logout", :controller => "band_sessions", :action => "destroy"
+  map.client_logout "client_logout", :controller => "client_sessions", :action => "destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

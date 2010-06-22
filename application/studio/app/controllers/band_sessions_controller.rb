@@ -6,7 +6,7 @@ class BandSessionsController < ApplicationController
   def create
     @band_session = BandSession.new(params[:band_session])
     if @band_session.save
-      flash[:notice] = "Login successful!"
+      flash[:notice] = "Successfully logged in!"
       redirect_to root_url
     else
       render :action => :new
@@ -15,7 +15,7 @@ class BandSessionsController < ApplicationController
 
   def destroy
     current_band_session.destroy
-    flash[:notice] = "Logout successful!"
+    flash[:notice] = "Successfully logged out!"
     redirect_to root_url
   end
 end

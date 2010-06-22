@@ -6,7 +6,7 @@ class ClientSessionsController < ApplicationController
   def create
     @client_session = ClientSession.new(params[:client_session])
     if @client_session.save
-      flash[:notice] = "Login successful!"
+      flash[:notice] = "Successfully logged in!"
       redirect_to root_url
     else
       render :action => :new
@@ -15,7 +15,7 @@ class ClientSessionsController < ApplicationController
 
   def destroy
     current_client_session.destroy
-    flash[:notice] = "Logout successful!"
+    flash[:notice] = "Successfully logged out!"
     redirect_to root_url
   end
 end
