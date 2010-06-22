@@ -8,6 +8,7 @@ class Client < ActiveRecord::Base
   has_many :external_rents
   has_many :equips, :through => :external_rents
 
+  acts_as_authentic
 
   def add_equip(equip, start, duration)
     ExternalRent.create!(:start => start, :duration => duration, :client => self, :equip => equip, :status => "reserved", :price => 0)

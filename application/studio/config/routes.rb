@@ -13,7 +13,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :people
 
   map.resource :band_session
+  map.resource :client_session
   map.root :controller => "band_sessions", :action => "new"
+  map.root :controller => "client_sessions", :action => "new"
   map.resource :account, :controller => "bands"
 
 

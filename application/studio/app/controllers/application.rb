@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
 
   filter_parameter_logging :password, :password_confirmation
-  helper_method :current_band_session, :current_band
+  helper_method :current_band_session, :current_band, :current_client_session, :current_client
 
   private
     def current_band_session
@@ -18,6 +18,15 @@ class ApplicationController < ActionController::Base
       @current_band = current_band_session && current_band_session.band
     end
 
+    def current_client_session
+      return @current_client_session if defined?(@current_client_session)
+      @current_client_session = ClientSession.find
+    end
+
+    def current_client
+      return @current_client if defined?(@current_client)
+      @current_client = current_client_session && current_client_session.client
+    end
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store

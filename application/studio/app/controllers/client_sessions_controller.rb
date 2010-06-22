@@ -1,11 +1,11 @@
-class BandSessionsController < ApplicationController
+class ClientSessionsController < ApplicationController
   def new
-    @band_session = BandSession.new
+    @client_session = ClientSession.new
   end
 
   def create
-    @band_session = BandSession.new(params[:band_session])
-    if @band_session.save
+    @client_session = ClientSession.new(params[:client_session])
+    if @client_session.save
       flash[:notice] = "Login successful!"
       redirect_to root_url
     else
@@ -14,7 +14,7 @@ class BandSessionsController < ApplicationController
   end
 
   def destroy
-    current_band_session.destroy
+    current_client_session.destroy
     flash[:notice] = "Logout successful!"
     redirect_to root_url
   end
