@@ -12,6 +12,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :people
 
+  map.resource :band_session
+  map.root :controller => "band_sessions", :action => "new"
+  map.resource :account, :controller => "bands"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
