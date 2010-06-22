@@ -1,5 +1,9 @@
 class ClientSessionsController < ApplicationController
   def new
+    if current_band || current_client
+      flash[:notice] = "You are already logged in!"
+      redirect_to root_url
+    end
     @client_session = ClientSession.new
   end
 
