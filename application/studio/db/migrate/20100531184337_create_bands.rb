@@ -5,7 +5,9 @@ class CreateBands < ActiveRecord::Migration
       t.string :name, :null => false
       t.string :style
       t.string :homepage
-      t.string :password, :null => false
+      t.string :crypted_password, :null => false
+      t.string :password_salt, :null => false
+      t.string :persistence_token, :null => false
       t.timestamps
     end
   end

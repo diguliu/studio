@@ -4,7 +4,9 @@ class Band < ActiveRecord::Base
   validates_length_of :password, :within => 5..40
   validates_uniqueness_of  :login
   validates_confirmation_of :password
-#blablabla
+
   has_and_belongs_to_many :people
   has_many :agendas
+
+  acts_as_authentic
 end
