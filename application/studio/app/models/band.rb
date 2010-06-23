@@ -9,4 +9,8 @@ class Band < ActiveRecord::Base
   has_many :agendas
 
   acts_as_authentic
+
+  def role_symbols
+    roles.split(' ').map {|role| role.to_sym}
+  end
 end

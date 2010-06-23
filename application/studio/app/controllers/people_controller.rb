@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
-  # GET /people
-  # GET /people.xml
+  filter_resource_access
+
   def index
     @people = Person.find(:all)
 
@@ -10,8 +10,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  # GET /people/1
-  # GET /people/1.xml
   def show
     @person = Person.find(params[:id])
 
@@ -21,8 +19,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  # GET /people/new
-  # GET /people/new.xml
   def new
     @person = Person.new
 
@@ -32,13 +28,10 @@ class PeopleController < ApplicationController
     end
   end
 
-  # GET /people/1/edit
   def edit
     @person = Person.find(params[:id])
   end
 
-  # POST /people
-  # POST /people.xml
   def create
     @person = Person.new(params[:person])
 
@@ -54,8 +47,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  # PUT /people/1
-  # PUT /people/1.xml
   def update
     @person = Person.find(params[:id])
 
@@ -71,8 +62,6 @@ class PeopleController < ApplicationController
     end
   end
 
-  # DELETE /people/1
-  # DELETE /people/1.xml
   def destroy
     @person = Person.find(params[:id])
     @person.destroy
@@ -81,5 +70,9 @@ class PeopleController < ApplicationController
       format.html { redirect_to(people_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def current_user
+    current_band || current_client
   end
 end

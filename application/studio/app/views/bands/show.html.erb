@@ -26,30 +26,34 @@
   <% end %>
 </div>
 
-<div class="folder_body">
-  <% if @aux.length > 0%>
-    <b>Add member: </b>
-    <% form_tag :action => "add_member" do %>
-      <%= hidden_field "band", "id", :id => @band.id %>
-      <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
-      <br /><br />
-      <%= submit_tag "Add!" %>
+
+<% if permitted_to?(:add_member, @band) || permitted_to?(:remove_member, @band) %>
+  <div class="folder_body">
+    <% if @aux.length > 0 && permitted_to?(:add_member, @band) %>
+      <b>Add member: </b>
+      <% form_tag :action => "add_member" do %>
+        <%= hidden_field "band", "id", :id => @band.id %>
+        <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
+        <br /><br />
+        <%= submit_tag "Add!" %>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <br />
+    <br />
 
-  <% if @band.people.length > 0%>
-    <b> Remove member: </b>
-    <% form_tag :action => "remove_member" do %>
-      <%= hidden_field "band", "id", :id => @band.id %>
-      <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
-      <br /><br />
-      <%= submit_tag "Remove!" %>
+    <% if @band.people.length > 0 && permitted_to?(:remove_member, @band) %>
+      <b> Remove member: </b>
+      <% form_tag :action => "remove_member" do %>
+        <%= hidden_field "band", "id", :id => @band.id %>
+        <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
+        <br /><br />
+        <%= submit_tag "Remove!" %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
-
-<%= link_to 'Edit', edit_band_path(@band) %> |
+<% if permitted_to? :edit, @band %>
+  <%= link_to 'Edit', edit_band_path(@band) %> |
+<% end %>
 <%= link_to 'Back', bands_path %>

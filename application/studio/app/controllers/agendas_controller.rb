@@ -1,6 +1,6 @@
 class AgendasController < ApplicationController
-  # GET /agendas
-  # GET /agendas.xml
+  filter_resource_access
+
   def index
     @agendas = Agenda.find(:all)
 
@@ -10,8 +10,6 @@ class AgendasController < ApplicationController
     end
   end
 
-  # GET /agendas/1
-  # GET /agendas/1.xml
   def show
     @agenda = Agenda.find(params[:id])
     @equips = Equip.find(:all)
@@ -23,8 +21,6 @@ class AgendasController < ApplicationController
     end
   end
 
-  # GET /agendas/new
-  # GET /agendas/new.xml
   def new
     @agenda = Agenda.new
     @bands = Band.find(:all)
@@ -36,15 +32,12 @@ class AgendasController < ApplicationController
     end
   end
 
-  # GET /agendas/1/edit
   def edit
     @agenda = Agenda.find(params[:id])
     @bands = Band.find(:all)
     @services = Service.find(:all)
   end
 
-  # POST /agendas
-  # POST /agendas.xml
   def create
     @agenda = Agenda.new(params[:agenda])
     @agenda.status = "reserved"
@@ -64,8 +57,6 @@ class AgendasController < ApplicationController
     end
   end
 
-  # PUT /agendas/1
-  # PUT /agendas/1.xml
   def update
     @agenda = Agenda.find(params[:id])
     @bands = Band.find(:all)
@@ -83,8 +74,6 @@ class AgendasController < ApplicationController
     end
   end
 
-  # DELETE /agendas/1
-  # DELETE /agendas/1.xml
   def destroy
     @agenda = Agenda.find(params[:id])
     @agenda.destroy
@@ -149,5 +138,9 @@ class AgendasController < ApplicationController
         format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  def current_user
+    current_band || current_client
   end
 end

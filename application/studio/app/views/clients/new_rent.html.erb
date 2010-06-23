@@ -26,7 +26,7 @@
     <%= f.collection_select(:equip_id, @equips, :id, :classification, :class =>"Equip") %>
   </div>
 
-  <%= hidden_field "client", "id", :id => @client.id %>
+  <%= hidden_field_tag 'id', @client.id %>
 
   <p><font color="red">* Required Fields</font></p>
 

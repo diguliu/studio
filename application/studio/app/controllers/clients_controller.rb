@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
-  # GET /clients
-  # GET /clients.xml
+  filter_resource_access
+
   def index
     @clients = Client.find(:all)
 
@@ -10,8 +10,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # GET /clients/1
-  # GET /clients/1.xml
   def show
     @client = Client.find(params[:id])
 
@@ -21,8 +19,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # GET /clients/new
-  # GET /clients/new.xml
   def new
     @client = Client.new
     @people = Person.find(:all)
@@ -38,7 +34,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # GET /clients/1/edit
   def edit
     @client = Client.find(params[:id])
     @people = Person.find(:all)
@@ -50,8 +45,6 @@ class ClientsController < ApplicationController
     @people << Person.find(@client.person_id)
   end
 
-  # POST /clients
-  # POST /clients.xml
   def create
     @client = Client.new(params[:client])
     @people = Person.find(:all)
@@ -73,8 +66,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # PUT /clients/1
-  # PUT /clients/1.xml
   def update
     @client = Client.find(params[:id])
 
@@ -90,8 +81,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # DELETE /clients/1
-  # DELETE /clients/1.xml
   def destroy
     @client = Client.find(params[:id])
     @client.destroy
@@ -127,15 +116,15 @@ class ClientsController < ApplicationController
 
   def create_rent
     @equips = Equip.find(:all)
-    @client = Client.find(params[:client][:id])
+    @client = Client.find(params[:id])
     @external_rent = ExternalRent.new(params[:external_rent])
-    @external_rent.client_id = params[:client][:id]
+    @external_rent.client_id = params[:id]
     @external_rent.status = "reserved"
     @external_rent.price = 0
 
     respond_to do |format|
       if @external_rent.save
-        flash[:notice] = 'Client was successfully created.'
+        flash[:notice] = 'Rent was successfully created.'
         format.html { redirect_to(:action => "show_rent", :id => @external_rent.id) }
         format.xml  { render :xml => @external_rent, :status => :created, :location => @external_rent }
       else
@@ -159,6 +148,10 @@ class ClientsController < ApplicationController
         format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  def current_user
+    current_band || current_client
   end
 
 end

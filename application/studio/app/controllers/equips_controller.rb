@@ -1,6 +1,6 @@
 class EquipsController < ApplicationController
-  # GET /equips
-  # GET /equips.xml
+  filter_resource_access
+
   def index
     @equips = Equip.find(:all)
 
@@ -10,8 +10,6 @@ class EquipsController < ApplicationController
     end
   end
 
-  # GET /equips/1
-  # GET /equips/1.xml
   def show
     @equip = Equip.find(params[:id])
 
@@ -21,8 +19,6 @@ class EquipsController < ApplicationController
     end
   end
 
-  # GET /equips/new
-  # GET /equips/new.xml
   def new
     @equip = Equip.new
 
@@ -32,13 +28,10 @@ class EquipsController < ApplicationController
     end
   end
 
-  # GET /equips/1/edit
   def edit
     @equip = Equip.find(params[:id])
   end
 
-  # POST /equips
-  # POST /equips.xml
   def create
     @equip = Equip.new(params[:equip])
 
@@ -54,8 +47,6 @@ class EquipsController < ApplicationController
     end
   end
 
-  # PUT /equips/1
-  # PUT /equips/1.xml
   def update
     @equip = Equip.find(params[:id])
 
@@ -71,8 +62,6 @@ class EquipsController < ApplicationController
     end
   end
 
-  # DELETE /equips/1
-  # DELETE /equips/1.xml
   def destroy
     @equip = Equip.find(params[:id])
     @equip.destroy
@@ -81,5 +70,9 @@ class EquipsController < ApplicationController
       format.html { redirect_to(equips_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def current_user
+    current_band || current_client
   end
 end

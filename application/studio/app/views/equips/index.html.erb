@@ -7,14 +7,22 @@
 <% for equip in @equips %>
   <tr>
     <td><%= equip.classification %></td>
-    <td><%= link_to 'Show', equip %></td>
-    <td><%= link_to 'Edit', edit_equip_path(equip) %></td>
-    <td><%= link_to 'Destroy', equip, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if permitted_to? :show, equip %>
+      <td><%= link_to 'Show', equip %></td>
+    <% end %>
+    <% if permitted_to? :edit, equip %>
+      <td><%= link_to 'Edit', edit_equip_path(equip) %></td>
+    <% end %>
+    <% if permitted_to? :destroy, equip %>
+      <td><%= link_to 'Destroy', equip, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New equipment', new_equip_path %>
+<% if permitted_to? :create, Equip.new %>
+  <%= link_to 'New equipment', new_equip_path %>
+<% end %>
 <%= link_to 'Home', root_path %>

@@ -4,9 +4,11 @@
   <b>Name: </b>
   <%= link_to(Person.find(@client.person_id).name, Person.find(@client.person_id)) %> <br />
   <b>Login: </b> <%= @client.login %><br />
-  <%= link_to 'New rent', :action => "new_rent", :id => @client.id %>
+  <% if permitted_to? :create_rent, @client %>
+    <%= link_to 'New rent', :action => "new_rent", :id => @client.id %>
+  <% end %>
 </div>
-<% if @client.external_rents.length > 0 %>
+<% if @client.external_rents.length > 0 && permitted_to?(:show_rent, @client) %>
   <div class="folder_body">
     <ul>
       <% @client.external_rents.each do |external_rent|%>
@@ -17,7 +19,7 @@
 </div>
 <% end %>
 
-<%#= event_calendar %>
-
-<%= link_to 'Edit', edit_client_path(@client) %>
+<% if permitted_to? :edit, @client %>
+  <%= link_to 'Edit', edit_client_path(@client) %>
+<% end %>
 <%= link_to 'Back', clients_path %>

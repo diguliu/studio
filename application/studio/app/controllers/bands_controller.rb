@@ -1,6 +1,6 @@
 class BandsController < ApplicationController
-  # GET /bands
-  # GET /bands.xml
+  filter_resource_access
+
   def index
     @bands = Band.find(:all)
 
@@ -10,8 +10,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # GET /bands/1
-  # GET /bands/1.xml
   def show
     @band = Band.find(params[:id])
     @people = Person.find(:all)
@@ -22,8 +20,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # GET /bands/new
-  # GET /bands/new.xml
   def new
     @band = Band.new
 
@@ -33,13 +29,10 @@ class BandsController < ApplicationController
     end
   end
 
-  # GET /bands/1/edit
   def edit
     @band = Band.find(params[:id])
   end
 
-  # POST /bands
-  # POST /bands.xml
   def create
     @band = Band.new(params[:band])
 
@@ -55,8 +48,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # PUT /bands/1
-  # PUT /bands/1.xml
   def update
     @band = Band.find(params[:id])
 
@@ -72,8 +63,6 @@ class BandsController < ApplicationController
     end
   end
 
-  # DELETE /bands/1
-  # DELETE /bands/1.xml
   def destroy
     @band = Band.find(params[:id])
     @band.destroy
@@ -116,6 +105,10 @@ class BandsController < ApplicationController
         format.xml  { render :xml => @band.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  def current_user
+    current_band || current_client
   end
 
 end

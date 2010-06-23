@@ -8,9 +8,15 @@
     <% for band in @bands %>
       <tr>
         <td><%= band.name %></td>
-        <td><%= link_to 'Show', band %></td>
-        <td><%= link_to 'Edit', edit_band_path(band) %></td>
-        <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% if permitted_to? :show, band %>
+          <td><%= link_to 'Show', band %></td>
+        <% end %>
+        <% if permitted_to? :edit, band %>
+          <td><%= link_to 'Edit', edit_band_path(band) %></td>
+        <% end %>
+        <% if permitted_to? :destroy, band %>
+          <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
       </tr>
     <% end %>
   </table>
@@ -18,5 +24,7 @@
 
 <br />
 
-<%= link_to 'New band', new_band_path %>
+<% if permitted_to? :create, Band.new %>
+  <%= link_to 'New band', new_band_path %>
+<% end %>
 <%= link_to 'Home', root_path %>

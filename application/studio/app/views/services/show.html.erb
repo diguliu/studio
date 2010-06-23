@@ -10,5 +10,7 @@
   <% end %>
 </div>
 
-<%= link_to 'Edit', edit_service_path(@service) %> |
+<% if permitted_to? :edit, @service %>
+  <%= link_to 'Edit', edit_service_path(@service) %> |
+<% end %>
 <%= link_to 'Back', services_path %>

@@ -27,5 +27,7 @@
 </div>
 
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
+<% if permitted_to? :edit, @person %>
+  <%= link_to 'Edit', edit_person_path(@person) %> |
+<% end %>
 <%= link_to 'Back', people_path %>

@@ -34,13 +34,19 @@
 
 </div>
 
-<% if @agenda.status == "reserved" || @agenda.status == "confirmed" %>
+<% if (permitted_to?(:add_equip, @agenda) || permitted_to?(:remove_equip, @agenda)) && (@agenda.status == "reserved" || @agenda.status == "confirmed") %>
   <div class="folder_body">
-    <%= render :partial => "add_equip" if @aux.length > 0 %>
+    <% if permitted_to? :add_equip, @agenda %>
+      <%= render :partial => "add_equip" if @aux.length > 0 %>
+    <% end %>
     <br />
-    <%= render :partial => "remove_equip" if @agenda.equips.length > 0 %>
+    <% if permitted_to? :remove_equip, @agenda %>
+      <%= render :partial => "remove_equip" if @agenda.equips.length > 0 %>
+    <% end %>
   </div>
 <% end %>
 
-<%= link_to 'Edit', edit_agenda_path(@agenda) %>
+<% if permitted_to? :edit, @agenda %>
+  <%= link_to 'Edit', edit_agenda_path(@agenda) %>
+<% end %>
 <%= link_to 'Back', agendas_path %>

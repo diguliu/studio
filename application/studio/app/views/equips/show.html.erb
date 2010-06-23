@@ -15,5 +15,7 @@
 <b>External price: </b> <%= @equip.external_price %><br />
 
 
-<%= link_to 'Edit', edit_equip_path(@equip) %> |
+<% if permitted_to? :edit, @equip %>
+  <%= link_to 'Edit', edit_equip_path(@equip) %> |
+<% end %>
 <%= link_to 'Back', equips_path %>

@@ -9,9 +9,15 @@
 <% for person in @people %>
   <tr>
     <td> <%= person.name %> </td>
-    <td><%= link_to 'Show', person %></td>
-    <td><%= link_to 'Edit', edit_person_path(person) %></td>
-    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if permitted_to? :show, person %>
+      <td><%= link_to 'Show', person %></td>
+    <% end %>
+    <% if permitted_to? :edit, person %>
+      <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    <% end %>
+    <% if permitted_to? :destroy, person %>
+      <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
@@ -19,5 +25,7 @@
 
 <br />
 
-<%= link_to 'New person', new_person_path %>
+<% if permitted_to? :create, Person.new %>
+  <%= link_to 'New person', new_person_path %>
+<% end %>
 <%= link_to 'Home', root_path %>

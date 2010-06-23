@@ -9,9 +9,15 @@
     <% for client in @clients %>
       <tr>
         <td><%= client.login %></td>
-        <td><%= link_to 'Show', client %></td>
-        <td><%= link_to 'Edit', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% if permitted_to? :show, client %>
+          <td><%= link_to 'Show', client %></td>
+        <% end %>
+        <% if permitted_to? :edit, client %>
+          <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <% end %>
+        <% if permitted_to? :destroy, client %>
+          <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
       </tr>
     <% end %>
   </table>
@@ -19,5 +25,7 @@
 
 <br />
 
-<%= link_to 'New client', new_client_path %>
+<% if permitted_to? :create, Client.new %>
+  <%= link_to 'New client', new_client_path %>
+<% end %>
 <%= link_to 'Home', root_path %>

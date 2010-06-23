@@ -10,6 +10,10 @@ class Client < ActiveRecord::Base
 
   acts_as_authentic
 
+  def role_symbols
+    roles.split(' ').map {|role| role.to_sym}
+  end
+
   def add_equip(equip, start, duration)
     ExternalRent.create!(:start => start, :duration => duration, :client => self, :equip => equip, :status => "reserved", :price => 0)
   end
