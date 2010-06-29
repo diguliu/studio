@@ -19,7 +19,7 @@
 
 
   <% if @external_rent.status == "reserved" %>
-    <%= link_to 'Cancel rent', :action => 'cancel_rent', :id => @external_rent.id %>
+    <%= link_to 'Cancel rent', :action => 'cancel_rent', :id => @client.id, :rent_id => @external_rent.id %>
   <% end %>
 
 </div>

@@ -15,19 +15,31 @@ authorization do
 
   role :band do
     includes :guest
+
     has_permission_on :bands, :to => [:edit, :update, :destroy, :add_member, :remove_member] do
-      if_attribute :login => is {user.login}
+      if_attribute :login => is { user.login }
     end
+
     has_permission_on :agendas, :to => [:new, :create]
+
     has_permission_on :agendas, :to => [:add_equip, :remove_equip, :cancel] do
-      if_attribute :band => is {user}
+      if_attribute :band => is { user }
     end
+
     has_permission_on :agendas, :to => [:edit, :update] do
-      if_attribute :band => is {user}, :status => "reserved"
+      if_attribute :band => is { user }, :status => "reserved"
     end
   end
 
   role :client do
     includes :guest
+
+    has_permission_on :clients, :to => [:edit, :update, :destroy, :show_rent, :new_rent, :create_rent] do
+      if_attribute :login => is { user.login }
+    end
+
+    has_permission_on :client, :to => :cancel_rent do
+      if_attribute :login => is { user.login }, :status => "reserved"
+    end
   end
 end

@@ -11,8 +11,6 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @client = Client.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @client }
@@ -35,7 +33,6 @@ class ClientsController < ApplicationController
   end
 
   def edit
-    @client = Client.find(params[:id])
     @people = Person.find(:all)
     @clients = Client.find(:all)
 
@@ -67,8 +64,6 @@ class ClientsController < ApplicationController
   end
 
   def update
-    @client = Client.find(params[:id])
-
     respond_to do |format|
       if @client.update_attributes(params[:client])
         flash[:notice] = 'Client was successfully updated.'
@@ -82,7 +77,6 @@ class ClientsController < ApplicationController
   end
 
   def destroy
-    @client = Client.find(params[:id])
     @client.destroy
 
     respond_to do |format|
@@ -92,7 +86,7 @@ class ClientsController < ApplicationController
   end
 
   def show_rent
-    @external_rent = ExternalRent.find(params[:id])
+    @external_rent = ExternalRent.find(params[:rent_id])
     @equips = Equip.find(:all)
     @equip = @external_rent.equip
 
@@ -103,7 +97,6 @@ class ClientsController < ApplicationController
   end
 
   def new_rent
-    @client = Client.find(params[:id])
     @equips = Equip.find(:all)
     @external_rent = ExternalRent.new
 
@@ -116,7 +109,6 @@ class ClientsController < ApplicationController
 
   def create_rent
     @equips = Equip.find(:all)
-    @client = Client.find(params[:id])
     @external_rent = ExternalRent.new(params[:external_rent])
     @external_rent.client_id = params[:id]
     @external_rent.status = "reserved"
@@ -135,16 +127,16 @@ class ClientsController < ApplicationController
   end
 
   def cancel_rent
-    @external_rent = ExternalRent.find(params[:id])
+    @external_rent = ExternalRent.find(params[:rent_id])
 
     respond_to do |format|
       if @external_rent.cancel
         flash[:notice] = "Rent canceled."
-        format.html {redirect_to({:action=> "show_rent", :id => @xternal_rent.id})}
+        format.html {redirect_to({:action=> "show_rent", :id => @client.id, :rent_id => @xternal_rent.id})}
         format.xml {head :ok}
       else
         flash[:notice] = "Failed to cancel rent."
-        format.html {redirect_to({:action=> "show_rent", :id => @xternal_rent.id})}
+        format.html {redirect_to({:action=> "show_rent", :id => @client.id, :rent_id => @xternal_rent.id})}
         format.xml  { render :xml => @agenda.errors, :status => :unprocessable_entity }
       end
     end
