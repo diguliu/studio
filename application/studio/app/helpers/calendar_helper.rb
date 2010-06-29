@@ -23,7 +23,7 @@ module CalendarHelper
       if event.agenda_id
         %(<a href="/agendas/#{event.agenda_id}" title="#{h(event.name)}">#{h(event.name)}</a>)
       elsif event.external_rent_id
-        %(<a href="/clients/show_rent/#{event.external_rent_id}" title="#{h(event.name)}">#{h(event.name)}</a>)
+        %(<a href="/clients/show_rent/#{ExternalRent.find(event.external_rent_id).client_id}?rent_id=#{event.external_rent_id}" title="#{h(event.name)}">#{h(event.name)}</a>)
       end
     end
   end
