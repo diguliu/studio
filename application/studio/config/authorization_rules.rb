@@ -1,9 +1,8 @@
 authorization do
   role :admin do
-    # Generic actions
     has_permission_on [:people, :clients, :bands, :services, :equipments, :agendas, :equips],
       :to => [:index, :show, :new, :edit, :create, :update, :destroy]
-    # Specific actions
+
     has_permission_on :clients, :to => [:show_rent, :new_rent, :create_rent, :cancel_rent] 
     has_permission_on :bands, :to => [:add_member, :remove_member] 
     has_permission_on :agendas, :to => [:add_equip, :remove_equip, :cancel] 
@@ -16,6 +15,16 @@ authorization do
 
   role :band do
     includes :guest
+    has_permission_on :bands, :to => [:edit, :update, :destroy, :add_member, :remove_member] do
+      if_attribute :login => is {user.login}
+    end
+    has_permission_on :agendas, :to => [:new, :create]
+    has_permission_on :agendas, :to => [:add_equip, :remove_equip, :cancel] do
+      if_attribute :band => is {user}
+    end
+    has_permission_on :agendas, :to => [:edit, :update] do
+      if_attribute :band => is {user}, :status => "reserved"
+    end
   end
 
   role :client do

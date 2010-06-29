@@ -7,7 +7,12 @@
     <div class="field required"> 
       <font color="#F00" style="float: left;">*</font>
       <%= f.label :band, "Band: ", :class => "field_label" %>  
-      <%= f.collection_select(:band_id, @bands, :id, :name, :class =>"Band") %>
+      <% if current_band %>
+        <%= current_band.name %>
+        <%= f.hidden_field :band_id, :value => current_band.id %>
+      <% elsif current_client.roles.include?("admin") %>
+        <%= f.collection_select(:band_id, @bands, :id, :name, :class =>"Band") %>
+      <% end %>
     </div>
 
     <div class="field required"> 

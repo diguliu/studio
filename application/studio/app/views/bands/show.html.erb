@@ -32,7 +32,7 @@
     <% if @aux.length > 0 && permitted_to?(:add_member, @band) %>
       <b>Add member: </b>
       <% form_tag :action => "add_member" do %>
-        <%= hidden_field "band", "id", :id => @band.id %>
+        <%= hidden_field_tag "id", @band.id %>
         <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
         <br /><br />
         <%= submit_tag "Add!" %>
@@ -44,7 +44,7 @@
     <% if @band.people.length > 0 && permitted_to?(:remove_member, @band) %>
       <b> Remove member: </b>
       <% form_tag :action => "remove_member" do %>
-        <%= hidden_field "band", "id", :id => @band.id %>
+        <%= hidden_field_tag "id", @band.id %>
         <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
         <br /><br />
         <%= submit_tag "Remove!" %>

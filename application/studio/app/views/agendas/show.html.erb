@@ -28,7 +28,7 @@
     </ul>
   <% end %>
 
-  <% if @agenda.status == "reserved" %>
+  <% if @agenda.status == "reserved" && permitted_to?(:cancel, @agenda) %>
     <%= link_to 'Cancel agenda', :action => 'cancel', :id => @agenda.id %>
   <% end %>
 

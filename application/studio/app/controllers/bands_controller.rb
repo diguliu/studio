@@ -75,7 +75,7 @@ class BandsController < ApplicationController
 
   def add_member
     @member = Person.find(params[:person][:id])
-    @band = Band.find(params[:band][:id])
+    @band = Band.find(params[:id])
 
     respond_to do |format|
       if @band.people << @member
@@ -92,7 +92,7 @@ class BandsController < ApplicationController
 
   def remove_member
     @member = Person.find(params[:person][:id])
-    @band = Band.find(params[:band][:id])
+    @band = Band.find(params[:id])
 
     respond_to do |format|
       if @band.people.delete(@member)
