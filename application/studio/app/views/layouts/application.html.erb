@@ -13,12 +13,9 @@
     <%= render :partial => 'shared/user_nav' %>
     <div id="container">
       <div id="header">
-        <h1>Studio Manager</h1>
+        <h1><%= link_to "Studio Manager", root_path %></h1>
       </div>
-      <div id="content">
-        <%= yield -%>
-      </div>
-      <div id="sidebar"></div>
     </div>
+    <%= yield -%>
   </body> 
 </html> 
