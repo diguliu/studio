@@ -72,6 +72,15 @@ class EquipsController < ApplicationController
     end
   end
 
+  def export_equips
+    send_data(Equip.xml_equips, :type => "text/xml", :filename => "equips.xml")
+  end
+
+  def import_equips
+    uploaded_file = params[:xml_file]
+
+  end
+
   def current_user
     current_band || current_client
   end

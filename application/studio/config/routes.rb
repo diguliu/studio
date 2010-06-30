@@ -17,6 +17,8 @@ ActionController::Routing::Routes.draw do |map|
   map.band_logout "band_logout", :controller => "band_sessions", :action => "destroy"
   map.client_logout "client_logout", :controller => "client_sessions", :action => "destroy"
 
+  map.export_xml "equips/export/xml", :controller => "equips", :action => "xml"
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

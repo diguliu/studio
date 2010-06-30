@@ -1,0 +1,8 @@
+<h2>Import Equips</h2>
+<% form_tag( {:action => 'upload'}, {:multipart=> true} ) do %>
+  <p>
+  <label for="file"><b>File: </b></label><%= file_field_tag "xml_file" %><br/>
+    <%= submit_tag "Import Equips!" %>
+  </p>
+<% end %>
+

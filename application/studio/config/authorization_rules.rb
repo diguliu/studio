@@ -1,16 +1,19 @@
 authorization do
   role :admin do
+    includes :guest
     has_permission_on [:people, :clients, :bands, :services, :equipments, :agendas, :equips],
       :to => [:index, :show, :new, :edit, :create, :update, :destroy]
 
     has_permission_on :clients, :to => [:show_rent, :new_rent, :create_rent, :cancel_rent] 
     has_permission_on :bands, :to => [:add_member, :remove_member] 
     has_permission_on :agendas, :to => [:add_equip, :remove_equip, :cancel] 
+    has_permission_on :equips, :to => :import_equips
   end
 
   role :guest do
     has_permission_on [:people, :clients, :bands, :services, :equipments, :agendas, :equips],
       :to => [:index, :show]
+    has_permission_on :equips, :to => :export_equips
   end
 
   role :band do
