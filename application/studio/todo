@@ -1,0 +1,8 @@
++ Add permission of client to person too
++ Remove user's and band's option of destroing itself.
++ Problem with external_rents when remove the equip.
++ Person registration should be part of band's add member method. Also, destroy a person should be a band's remove member method. Every person must be a member of a band.
++ Remove the external rent controller logic from the client controller.
++ The client criation form must have the person attributes.
++ Create a contextualized menu with the actions in that page.
+
