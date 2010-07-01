@@ -1,3 +1,5 @@
+require "hpricot"
+
 class EquipsController < ApplicationController
   filter_resource_access
 
@@ -71,8 +73,36 @@ class EquipsController < ApplicationController
   end
 
   def import_equips
-    uploaded_file = params[:xml_file]
-
+    require "ap"
+    if(request.post?)
+      uploaded_file = params[:xml_file]
+      xml = ""
+      uploaded_file.each do |lines|
+        xml << lines
+      end
+      doc = Hpricot(xml)
+      invalid_equips_models = []
+      (doc/"equipment").each do |equipment|
+        ap (equipment/"model")
+        ap (equipment/"model").inner_html
+        #        begin
+        #equip = Equip.new(:model => (equipment/"model").inner_html, 
+        #                  :description => (equipment/"description").inner_html, 
+        #                  :classification => (equipment/"classification").inner_html)
+        #                        :internal_price => (equipment/"internal_price"),
+        #                        :external_price => (equipment/"external_price"))
+        #require "ap"
+        #ap equip
+        #equip.save
+        #       rescue
+        #        invalid_equips_models << (equipment/"model")
+        #      end
+      end
+      if(!invalid_equips_models.blank?)
+        flash[:error] = "The following equipment(s) were invalid: " + invalid_equips_models.join(', ')
+      end
+      redirect_to equips_path
+    end
   end
 
   def current_user
