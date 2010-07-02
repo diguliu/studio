@@ -11,8 +11,6 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @person = Person.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @person }
@@ -29,7 +27,6 @@ class PeopleController < ApplicationController
   end
 
   def edit
-    @person = Person.find(params[:id])
   end
 
   def create
@@ -37,8 +34,9 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        flash[:notice] = 'Person was successfully created.'
-        format.html { redirect_to(@person) }
+        current_user.people << @person
+        flash[:notice] = 'Member was successfully added.'
+        format.html { redirect_to(current_user) }
         format.xml  { render :xml => @person, :status => :created, :location => @person }
       else
         format.html { render :action => "new" }
@@ -48,11 +46,9 @@ class PeopleController < ApplicationController
   end
 
   def update
-    @person = Person.find(params[:id])
-
     respond_to do |format|
       if @person.update_attributes(params[:person])
-        flash[:notice] = 'Person was successfully updated.'
+        flash[:notice] = 'Member was successfully updated.'
         format.html { redirect_to(@person) }
         format.xml  { head :ok }
       else
@@ -63,11 +59,10 @@ class PeopleController < ApplicationController
   end
 
   def destroy
-    @person = Person.find(params[:id])
     @person.destroy
 
     respond_to do |format|
-      format.html { redirect_to(people_url) }
+      format.html { redirect_to current_user }
       format.xml  { head :ok }
     end
   end

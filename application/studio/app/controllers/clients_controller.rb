@@ -31,6 +31,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(params[:client])
+    @client.roles = "client"
 
     respond_to do |format|
       if @client.save

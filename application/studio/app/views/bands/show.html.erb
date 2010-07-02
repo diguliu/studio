@@ -13,45 +13,24 @@
     <b>Homepage: </b> <%= @band.homepage %><br />
   <% end %>
 
-  <% @aux = @people %>
-
   <% if @band.people.length > 0 %>
     <b>Members:</b>
     <ul>
-      <% @band.people.each do |person| %>
-        <li><%= link_to(person.name, person) %></li>
-        <% @aux.delete(person) %>
+      <% @members.each do |member| %>
+        <li>
+          <b><%= link_to(member.name, member) %></b> 
+          <% if permitted_to? :destroy, member %>
+            <%= link_to 'Remove member', member, :confirm => 'Are you sure?', :method => :delete %></li>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   <% end %>
+
+  <% if permitted_to? :new, Person.new %>
+    <%= link_to 'New member', new_person_path %>
+  <% end %>
 </div>
-
-
-<% if permitted_to?(:add_member, @band) || permitted_to?(:remove_member, @band) %>
-  <div class="folder_body">
-    <% if @aux.length > 0 && permitted_to?(:add_member, @band) %>
-      <b>Add member: </b>
-      <% form_tag :action => "add_member" do %>
-        <%= hidden_field_tag "id", @band.id %>
-        <%= collection_select(:person, :id, @aux, :id, :name, :class =>"Person") %>
-        <br /><br />
-        <%= submit_tag "Add!" %>
-      <% end %>
-    <% end %>
-
-    <br />
-
-    <% if @band.people.length > 0 && permitted_to?(:remove_member, @band) %>
-      <b> Remove member: </b>
-      <% form_tag :action => "remove_member" do %>
-        <%= hidden_field_tag "id", @band.id %>
-        <%= collection_select(:person, :id, @band.people, :id, :name, :class =>"Person") %>
-        <br /><br />
-        <%= submit_tag "Remove!" %>
-      <% end %>
-    <% end %>
-  </div>
-<% end %>
 
 <% if permitted_to? :edit, @band %>
   <%= link_to 'Edit', edit_band_path(@band) %> |

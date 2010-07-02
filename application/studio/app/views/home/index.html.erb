@@ -3,12 +3,23 @@
 <b>Welcome!</b>
 This is a studio management system.<br />
 Clink in the links below to know the features of the system.<br />
-<%= link_to "People", people_path %> <br />
+<% if permitted_to? :index, Person.new %>
+  <%= link_to "People", people_path %> <br />
+<% end %>
+<% if permitted_to? :index, Client.new %>
 <%= link_to "Clients", clients_path %> <br />
+<% end %>
+<% if permitted_to? :index, Band.new %>
 <%= link_to "Bands", bands_path %> <br />
+<% end %>
+<% if permitted_to? :index, Service.new %>
 <%= link_to "Services", services_path %> <br />
+<% end %>
+<% if permitted_to? :index, Equip.new %>
 <%= link_to "Equipments", equips_path %> <br />
+<% end %>
+<% if permitted_to? :index, Agenda.new %>
 <%= link_to "Agendas", agendas_path %> <br />
+<% end %>
 <%= link_to "Calendar", calendar_path %> <br />
 <%= link_to "Documentation"%><br />
-

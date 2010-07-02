@@ -1,4 +1,4 @@
-<h1>Showing person</h1>
+<h1>Showing member</h1>
 
 <div class="folder_header">
   <b>Name: </b> <%= @person.name%><br />
@@ -30,4 +30,4 @@
 <% if permitted_to? :edit, @person %>
   <%= link_to 'Edit', edit_person_path(@person) %> |
 <% end %>
-<%= link_to 'Back', people_path %>
+<%= link_to 'Back', Authorization.current_user %>

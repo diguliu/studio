@@ -11,7 +11,7 @@ class BandsController < ApplicationController
   end
 
   def show
-    @people = Person.find(:all)
+    @members = @band.people
 
     respond_to do |format|
       format.html # show.html.erb
@@ -65,38 +65,6 @@ class BandsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(bands_url) }
       format.xml  { head :ok }
-    end
-  end
-
-  def add_member
-    @member = Person.find(params[:person][:id])
-
-    respond_to do |format|
-      if @band.people << @member
-        flash[:notice] = "Member added to the band."
-        format.html {redirect_to(@band)}
-        format.xml {head :ok}
-      else
-        flash[:notice] = "Failed to add member to the band."
-        format.html {redirect_to(@band)}
-        format.xml  { render :xml => @band.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  def remove_member
-    @member = Person.find(params[:person][:id])
-
-    respond_to do |format|
-      if @band.people.delete(@member)
-        flash[:notice] = "Member removed from the band."
-        format.html {redirect_to(@band)}
-        format.xml {head :ok}
-      else
-        flash[:notice] = "Failed to remove member from the band."
-        format.html {redirect_to(@band)}
-        format.xml  { render :xml => @band.errors, :status => :unprocessable_entity }
-      end
     end
   end
 
