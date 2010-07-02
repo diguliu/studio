@@ -26,5 +26,9 @@
 <% if permitted_to? :create, Equip.new %>
   <%= link_to 'New equipment', new_equip_path %>
 <% end %>
-<%#= link_to "Export Equipments", url_for(:controller => "equips", :action => "export_equips", :id => equip.id)%>
-<%#= link_to "Import Equipments", url_for(:controller => "equips", :action => "import_equips", :id => equip.id)%>
+<% if permitted_to? :export_equips, Equip.new %>
+  <%= link_to "Export Equipments", export_equips_path %>
+<% end %>
+<% if permitted_to? :import_equips, Equip.new %>
+  <%= link_to "Import Equipments", import_equips_path %>
+<% end %>

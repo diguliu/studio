@@ -1,7 +1,7 @@
 require "hpricot"
 
 class EquipsController < ApplicationController
-  filter_resource_access
+  filter_access_to :all
 
   def index
     @equips = Equip.find(:all)
@@ -13,6 +13,7 @@ class EquipsController < ApplicationController
   end
 
   def show
+    @equip = Equip.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @equip }
@@ -29,6 +30,7 @@ class EquipsController < ApplicationController
   end
 
   def edit
+    @equip = Equip.find(params[:id])
   end
 
   def create
@@ -47,6 +49,8 @@ class EquipsController < ApplicationController
   end
 
   def update
+    @equip = Equip.find(params[:id])
+
     respond_to do |format|
       if @equip.update_attributes(params[:equip])
         flash[:notice] = 'Equip was successfully updated.'
@@ -60,6 +64,7 @@ class EquipsController < ApplicationController
   end
 
   def destroy
+    @equip = Equip.find(params[:id])
     @equip.destroy
 
     respond_to do |format|
@@ -73,33 +78,32 @@ class EquipsController < ApplicationController
   end
 
   def import_equips
-    require "ap"
     if(request.post?)
+
       uploaded_file = params[:xml_file]
       xml = ""
       uploaded_file.each do |lines|
         xml << lines
       end
       doc = Hpricot(xml)
-      invalid_equips_models = []
+
+      invalid_equips = []
       (doc/"equipment").each do |equipment|
-        ap (equipment/"model")
-        ap (equipment/"model").inner_html
-        #        begin
-        #equip = Equip.new(:model => (equipment/"model").inner_html, 
-        #                  :description => (equipment/"description").inner_html, 
-        #                  :classification => (equipment/"classification").inner_html)
-        #                        :internal_price => (equipment/"internal_price"),
-        #                        :external_price => (equipment/"external_price"))
-        #require "ap"
-        #ap equip
-        #equip.save
-        #       rescue
-        #        invalid_equips_models << (equipment/"model")
-        #      end
+        begin
+          Equip.create!(:model => (equipment/"model").inner_html,
+                        :description => (equipment/"description").inner_html,
+                        :classification => (equipment/"classification").inner_html,
+                        :internal_price => (equipment/"internal_price").inner_html,
+                        :external_price => (equipment/"external_price").inner_html)
+        rescue
+          invalid_equips << (equipment/"classification").inner_html + "(" + (equipment/"model").inner_html + ")"
+        end
       end
-      if(!invalid_equips_models.blank?)
-        flash[:error] = "The following equipment(s) were invalid: " + invalid_equips_models.join(', ')
+
+      if(!invalid_equips.blank?)
+        flash[:error] = "The following equipment(s) was(were) invalid, so was(were)n't imported: " + invalid_equips.join(', ')
+      else
+        flash[:notice] = "All equipments were imported successfully!"
       end
       redirect_to equips_path
     end

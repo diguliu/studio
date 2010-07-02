@@ -2,7 +2,6 @@ Missing
 =======
   + Problem with internal and external_rents when remove the equip.
   + Create a contextualized menu with the actions in that page.
-  + Import and export equipments.
 
 Done
 ====
@@ -13,4 +12,4 @@ Done
   + Person registration should be part of band's add member method. Also,
     destroy a person should be a band's remove member method. Every person must
     be a member of a band.
-
+  + Import and export equipments.
