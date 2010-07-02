@@ -1,26 +1,28 @@
 <h1>Listing agendas</h1>
 
-<table>
-<% for agenda in @agendas %>
-  <tr>
-    <td><%= agenda.band.name + " - " + agenda.start.strftime("%m/%d/%Y") %></td>
-    <% if permitted_to? :show, agenda %>
-      <td><%= link_to 'Show', agenda %></td>
+<% if @agendas.blank? %>
+  <p>There is no agenda registered.</p>
+<% else %>
+  <table>
+    <% for agenda in @agendas %>
+      <tr>
+        <td><%= agenda.band.name + " - " + agenda.start.strftime("%m/%d/%Y") %></td>
+        <% if permitted_to? :show, agenda %>
+          <td><%= link_to 'Show', agenda %></td>
+        <% end %>
+        <% if permitted_to? :edit, agenda %>
+          <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
+        <% end %>
+        <% if permitted_to? :destroy, agenda %>
+          <td><%= link_to 'Destroy', agenda, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
     <% end %>
-    <% if permitted_to? :edit, agenda %>
-      <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
-    <% end %>
-    <% if permitted_to? :destroy, agenda %>
-      <td><%= link_to 'Destroy', agenda, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end %>
-  </tr>
+  </table>
 <% end %>
-</table>
 
 <br />
 
 <% if permitted_to? :create, Agenda.new %>
   <%= link_to 'New agenda', new_agenda_path %>
 <% end %>
-<%= link_to 'Home', root_path %>
-

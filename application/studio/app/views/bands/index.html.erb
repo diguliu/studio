@@ -2,7 +2,6 @@
 
 <% if @bands.blank? %>
   <p>There is no band registered.</p>
-
 <% else %>
   <table>
     <% for band in @bands %>
@@ -27,4 +26,3 @@
 <% if permitted_to? :create, Band.new %>
   <%= link_to 'New band', new_band_path %>
 <% end %>
-<%= link_to 'Home', root_path %>

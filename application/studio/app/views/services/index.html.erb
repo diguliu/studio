@@ -1,25 +1,28 @@
 <h1>Listing services</h1>
 
-<table>
-<% for service in @services %>
-  <tr>
-    <td><%= service.name %></td>
-    <% if permitted_to? :show, service %>
-      <td><%= link_to 'Show', service %></td>
+<% if @services.blank? %>
+  <p>There is no service registered.</p>
+<% else %>
+  <table>
+    <% for service in @services %>
+      <tr>
+        <td><%= service.name %></td>
+        <% if permitted_to? :show, service %>
+          <td><%= link_to 'Show', service %></td>
+        <% end %>
+        <% if permitted_to? :edit, service %>
+          <td><%= link_to 'Edit', edit_service_path(service) %></td>
+        <% end %>
+        <% if permitted_to? :destroy, service %>
+          <td><%= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
     <% end %>
-    <% if permitted_to? :edit, service %>
-      <td><%= link_to 'Edit', edit_service_path(service) %></td>
-    <% end %>
-    <% if permitted_to? :destroy, service %>
-      <td><%= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end %>
-  </tr>
+  </table>
 <% end %>
-</table>
 
 <br />
 
 <% if permitted_to? :create, Service.new %>
   <%= link_to 'New service', new_service_path %>
 <% end %>
-<%= link_to 'Home', root_path %>
