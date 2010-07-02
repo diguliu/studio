@@ -1,6 +1,8 @@
 <div id="user_nav">
   <% if !current_band && !current_client %>
+    <%= link_to "Register Band", new_band_path %> -  
     <%= link_to "Band Login", band_login_path %> | 
+    <%= link_to "Register Client", new_client_path %> -  
     <%= link_to "Client Login", client_login_path %>
   <% elsif current_band %>
     <%= link_to current_band.name, current_band %> | 
