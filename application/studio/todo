@@ -7,9 +7,11 @@ Missing
     be a member of a band.
   + The client criation form must have the person attributes.
   + Create a contextualized menu with the actions in that page.
+  + Import and export equipments.
 
 Done
 ====
   + Remove user's and band's option of destroying itself.
   + Remove the external rent controller logic from the client controller.
+  + Making client-person relationship a real heritage using STI.
 

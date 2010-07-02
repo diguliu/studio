@@ -1,9 +1,30 @@
 <h1>Showing client</h1>
 
 <div class="folder_header">
-  <b>Name: </b>
-  <%= link_to(Person.find(@client.person_id).name, Person.find(@client.person_id)) %> <br />
-  <b>Login: </b> <%= @client.login %><br />
+  <b>Name: </b> <%= @client.name %> <br />
+  <b>Login: </b> <%= @client.login %> <br />
+  <b>Cpf: </b> <%= @client.cpf %><br />
+
+  <% if !@client.address.blank? %>
+    <b>Address: </b> <%= @client.address %><br />
+  <% end %>
+
+  <% if !@client.email.blank? %>
+    <b>Email: </b> <%= @client.email %><br />
+  <% end %>
+
+  <% if !@client.gender.blank? %>
+    <b>Gender: </b> <%= @client.gender %><br />
+  <% end %>
+
+  <% if !@client.phone1.blank? %>
+    <b>Phone 1: </b> <%= @client.phone1 %><br />
+  <% end %>
+
+  <% if !@client.phone2.blank? %>
+    <b>Phone 2: </b> <%= @client.phone2 %><br />
+  <% end %>
+
   <% if permitted_to? :new, ExternalRent.new %>
     <%= link_to 'New rent', new_external_rent_path %>
   <% end %>

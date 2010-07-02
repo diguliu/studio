@@ -1,5 +1,5 @@
-class Client < ActiveRecord::Base
-  validates_presence_of :login, :password, :password_confirmation, :person_id
+class Client < Person
+  validates_presence_of :login, :email, :password, :password_confirmation
   validates_length_of :login, :within => 3..40
   validates_length_of :password, :within => 5..40
   validates_uniqueness_of  :login

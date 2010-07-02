@@ -2,13 +2,11 @@
 
 <% if @clients.blank? %>
   <p>There is no client registered.</p>
-
 <% else %>
-
   <table>
     <% for client in @clients %>
       <tr>
-        <td><%= client.login %></td>
+        <td><%= client.name %></td>
         <% if permitted_to? :show, client %>
           <td><%= link_to 'Show', client %></td>
         <% end %>

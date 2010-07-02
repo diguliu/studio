@@ -11,27 +11,27 @@
 
   <div class="field required">
     <font color="#F00" style="float: left;">*</font>
-    <%= f.label :client, "Client: ", :class => "field_label" %>  
-    <%= @client.login %>  
+    <%= f.label :client, "Client: ", :class => "field_label" %>
+    <%= @client.login %>
   </div>
 
   <div class="field required">
     <font color="#F00" style="float: left;">*</font>
-    <%= f.label :start, "Starts at: ", :class => "field_label" %>  
+    <%= f.label :start, "Starts at: ", :class => "field_label" %>
     <% fields_for :external_rent do |ff|%>
       <%= ff.calendar_date_select :start, :popup => "force" %>
     <% end %>
   </div>
 
-  <div class="field required"> 
+  <div class="field required">
     <font color="#F00" style="float: left;">*</font>
-    <%= f.label :duration, "Duration: ", :class => "field_label" %>  
+    <%= f.label :duration, "Duration: ", :class => "field_label" %>
     <%= f.text_field :duration %> day(s)
   </div>
 
-  <div class="field required"> 
+  <div class="field required">
     <font color="#F00" style="float: left;">*</font>
-    <%= f.label :person_id, "Equipment: ", :class => "field_label" %>  
+    <%= f.label :equip_id, "Equipment: ", :class => "field_label" %>
     <%= f.collection_select(:equip_id, @equips, :id, :classification, :class =>"Equip") %>
   </div>
 

@@ -19,12 +19,6 @@ class ClientsController < ApplicationController
 
   def new
     @client = Client.new
-    @people = Person.find(:all)
-    @clients = Client.find(:all)
-
-    @clients.each do |client|
-      @people.delete_if {|person| person.id == client.person_id}
-    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,23 +27,10 @@ class ClientsController < ApplicationController
   end
 
   def edit
-    @people = Person.find(:all)
-    @clients = Client.find(:all)
-
-    @clients.each do |client|
-      @people.delete_if {|person| person.id == client.person_id}
-    end
-    @people << Person.find(@client.person_id)
   end
 
   def create
     @client = Client.new(params[:client])
-    @people = Person.find(:all)
-    @clients = Client.find(:all)
-
-    @clients.each do |client|
-      @people.delete_if {|person| person.id == client.person_id}
-    end
 
     respond_to do |format|
       if @client.save

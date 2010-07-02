@@ -14,6 +14,7 @@ authorization do
     has_permission_on [:people, :clients, :bands, :services, :equipments, :agendas, :equips],
       :to => [:index, :show]
     has_permission_on :equips, :to => :export_equips
+    has_permission_on [:bands, :clients], :to => [:new, :create]
   end
 
   role :band do
