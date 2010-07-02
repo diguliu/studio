@@ -11,7 +11,6 @@ class BandsController < ApplicationController
   end
 
   def show
-    @band = Band.find(params[:id])
     @people = Person.find(:all)
 
     respond_to do |format|
@@ -30,7 +29,6 @@ class BandsController < ApplicationController
   end
 
   def edit
-    @band = Band.find(params[:id])
   end
 
   def create
@@ -49,8 +47,6 @@ class BandsController < ApplicationController
   end
 
   def update
-    @band = Band.find(params[:id])
-
     respond_to do |format|
       if @band.update_attributes(params[:band])
         flash[:notice] = 'Band was successfully updated.'
@@ -64,7 +60,6 @@ class BandsController < ApplicationController
   end
 
   def destroy
-    @band = Band.find(params[:id])
     @band.destroy
 
     respond_to do |format|
@@ -75,7 +70,6 @@ class BandsController < ApplicationController
 
   def add_member
     @member = Person.find(params[:person][:id])
-    @band = Band.find(params[:id])
 
     respond_to do |format|
       if @band.people << @member
@@ -92,7 +86,6 @@ class BandsController < ApplicationController
 
   def remove_member
     @member = Person.find(params[:person][:id])
-    @band = Band.find(params[:id])
 
     respond_to do |format|
       if @band.people.delete(@member)

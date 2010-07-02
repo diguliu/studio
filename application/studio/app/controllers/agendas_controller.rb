@@ -3,7 +3,6 @@ class AgendasController < ApplicationController
 
   def index
     @agendas = Agenda.find(:all)
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @agendas }
@@ -11,7 +10,6 @@ class AgendasController < ApplicationController
   end
 
   def show
-    @agenda = Agenda.find(params[:id])
     @equips = Equip.find(:all)
     @internal_rent = InternalRent.new
 
@@ -33,7 +31,6 @@ class AgendasController < ApplicationController
   end
 
   def edit
-    @agenda = Agenda.find(params[:id])
     @bands = Band.find(:all)
     @services = Service.find(:all)
   end
@@ -58,7 +55,6 @@ class AgendasController < ApplicationController
   end
 
   def update
-    @agenda = Agenda.find(params[:id])
     @bands = Band.find(:all)
     @services = Service.find(:all)
 
@@ -75,7 +71,6 @@ class AgendasController < ApplicationController
   end
 
   def destroy
-    @agenda = Agenda.find(params[:id])
     @agenda.destroy
 
     respond_to do |format|
@@ -125,8 +120,6 @@ class AgendasController < ApplicationController
   end
 
   def cancel
-    @agenda = Agenda.find(params[:id])
-
     respond_to do |format|
       if @agenda.cancel
         flash[:notice] = "Agenda canceled."

@@ -11,8 +11,6 @@ class EquipsController < ApplicationController
   end
 
   def show
-    @equip = Equip.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @equip }
@@ -29,7 +27,6 @@ class EquipsController < ApplicationController
   end
 
   def edit
-    @equip = Equip.find(params[:id])
   end
 
   def create
@@ -48,8 +45,6 @@ class EquipsController < ApplicationController
   end
 
   def update
-    @equip = Equip.find(params[:id])
-
     respond_to do |format|
       if @equip.update_attributes(params[:equip])
         flash[:notice] = 'Equip was successfully updated.'
@@ -63,7 +58,6 @@ class EquipsController < ApplicationController
   end
 
   def destroy
-    @equip = Equip.find(params[:id])
     @equip.destroy
 
     respond_to do |format|

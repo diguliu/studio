@@ -11,8 +11,6 @@ class ServicesController < ApplicationController
   end
 
   def show
-    @service = Service.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @service }
@@ -29,7 +27,6 @@ class ServicesController < ApplicationController
   end
 
   def edit
-    @service = Service.find(params[:id])
   end
 
   def create
@@ -48,8 +45,6 @@ class ServicesController < ApplicationController
   end
 
   def update
-    @service = Service.find(params[:id])
-
     respond_to do |format|
       if @service.update_attributes(params[:service])
         flash[:notice] = 'Service was successfully updated.'
@@ -63,7 +58,6 @@ class ServicesController < ApplicationController
   end
 
   def destroy
-    @service = Service.find(params[:id])
     @service.destroy
 
     respond_to do |format|
