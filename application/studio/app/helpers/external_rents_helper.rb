@@ -1,0 +1,2 @@
+module ExternalRentsHelper
+end

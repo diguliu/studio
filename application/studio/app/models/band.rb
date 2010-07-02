@@ -13,4 +13,5 @@ class Band < ActiveRecord::Base
   def role_symbols
     roles.split(' ').map {|role| role.to_sym}
   end
+
 end

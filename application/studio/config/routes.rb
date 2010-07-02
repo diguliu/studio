@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :bands
   map.resources :clients
   map.resources :people
+  map.resources :external_rents
 
   map.resource :band_session
   map.resource :client_session

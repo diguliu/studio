@@ -4,19 +4,26 @@
   <b>Name: </b>
   <%= link_to(Person.find(@client.person_id).name, Person.find(@client.person_id)) %> <br />
   <b>Login: </b> <%= @client.login %><br />
-  <% if permitted_to? :create_rent, @client %>
-    <%= link_to 'New rent', :action => "new_rent", :id => @client.id %>
+  <% if permitted_to? :new, ExternalRent.new %>
+    <%= link_to 'New rent', new_external_rent_path %>
   <% end %>
 </div>
-<% if @client.external_rents.length > 0 && permitted_to?(:show_rent, @client) %>
+
+<% if Authorization.current_user == @client || is_admin?(Authorization.current_user) %>
   <div class="folder_body">
     <ul>
+      <% if @client.external_rents.blank? %>
+        There is no rent available.
+      <% end %>
       <% @client.external_rents.each do |external_rent|%>
-        <li> <%= link_to(external_rent.equip.classification, :action => "show_rent", :id => @client.id, :rent_id => external_rent.id) + " " + 
-                 external_rent.start.strftime("%m/%d/%Y") %> </li>
+        <% if permitted_to? :show, external_rent %>
+          <li> 
+          <%= link_to(external_rent.equip.classification, external_rent) + " " + external_rent.start.strftime("%m/%d/%Y") %> 
+          </li>
+        <% end %>
       <% end %>
     </ul>
-</div>
+  </div>
 <% end %>
 
 <% if permitted_to? :edit, @client %>
