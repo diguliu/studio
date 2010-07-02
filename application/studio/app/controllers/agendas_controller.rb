@@ -80,7 +80,6 @@ class AgendasController < ApplicationController
   end
 
   def add_equip
-    @agenda = Agenda.find(params[:agenda][:id])
     @internal_rent= InternalRent.new(params[:internal_rent])
     @internal_rent.agenda_id = @agenda.id
     year = @agenda.start.year
@@ -103,7 +102,6 @@ class AgendasController < ApplicationController
   end
 
   def remove_equip
-    @agenda = Agenda.find(params[:agenda][:id])
     @internal_rent = InternalRent.find_by_equip_id(params[:internal_rent][:equip_id])
 
     respond_to do |format|

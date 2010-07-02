@@ -4,16 +4,12 @@
 
   <b> Add equipment: </b>
 
-  <%= hidden_field "agenda", "id", :id => @agenda.id %>
+  <%= hidden_field_tag "id", @agenda.id %>
 
   <div class="field required">
     <font color="#F00" style="float: left;">*</font>
     <%= f.label :start, "Starts at: ", :class => "field_label" %>
     <%= select_time @agenda.start, :time_separator => ":" %>
-
-    <%# fields_for :internal_rent do |ff|%>
-      <%#= ff.calendar_date_select :start, :popup => "force", :time => true, :default_time => @agenda.start %>
-    <%# end %>
   </div>
 
   <div class="field required">

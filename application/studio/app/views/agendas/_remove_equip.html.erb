@@ -4,7 +4,7 @@
   <b> Remove equipment: </b>
   <br />
 
-  <%= hidden_field "agenda", "id", :id => @agenda.id %>
+  <%= hidden_field_tag "id", @agenda.id %>
 
   <%= f.collection_select(:equip_id, @agenda.equips, :id, :classification, :class =>"Equip") %>
   <br /><br />
