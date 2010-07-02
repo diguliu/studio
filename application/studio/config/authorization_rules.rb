@@ -19,7 +19,7 @@ authorization do
   role :band do
     includes :guest
 
-    has_permission_on :bands, :to => [:edit, :update, :destroy, :add_member, :remove_member] do
+    has_permission_on :bands, :to => [:edit, :update, :add_member, :remove_member] do
       if_attribute :login => is { user.login }
     end
 
@@ -37,7 +37,7 @@ authorization do
   role :client do
     includes :guest
 
-    has_permission_on :clients, :to => [:edit, :update, :destroy] do
+    has_permission_on :clients, :to => [:edit, :update] do
       if_attribute :login => is { user.login }
     end
 
