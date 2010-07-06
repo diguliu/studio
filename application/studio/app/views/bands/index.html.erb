@@ -6,9 +6,8 @@
   <table>
     <% for band in @bands %>
       <tr>
-        <td><%= band.name %></td>
         <% if permitted_to? :show, band %>
-          <td><%= link_to 'Show', band %></td>
+          <td><%= link_to content_tag('b', band.name), band %></td>
         <% end %>
         <% if permitted_to? :edit, band %>
           <td><%= link_to 'Edit', edit_band_path(band) %></td>

@@ -6,9 +6,8 @@
   <table>
     <% for service in @services %>
       <tr>
-        <td><%= service.name %></td>
         <% if permitted_to? :show, service %>
-          <td><%= link_to 'Show', service %></td>
+          <td><%= link_to content_tag('b', service.name), service %></td>
         <% end %>
         <% if permitted_to? :edit, service %>
           <td><%= link_to 'Edit', edit_service_path(service) %></td>

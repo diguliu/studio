@@ -6,9 +6,8 @@
   <table>
     <% for client in @clients %>
       <tr>
-        <td><%= client.name %></td>
         <% if permitted_to? :show, client %>
-          <td><%= link_to 'Show', client %></td>
+          <td><%= link_to content_tag('b', client.name), client %></td>
         <% end %>
         <% if permitted_to? :edit, client %>
           <td><%= link_to 'Edit', edit_client_path(client) %></td>

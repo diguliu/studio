@@ -6,9 +6,8 @@
   <table>
     <% for agenda in @agendas %>
       <tr>
-        <td><%= agenda.band.name + " - " + agenda.start.strftime("%m/%d/%Y") %></td>
         <% if permitted_to? :show, agenda %>
-          <td><%= link_to 'Show', agenda %></td>
+          <td><%= link_to content_tag('b', agenda.band.name + " - " + agenda.start.strftime("%m/%d/%Y")), agenda %></td>
         <% end %>
         <% if permitted_to? :edit, agenda %>
           <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>

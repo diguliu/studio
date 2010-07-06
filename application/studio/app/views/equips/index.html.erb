@@ -6,9 +6,8 @@
   <table>
     <% for equip in @equips %>
       <tr>
-        <td><%= equip.classification %></td>
         <% if permitted_to? :show, equip %>
-          <td><%= link_to 'Show', equip %></td>
+          <td><%= link_to content_tag('b', equip.classification), equip %></td>
         <% end %>
         <% if permitted_to? :edit, equip %>
           <td><%= link_to 'Edit', edit_equip_path(equip) %></td>

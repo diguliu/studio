@@ -8,9 +8,8 @@
 <table>
 <% for person in @people %>
   <tr>
-    <td> <%= person.name %> </td>
     <% if permitted_to? :show, person %>
-      <td><%= link_to 'Show', person %></td>
+      <td><%= link_to content_tag('b', person.name), person %></td>
     <% end %>
     <% if permitted_to? :edit, person %>
       <td><%= link_to 'Edit', edit_person_path(person) %></td>

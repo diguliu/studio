@@ -2,7 +2,6 @@ Missing
 =======
   + Problem with internal and external_rents when remove the equip.
   + Create a contextualized menu with the actions in that page.
-  + Convert the "show" link to the names of the "objects". Set the names with bold font.
   + Put in the manual the "walkthrough" of the "report section".
 Done
 ====
@@ -15,3 +14,4 @@ Done
     be a member of a band.
   + Import and export equipments.
   + Remove the "new client" from client
+  + Convert the "show" link to the names of the "objects". Set the names with bold font.
