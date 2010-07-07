@@ -16,8 +16,8 @@ class ReportsController < ApplicationController
 
   def filter_reports(reports = [], filters = {})
     if filters
-      reports.delete_if{|report| report.class == "ExternalRent"}if filters[:classification] && filters[:classification] == "services"
-      reports.delete_if{|report| report.class == "Agenda"} if filters[:classification] && filters[:classification] == "rents"
+      reports.delete_if{|report| report.class.to_s == "ExternalRent" && filters[:classification] == "bands"}
+      reports.delete_if{|report| report.class.to_s == "Agenda" && filters[:classification] == "clients"}
       reports.delete_if{|report| report.start < Date.strptime(filters[:start_date], "%b %d, %Y")} if !filters[:start_date].blank?
       reports.delete_if{|report| report.start > Date.strptime(filters[:end_date], "%b %d, %Y")} if !filters[:end_date].blank?
       reports.delete_if{|report| report.band != filters[:band]} if filters[:band]

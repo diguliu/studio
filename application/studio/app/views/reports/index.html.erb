@@ -3,7 +3,7 @@
 
 <h1>Reports</h1>
 
-<% form_tag :method => "get" do %>
+<% form_tag do %>
 
   <div class="field">
     <%= label_tag "filters[start_date]", "Start date: ", :class => "field_label" %>  
@@ -17,6 +17,12 @@
       <% fields_for :filters do |ff|%>
         <%= ff.calendar_date_select :end_date, :popup => "force" %>
       <% end %>
+  </div>
+
+  <div class="field">
+    <% classifications = [["full", "Full"], ["bands", "Bands"], ["clients", "Client"]] %>
+    <%= label_tag "filters[classification]", "Classification: ", :class => "field_label" %>
+    <%= collection_select (:filters, :classification, classifications, "first", "second") %>
   </div>
 
   <%= submit_tag "Filter!" %>
