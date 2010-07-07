@@ -5,7 +5,7 @@
   <b>Equipment: </b> <%= link_to @equip.classification, @equip %><br />
   <b>Duration: </b> <%= @external_rent.duration %> day(s)<br />
   <b>Starts at: </b> <%= @external_rent.start %><br />
-  <b>Price: </b> <%= @external_rent.price %><br />
+  <b>Price: </b> <%= @external_rent.total_price %><br />
 
   <%  
     case @external_rent.status

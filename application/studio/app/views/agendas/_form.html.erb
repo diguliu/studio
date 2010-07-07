@@ -36,7 +36,7 @@
 
     <div class="field">
       <%= f.label :start, "Starts at: ", :class => "field_label" %>  
-      <% fields_for :agenda do |ff|%>
+      <% fields_for :agenda do |ff| %>
         <%= ff.calendar_date_select :start, :popup => "force" %>
       <% end %>
     </div>

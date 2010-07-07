@@ -21,6 +21,8 @@ ActionController::Routing::Routes.draw do |map|
   map.export_equips "equips/export/xml", :controller => "equips", :action => "export_equips"
   map.import_equips "equips/import/xml", :controller => "equips", :action => "import_equips"
 
+  map.reports "reports", :controller => "reports", :action => "index"
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

@@ -29,7 +29,7 @@ class ExternalRentsController < ApplicationController
     @external_rent = ExternalRent.new(params[:external_rent])
     @external_rent.client_id = @client.id
     @external_rent.status = "reserved"
-    @external_rent.price = 0
+    @external_rent.total_price = 0
 
     respond_to do |format|
       if @external_rent.save

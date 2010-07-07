@@ -9,6 +9,9 @@ class Agenda < ActiveRecord::Base
   has_many :equips, :through => :internal_rents
   has_one :event, :dependent => :destroy
 
+  def responsible
+    band
+  end
 
   def remove_equip(internal_rent)
     internal_rent.destroy

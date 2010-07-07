@@ -1,0 +1,25 @@
+<%= javascript_include_tag 'prototype' %>
+<%= calendar_date_select_includes %>
+
+<h1>Reports</h1>
+
+<% form_tag :method => "get" do %>
+
+  <div class="field">
+    <%= label_tag "filters[start_date]", "Start date: ", :class => "field_label" %>  
+      <% fields_for :filters do |ff|%>
+        <%= ff.calendar_date_select :start_date, :popup => "force" %>
+      <% end %>
+  </div>
+
+  <div class="field">
+    <%= label_tag "filters[end_date]", "End date: ", :class => "field_label" %>  
+      <% fields_for :filters do |ff|%>
+        <%= ff.calendar_date_select :end_date, :popup => "force" %>
+      <% end %>
+  </div>
+
+  <%= submit_tag "Filter!" %>
+<% end %>
+
+<%= reports_list(@reports) %>

@@ -15,7 +15,7 @@ class Client < Person
   end
 
   def add_equip(equip, start, duration)
-    ExternalRent.create!(:start => start, :duration => duration, :client => self, :equip => equip, :status => "reserved", :price => 0)
+    ExternalRent.create!(:start => start, :duration => duration, :client => self, :equip => equip, :status => "reserved", :total_price => 0)
   end
 
   def remove_equip(equip)

@@ -4,7 +4,7 @@ class CreateExternalRents < ActiveRecord::Migration
       t.datetime    :start, :null => false
       t.integer     :duration, :null => false
       t.string      :status
-      t.float       :price
+      t.float       :total_price
       t.references  :client
       t.references  :equip
 

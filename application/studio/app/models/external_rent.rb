@@ -9,6 +9,10 @@ class ExternalRent < ActiveRecord::Base
   before_save :calculate_total_price, :set_status
   after_create :create_event
 
+  def responsible
+    client
+  end
+
   def cancel
     self.status = "canceled"
     event.destroy
@@ -32,7 +36,7 @@ class ExternalRent < ActiveRecord::Base
 
   def calculate_total_price
     puts "-- Calculating total price..."
-    self.price = equip.external_price*duration
+    self.total_price = equip.external_price*duration
   end
 
   def create_event
