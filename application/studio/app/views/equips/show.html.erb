@@ -1,19 +1,16 @@
 <h1>Showing equipment</h1>
 
-<b>Classification: </b> <%= @equip.classification %><br />
-
-<% if !@equip.model.blank? %>
-  <b>Model: </b> <%= @equip.model %><br />
-<% end %>
-
-<% if !@equip.description.blank? %>
-  <b>Description: </b> <%= @equip.description %><br />
-<% end %>
-
-<b>Internal price: </b> <%= @equip.internal_price %><br />
-
-<b>External price: </b> <%= @equip.external_price %><br />
-
+<div class="folder_header">
+  <b>Classification: </b> <%= @equip.classification %><br />
+  <% if !@equip.model.blank? %>
+    <b>Model: </b> <%= @equip.model %><br />
+  <% end %>
+  <% if !@equip.description.blank? %>
+    <b>Description: </b> <%= @equip.description %><br />
+  <% end %>
+  <b>Internal price: </b> <%= @equip.internal_price %><br />
+  <b>External price: </b> <%= @equip.external_price %><br />
+</div>
 
 <% if permitted_to? :edit, @equip %>
   <%= link_to 'Edit', edit_equip_path(@equip) %> |
