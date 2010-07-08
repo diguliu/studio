@@ -1,6 +1,6 @@
 <h1>Band Login</h1>
 
-<% form_for @band_session, :url => band_session_path do |f| %>
+<% form_for @band_session, :url => band_session_path, :html => {:name => "login_form"} do |f| %>
   <%= f.error_messages %>
   <%= f.label :login %><br />
   <%= f.text_field :login %><br />
@@ -9,3 +9,8 @@
   <br />
   <%= f.submit "Login" %>
 <% end %>
+
+<script type="text/javascript">
+ document.login_form.band_session_login.focus();
+</script>
+
